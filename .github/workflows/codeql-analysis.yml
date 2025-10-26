@@ -97,18 +97,21 @@ jobs:
               Write-Warning ('nuget restore returned exit code ' + $LASTEXITCODE + ' for ' + $proj + ' - continuing to build (msbuild may still resolve references).')
             }
 
-            # Compute absolute OutDir (ensure trailing backslash). Use repo root as base to ensure MSBuild sees a valid path.
+            # Compute absolute OutDir using repo root as base (avoid trailing-backslash-quote escaping issues)
             $projDir = Split-Path -Parent $proj
-            $outDirCandidate = Join-Path $projDir "bin\Release\"
             $repoRoot = (Get-Location).ProviderPath
+            $outDirCandidate = Join-Path $projDir "bin\Release"
             $resolved = Join-Path $repoRoot $outDirCandidate
-            if ($resolved -notlike '*\') { $resolved += '\' }
+
+            # Ensure there is NO trailing backslash to avoid escaping the closing quote when we quote the argument
+            $resolved = $resolved.TrimEnd('\')
 
             Write-Host ('Building ' + $proj + ' -> OutDir: ' + $resolved)
 
-            # IMPORTANT: pass Platform as AnyCPU (no space) so project Condition like Release|AnyCPU matches and OutputPath is set
+            # Pass Platform as AnyCPU (no space) to match common project Conditions (Release|AnyCPU).
+            # Build the OutDir argument and quote it safely (we trimmed trailing backslash above).
             $platformArg = '/p:Platform=AnyCPU'
-            $outArg = '/p:OutDir=' + '"' + $resolved + '"'
+            $outArg = '/p:OutDir="' + $resolved + '"' 
 
             $msbuildArgs = @(
               $proj,
