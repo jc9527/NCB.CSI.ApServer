@@ -1,86 +1,58 @@
-name: "CodeQL - C# (.NET Framework 4.7.2)"
+name: CodeQL - C# (.NET Framework 4.7.2)
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
   schedule:
-    - cron: '0 3 * * 0'
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  actions: read
-  security-events: write
+    - cron: '0 5 * * 0'
 
 jobs:
-  codeql:
+  analyze:
     name: CodeQL analysis for .NET Framework (C#)
     runs-on: windows-latest
-    env:
-      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+
     steps:
+      # -----------------------------
+      # 1️⃣ Checkout repository
+      # -----------------------------
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
+      # -----------------------------
+      # 2️⃣ Setup MSBuild & NuGet
+      # -----------------------------
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      # -----------------------------
+      # 3️⃣ Restore NuGet packages
+      # -----------------------------
+      - name: Restore NuGet packages
+        run: nuget restore NCB.CSI.ApServer.sln
+
+      # -----------------------------
+      # 4️⃣ Build entire solution (Release)
+      # -----------------------------
+      - name: Build Solution
+        run: |
+          msbuild NCB.CSI.ApServer.sln /p:Configuration=Release /p:Platform="Any CPU" /m
+
+      # -----------------------------
+      # 5️⃣ Initialize CodeQL
+      # -----------------------------
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
           languages: csharp
+          build-mode: manual
 
-      - name: Download nuget.exe
-        shell: powershell
-        run: |
-          $out = "nuget.exe"
-          Invoke-WebRequest -Uri "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" -OutFile $out
-          Write-Host "nuget.exe downloaded to $PWD\$out"
-
-      - name: Restore NuGet packages for NCB.CSI.Batch
-        shell: powershell
-        run: |
-          $proj = "NCB.CSI.Batch/NCB.CSI.Batch.csproj"
-          if (Test-Path $proj) {
-            & .\nuget.exe restore $proj -PackagesDirectory packages
-          } else {
-            Write-Error "Project not found: $proj. Update the path in the workflow if necessary."
-          }
-
-      - name: Build NCB.CSI.Batch with MSBuild
-        shell: powershell
-        run: |
-          $proj = "NCB.CSI.Batch/NCB.CSI.Batch.csproj"
-          if (-not (Test-Path $proj)) {
-            Write-Error "Project not found: $proj. Update the path in the workflow if necessary."
-            exit 1
-          }
-
-          $msbuildPath = $null
-          $vswhere = Join-Path ${env:ProgramFiles(x86)} "Microsoft Visual Studio\Installer\vswhere.exe"
-
-          if (Test-Path $vswhere) {
-            $installPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath -nologo 2>$null
-            if ($installPath) {
-              $candidate1 = Join-Path $installPath "MSBuild\Current\Bin\MSBuild.exe"
-              $candidate2 = Join-Path $installPath "MSBuild\15.0\Bin\MSBuild.exe"
-              if (Test-Path $candidate1) { $msbuildPath = $candidate1 }
-              elseif (Test-Path $candidate2) { $msbuildPath = $candidate2 }
-            }
-          }
-
-          if (-not $msbuildPath) {
-            $msbuildPath = "msbuild"
-          } else {
-            Write-Host "Using MSBuild at $msbuildPath"
-          }
-
-          $msbuildArgs = "/p:Configuration=Release /p:Platform=AnyCPU /p:VisualStudioVersion=15.0 /m"
-          & $msbuildPath $proj /p:Configuration=Release /p:Platform=AnyCPU /m
-
-
-      - name: Perform CodeQL analysis
+      # -----------------------------
+      # 6️⃣ Perform CodeQL Analysis
+      # -----------------------------
+      - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
-        with:
-          category: "security"
