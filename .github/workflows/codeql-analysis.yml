@@ -1,69 +1,139 @@
-name: "CodeQL - C# (.NET Framework 4.7.2)"
+name: "CodeQL - C# (.NET Framework 4.7.2) - build selected projects"
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
   schedule:
-    - cron: '0 9 * * 1'
+    - cron: '0 3 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+  security-events: write
 
 jobs:
-  analyze:
-    name: CodeQL analysis for .NET Framework (C#)
+  codeql:
+    name: CodeQL analysis (build selected .csproj)
     runs-on: windows-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
-
-    strategy:
-      fail-fast: false
-      matrix:
-        language: [ 'csharp' ]
-
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Setup NuGet
-      uses: nuget/setup-nuget@v2
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: csharp
 
-    - name: Restore NuGet packages
-      run: nuget restore NCB.CSI.ApServer.sln
+      - name: Download nuget.exe
+        shell: powershell
+        run: |
+          $out = "nuget.exe"
+          Invoke-WebRequest -Uri "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" -OutFile $out
+          Write-Host "nuget.exe downloaded to $PWD\$out"
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: ${{ matrix.language }}
-        build-mode: manual
-
-    - name: Build specific projects
-      shell: pwsh
-      run: |
-        $projects = @(
-          "NCB.CSI.ApClient/NCB.CSI.ApClient.csproj",
-          "NCB.CSI.Models/NCB.CSI.Models.csproj",
-          "NCB.CSI.Batch/NCB.CSI.Batch.csproj"
-        )
-
-        $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
-        $msbuild = "msbuild"
-        if (Test-Path $vswhere) {
-          $installPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath
-          if ($installPath) {
-            $msbuild = Join-Path $installPath "MSBuild\Current\Bin\MSBuild.exe"
+      - name: Locate MSBuild (vswhere fallback to PATH)
+        id: find-msbuild
+        shell: powershell
+        run: |
+          $msbuildPath = $null
+          $pf86 = ${env:ProgramFiles(x86)}
+          if (-not $pf86 -or -not (Test-Path $pf86)) {
+            if ($env:ProgramFiles -and (Test-Path $env:ProgramFiles)) { $pf86 = $env:ProgramFiles }
+            elseif ($env:ProgramW6432 -and (Test-Path $env:ProgramW6432)) { $pf86 = $env:ProgramW6432 }
           }
-        }
-
-        foreach ($proj in $projects) {
-          if (Test-Path $proj) {
-            Write-Host "🔧 Building $proj ..."
-            & $msbuild $proj /p:Configuration=Release /p:Platform="Any CPU" /m /verbosity:minimal
+          if ($pf86) {
+            $vswhere = Join-Path $pf86 "Microsoft Visual Studio\Installer\vswhere.exe"
           } else {
-            Write-Warning "⚠️ Project not found: $proj"
+            $vswhere = $null
           }
-        }
 
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
+          if ($vswhere -and (Test-Path $vswhere)) {
+            $installPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath -nologo 2>$null
+            if ($installPath) {
+              $candidate1 = Join-Path $installPath "MSBuild\Current\Bin\MSBuild.exe"
+              $candidate2 = Join-Path $installPath "MSBuild\15.0\Bin\MSBuild.exe"
+              if (Test-Path $candidate1) { $msbuildPath = $candidate1 }
+              elseif (Test-Path $candidate2) { $msbuildPath = $candidate2 }
+            }
+          }
+
+          if (-not $msbuildPath) {
+            # fallback to msbuild on PATH
+            $msbuildPath = "msbuild"
+          }
+
+          Write-Host "MSBUILD_PATH=$msbuildPath"
+          Write-Output "::set-output name=msbuild::$msbuildPath"
+
+      - name: Restore & Build selected projects (Models -> ApClient -> Batch)
+        shell: powershell
+        env:
+          MSBUILD_PATH: ${{ steps.find-msbuild.outputs.msbuild }}
+        run: |
+          $projects = @(
+            "NCB.CSI.Models/NCB.CSI.Models.csproj",
+            "NCB.CSI.ApClient/NCB.CSI.ApClient.csproj",
+            "NCB.CSI.Batch/NCB.CSI.Batch.csproj"
+          )
+
+          $msbuild = $env:MSBUILD_PATH
+          if (-not $msbuild) { $msbuild = "msbuild" }
+
+          foreach ($proj in $projects) {
+            Write-Host "---- Processing project: $proj ----"
+
+            if (-not (Test-Path $proj)) {
+              Write-Error "Project not found: $proj. Update the path in the workflow if necessary."
+              exit 1
+            }
+
+            # Restore with nuget.exe (works for packages.config & older projects)
+            Write-Host "Restoring packages for $proj"
+            & .\nuget.exe restore $proj -PackagesDirectory packages
+            if ($LASTEXITCODE -ne 0) {
+              Write-Warning "nuget restore returned exit code $LASTEXITCODE for $proj — continuing to build (msbuild may still resolve references)."
+            }
+
+            # Compute OutDir (ensure trailing backslash)
+            $projDir = Split-Path -Parent $proj
+            $outDirCandidate = Join-Path $projDir "bin\Release\"
+            $resolved = $null
+            try {
+              $resolved = (Resolve-Path -Path $outDirCandidate -ErrorAction Stop).Path
+            } catch {
+              # path may not exist yet; use the candidate
+              $resolved = $outDirCandidate
+            }
+            if ($resolved -notlike '*\') { $resolved += '\' }
+
+            Write-Host "Building $proj -> OutDir: $resolved"
+
+            # Build args: pass each /p: as separate argv; quote Platform "Any CPU"
+            $msbuildArgs = @(
+              $proj,
+              '/p:Configuration=Release',
+              '/p:Platform="Any CPU"',
+              "/p:OutDir=`"$resolved`"",
+              '/p:BuildProjectReferences=true',
+              '/m'
+            )
+
+            Write-Host "Calling MSBuild: $msbuild $($msbuildArgs -join ' ')"
+            & $msbuild @msbuildArgs
+            if ($LASTEXITCODE -ne 0) {
+              Write-Error "MSBuild failed for $proj with exit code $LASTEXITCODE"
+              exit $LASTEXITCODE
+            }
+          }
+
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "security"
