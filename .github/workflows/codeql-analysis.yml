@@ -1,0 +1,88 @@
+name: "CodeQL - C# (.NET Framework 4.7.2)"
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    - cron: '0 3 * * 0'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  security-events: write
+  code-scanning: write
+
+jobs:
+  codeql:
+    name: CodeQL analysis for .NET Framework (C#)
+    runs-on: windows-latest
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: csharp
+
+      - name: Download nuget.exe
+        shell: powershell
+        run: |
+          $out = "nuget.exe"
+          Invoke-WebRequest -Uri "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" -OutFile $out
+          Write-Host "nuget.exe downloaded to $PWD\$out"
+
+      - name: Restore NuGet packages for NCB.CSI.Batch
+        shell: powershell
+        run: |
+          $proj = "NCB.CSI.Batch/NCB.CSI.Batch.csproj"
+          if (Test-Path $proj) {
+            # Use nuget.exe restore to support packages.config and older project types
+            & .\nuget.exe restore $proj -PackagesDirectory packages
+          } else {
+            Write-Error "Project not found: $proj. Update the path in the workflow if necessary."
+          }
+
+      - name: Build NCB.CSI.Batch with MSBuild
+        shell: powershell
+        run: |
+          $proj = "NCB.CSI.Batch/NCB.CSI.Batch.csproj"
+          if (-not (Test-Path $proj)) {
+            Write-Error "Project not found: $proj. Update the path in the workflow if necessary."
+            exit 1
+          }
+
+          # Try to locate MSBuild via vswhere (robust across VS versions). Fallback to 'msbuild' in PATH.
+          $msbuildPath = $null
+          $vswhere = Join-Path $env:ProgramFiles(x86) "Microsoft Visual Studio\Installer\vswhere.exe"
+          if (Test-Path $vswhere) {
+            $installPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath -nologo 2>$null
+            if ($installPath) {
+              # Prefer MSBuild from Current then older locations
+              $candidate1 = Join-Path $installPath "MSBuild\Current\Bin\MSBuild.exe"
+              $candidate2 = Join-Path $installPath "MSBuild\15.0\Bin\MSBuild.exe"
+              if (Test-Path $candidate1) { $msbuildPath = $candidate1 }
+              elseif (Test-Path $candidate2) { $msbuildPath = $candidate2 }
+            }
+          }
+
+          if (-not $msbuildPath) {
+            # fallback to msbuild on PATH
+            $msbuildPath = "msbuild"
+          } else {
+            Write-Host "Using MSBuild at $msbuildPath"
+          }
+
+          $msbuildArgs = "/p:Configuration=Release /p:Platform=AnyCPU /p:VisualStudioVersion=15.0 /m"
+          & $msbuildPath $proj $msbuildArgs
+
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "security"
