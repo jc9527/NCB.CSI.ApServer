@@ -2,17 +2,16 @@ name: "CodeQL - C# (.NET Framework 4.7.2)"
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ main, master ]
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 9 * * 1'
 
 jobs:
   analyze:
     name: CodeQL analysis for .NET Framework (C#)
     runs-on: windows-latest
-
     permissions:
       actions: read
       contents: read
@@ -24,48 +23,47 @@ jobs:
         language: [ 'csharp' ]
 
     steps:
-      # Step 1: Checkout repository
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      # Step 2: Setup NuGet
-      - name: Setup NuGet
-        uses: nuget/setup-nuget@v2
+    - name: Setup NuGet
+      uses: nuget/setup-nuget@v2
 
-      # Step 3: Restore NuGet packages (solution-wide)
-      - name: Restore NuGet packages
-        run: |
-          nuget restore NCB.CSI.ApServer.sln
+    - name: Restore NuGet packages
+      run: nuget restore NCB.CSI.ApServer.sln
 
-      # Step 4: Initialize CodeQL
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: ${{ matrix.language }}
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}
+        build-mode: manual
 
-      # Step 5: Build entire solution using MSBuild (auto-detect via vswhere)
-      - name: Build solution
-        shell: pwsh
-        run: |
-          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
-          if (Test-Path $vswhere) {
-            $installPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath
+    - name: Build specific projects
+      shell: pwsh
+      run: |
+        $projects = @(
+          "NCB.CSI.ApClient/NCB.CSI.ApClient.csproj",
+          "NCB.CSI.Models/NCB.CSI.Models.csproj",
+          "NCB.CSI.Batch/NCB.CSI.Batch.csproj"
+        )
+
+        $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+        $msbuild = "msbuild"
+        if (Test-Path $vswhere) {
+          $installPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath
+          if ($installPath) {
             $msbuild = Join-Path $installPath "MSBuild\Current\Bin\MSBuild.exe"
+          }
+        }
+
+        foreach ($proj in $projects) {
+          if (Test-Path $proj) {
+            Write-Host "🔧 Building $proj ..."
+            & $msbuild $proj /p:Configuration=Release /p:Platform="Any CPU" /m /verbosity:minimal
           } else {
-            Write-Error "vswhere.exe not found."
-            exit 1
+            Write-Warning "⚠️ Project not found: $proj"
           }
+        }
 
-          if (-not (Test-Path $msbuild)) {
-            Write-Error "MSBuild not found in Visual Studio installation."
-            exit 1
-          }
-
-          Write-Host "Using MSBuild at $msbuild"
-          & $msbuild "NCB.CSI.ApServer.sln" /p:Configuration=Release /p:Platform="Any CPU" /m /verbosity:minimal
-
-      # Step 6: Perform CodeQL analysis
-      - name: Perform CodeQL analysis
-        uses: github/codeql-action/analyze@v3
-
-        
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
