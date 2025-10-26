@@ -77,7 +77,8 @@ jobs:
           }
 
           $msbuildArgs = "/p:Configuration=Release /p:Platform=AnyCPU /p:VisualStudioVersion=15.0 /m"
-          & $msbuildPath $proj $msbuildArgs
+          & $msbuildPath $proj /p:Configuration=Release /p:Platform=AnyCPU /m
+
 
       - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
