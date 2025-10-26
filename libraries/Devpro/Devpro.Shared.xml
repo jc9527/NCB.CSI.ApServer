@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Devpro.Shared</name>
+    </assembly>
+    <members>
+        <member name="F:Devpro.Shared.Captcha.CaptchaBLL._imageWidth">
+            <summary>
+            圖片寬度
+            </summary>
+        </member>
+        <member name="F:Devpro.Shared.Captcha.CaptchaBLL._imageHeight">
+            <summary>
+            圖片高度
+            </summary>
+        </member>
+        <member name="F:Devpro.Shared.Captcha.CaptchaBLL._textColorDepth">
+            <summary>
+            數值越高越亮 越低越暗 0-255
+            </summary>
+        </member>
+        <member name="F:Devpro.Shared.Captcha.CaptchaBLL._interferenceColorDepth">
+            <summary>
+            數值越高越亮 越低越暗 0-255
+            </summary>
+        </member>
+        <member name="F:Devpro.Shared.Captcha.CaptchaBLL._chars">
+            <summary>
+            驗證碼會隨機產生的字元，如果要用英數大小寫，會避開 l1Oo0 之類的。
+            </summary>
+        </member>
+        <member name="F:Devpro.Shared.Captcha.CaptchaBLL._random">
+            <summary>
+            亂數產生器
+            </summary>
+        </member>
+        <member name="F:Devpro.Shared.Captcha.CaptchaBLL._backGroundColor">
+            <summary>
+            背景顏色
+            </summary>
+        </member>
+        <member name="F:Devpro.Shared.Captcha.CaptchaBLL._fonts">
+            <summary>
+            隨機每個驗證碼字元的字體列表
+            </summary>
+        </member>
+        <member name="M:Devpro.Shared.Captcha.CaptchaBLL.GenerateImage(System.String)">
+            <summary>
+            產生驗證碼的圖片
+            </summary>
+            <param name="code">驗證碼</param>
+            <returns>圖片</returns>
+        </member>
+        <member name="M:Devpro.Shared.Captcha.CaptchaBLL.GenerateCode(System.Int32)">
+            <summary>
+            隨機產生驗證碼
+            </summary>
+            <param name="len">要幾個字元</param>
+            <returns>驗證碼</returns>
+        </member>
+        <member name="M:Devpro.Shared.Captcha.CaptchaBLL.InterferenceLines(System.Drawing.Graphics@,System.Int32)">
+            <summary>
+            隨機劃出干擾線
+            </summary>
+            <param name="g">畫布</param>
+            <param name="lines">干擾線數量</param>
+        </member>
+        <member name="M:Devpro.Shared.Captcha.CaptchaBLL.GetRandomColor(System.Int32)">
+            <summary>
+            隨機產生顏色
+            </summary>
+            <param name="depth">顏色深度</param>
+            <returns>顏色</returns>
+        </member>
+        <member name="T:Devpro.Models.RequestHeader">
+            <summary>
+            Request 封包檔頭資訊
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.ApplicationName">
+            <summary>
+            呼叫端的應用程式名稱
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.SessionID">
+            <summary>
+            該次連線的 Session ID
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.ServiceType">
+            <summary>
+            服務類型
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.ClientIP">
+            <summary>
+            客戶端的 IP:PORT
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.ClientRefNo">
+            <summary>
+            用戶端自編唯一值序號
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.ClientTimestamp">
+            <summary>
+            用戶端時間戳記
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.UserAgent">
+            <summary>
+            使用者代理識別資訊
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.Tag">
+            <summary>
+            Client額外的資訊需要被記錄在API端的LOG
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.Signature">
+            <summary>
+            簽章值
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.RequestHeader.UserId">
+            <summary>
+            使用者代碼
+            </summary>
+        </member>
+        <member name="T:Devpro.Models.ResponseHeader">
+            <summary>
+            Response 封包檔頭資訊
+            </summary>
+        </member>
+        <member name="F:Devpro.Models.ResponseHeader.ReferenceNo">
+            <summary>
+            本次呼叫的 Reference Number
+            </summary>
+        </member>
+        <member name="F:Devpro.Models.ResponseHeader.RequestTime">
+            <summary>
+            接收 Request 封包的時間
+            </summary>
+        </member>
+        <member name="F:Devpro.Models.ResponseHeader.ResponseTime">
+            <summary>
+            回覆 Response 封包的時間
+            </summary>
+        </member>
+        <member name="T:Devpro.Models.Request`1">
+            <summary>
+            Request 封包資訊
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Devpro.Models.Request`1.Header">
+            <summary>
+            Request 封包檔頭資訊
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.Request`1.Content">
+            <summary>
+            Request 封包內容資訊
+            </summary>
+        </member>
+        <member name="T:Devpro.Models.Response`1">
+            <summary>
+            Response 封包資訊
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Devpro.Models.Response`1.Header">
+            <summary>
+            Response 封包擋頭
+            </summary>
+        </member>
+        <member name="F:Devpro.Models.Response`1.ResultCode">
+            <summary>
+            結果代碼
+            </summary>
+        </member>
+        <member name="F:Devpro.Models.Response`1.ResultMessage">
+            <summary>
+            結果訊息
+            </summary>
+        </member>
+        <member name="F:Devpro.Models.Response`1.Result">
+            <summary>
+            結果
+            </summary>
+        </member>
+        <member name="F:Devpro.Models.Response`1.Error">
+            <summary>
+            例外錯誤
+            </summary>
+        </member>
+        <member name="P:Devpro.Models.Response`1.Original">
+            <summary>
+            原始 Request
+            </summary>        
+        </member>
+        <member name="P:Devpro.Models.Response`1.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+    </members>
+</doc>

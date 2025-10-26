@@ -1,0 +1,36 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "PmtAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "PmtAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO05",
+        "TxnNo" : "PO0500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "0000",
+        "RtrnDesc" : "200{0000}",
+        "PmtAddInfo" : {
+          "TxNo" : "122345000001",
+          "PostDate" : "2016-01-01",
+          "CurAmt" : 10000,
+          "HdlgChrg" : 500,
+          "AvailBal" : 90500,
+          "AcctBal" : 90500,
+          "FISCTxnNo" : "12345000001",
+          "FISCRtrnCode" : "4001"
+        }
+      }
+    }
+  }
+}

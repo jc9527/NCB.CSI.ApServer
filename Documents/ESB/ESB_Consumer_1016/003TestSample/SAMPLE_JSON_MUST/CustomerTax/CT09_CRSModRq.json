@@ -1,0 +1,56 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CustomerTax",
+    "OperationName" : "CRSMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CRSModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CT09",
+        "TxnNo" : "CT0900001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "CIFNo" : "1000000004",
+        "CustType" : "INDIVIDUAL",
+        "KYCFlg" : "YES",
+        "SelfCertfctnFlg" : "YES",
+        "RegrCntry" : "TW",
+        "TINRec" : [ {
+          "TINCntry" : "AU",
+          "TINCode" : "AACC213124531"
+        } ],
+        "AddrTypeRec" : [ {
+        } ],
+        "PhnNoRec" : [ {
+        } ],
+        "StndInstrctRec" : [ {
+        } ],
+        "HldrCntryRec" : [ {
+        } ],
+        "JointAcctRec" : [ {
+        } ],
+        "CRSRec" : [ {
+          "ReqDate" : "20200101",
+          "CRSCIFNo" : "1000000004"
+        } ],
+        "RptRec" : [ {
+        } ],
+        "INDICIARec" : [ {
+        } ],
+        "NoTINRec" : [ {
+        } ],
+        "NatlAddrRec" : [ {
+        } ],
+        "APIKey" : "NCB-IF99002"
+      }
+    }
+  }
+}

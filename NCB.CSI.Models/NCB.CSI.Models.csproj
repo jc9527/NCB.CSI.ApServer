@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7ED8F189-49B9-4495-BB42-E1829DB763BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NCB.CSI.Models</RootNamespace>
+    <AssemblyName>NCB.CSI.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Devpro.Shared">
+      <HintPath>..\libraries\Devpro\Devpro.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.6.1\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.ValidatorAttribute, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.ValidatorAttribute.8.6.1\lib\net45\FluentValidation.ValidatorAttribute.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.WebApi, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.WebApi.8.6.1\lib\net45\FluentValidation.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BMS\Common\GetEDDSurvey.cs" />
+    <Compile Include="BMS\Common\GetCodeBooks.cs" />
+    <Compile Include="BMS\CreateAccount\ModifyIndustryAndJob.cs" />
+    <Compile Include="BMS\DebitCards\GetCheckAddrList.cs" />
+    <Compile Include="BMS\DebitCards\UpdateCheckAddrStatus.cs" />
+    <Compile Include="BMS\Deposit\PocketList.cs" />
+    <Compile Include="BMS\Loan\SendForEmail.cs" />
+    <Compile Include="BMS\Member\TransferQuotaUpgrade.cs" />
+    <Compile Include="BMS\Member\GetAccountUpgrade.cs" />
+    <Compile Include="BMS\Point\AddPointHistory.cs" />
+    <Compile Include="BMS\UpgradeAccount\IVRCheckUpgradeAccount.cs" />
+    <Compile Include="BMS\BmsModels.cs" />
+    <Compile Include="BMS\Common\UpdatePersonalInfo.cs" />
+    <Compile Include="BMS\Common\ModifyBlackList.cs" />
+    <Compile Include="BMS\Common\CreateBlackList.cs" />
+    <Compile Include="BMS\Common\GetBlackList.cs" />
+    <Compile Include="BMS\CreateAccount\UpdateStatus.cs" />
+    <Compile Include="BMS\CreateAccount\GetCaseList.cs" />
+    <Compile Include="BMS\CreateAccount\GetCreateInfo.cs" />
+    <Compile Include="BMS\Loan\GetLoanInfo.cs" />
+    <Compile Include="BMS\Login\GetLoginInfo.cs" />
+    <Compile Include="BMS\Member\GetMemberInfo.cs" />
+    <Compile Include="BMS\Member\UpdateMemberInfo.cs" />
+    <Compile Include="BMS\Rate\AddRate.cs" />
+    <Compile Include="BMS\Rate\GetRates.cs" />
+    <Compile Include="BMS\UpgradeAccount\GetEddaCheckResult.cs" />
+    <Compile Include="CBS\CbsModels.cs" />
+    <Compile Include="CBS\NCBAPI17007.cs" />
+    <Compile Include="CM\CmCommonRs.cs" />
+    <Compile Include="CM\DeleteFile.cs" />
+    <Compile Include="CM\GetFile.cs" />
+    <Compile Include="CM\CallViewer.cs" />
+    <Compile Include="CM\UploadFile.cs" />
+    <Compile Include="CSI\CampaignTasks.cs" />
+    <Compile Include="ESB\BankCard\AcidntFeeInq.cs" />
+    <Compile Include="ESB\BankCard\BankCardAcidntInq.cs" />
+    <Compile Include="ESB\BankCard\BankCardAppStatInq.cs" />
+    <Compile Include="ESB\BankCard\BankCardHistInq.cs" />
+    <Compile Include="ESB\BankCard\BankCardOpen.cs" />
+    <Compile Include="ESB\BankCard\BankCardApp.cs" />
+    <Compile Include="ESB\BankCard\BankCardResnd.cs" />
+    <Compile Include="ESB\BankCard\BankCardResndChk.cs" />
+    <Compile Include="ESB\BankCard\BankCardResndHistInq.cs" />
+    <Compile Include="ESB\BankCard\BankCardRgstr.cs" />
+    <Compile Include="ESB\BankCard\BankCardSummInq.cs" />
+    <Compile Include="ESB\BankCard\WdlCardFnctMod.cs" />
+    <Compile Include="ESB\CurrentAccount\AcctDtlInq.cs" />
+    <Compile Include="ESB\CurrentAccount\CampIntrstRateCan.cs" />
+    <Compile Include="ESB\CurrentAccount\CampIntrstRateMod.cs" />
+    <Compile Include="ESB\CustomerTax\DbAdjIntrstAdd.cs" />
+    <Compile Include="ESB\CustomerTax\CrAdjIntrstAdd.cs" />
+    <Compile Include="ESB\CustomerTax\RefndWHTAdd.cs" />
+    <Compile Include="ESB\CustomerTax\WHTInq.cs" />
+    <Compile Include="ESB\Customer\CIFRstrctHistInq.cs" />
+    <Compile Include="ESB\Customer\CustProfAdd.cs" />
+    <Compile Include="ESB\Customer\CustProfSync.cs" />
+    <Compile Include="ESB\DebitCard\CardCIFInfoInq.cs" />
+    <Compile Include="ESB\DebitCard\CardMod.cs" />
+    <Compile Include="ESB\DebitCard\DbCardChngCtrl.cs" />
+    <Compile Include="ESB\DebitCard\DbCardFeeAdd.cs" />
+    <Compile Include="ESB\DebitCard\DbCardFeeInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardFnctInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardInstlmtInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardLmtInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardLmtMod.cs" />
+    <Compile Include="ESB\DebitCard\DbCardLockAcctInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardLockDtlsInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardResndAppntAdd.cs" />
+    <Compile Include="ESB\DebitCard\DbCardResndAppntInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardTxnAcidntDtlsInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardTxnAcidntDtlsMod.cs" />
+    <Compile Include="ESB\DebitCard\DbCardTxnDtlsInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardTxnFnctInq.cs" />
+    <Compile Include="ESB\DebitCard\DbCardTxnFnctMod.cs" />
+    <Compile Include="ESB\DebitCard\TxnAcidntInq.cs" />
+    <Compile Include="ESB\DebitCard\XbrdWdlCardPswdCntInq.cs" />
+    <Compile Include="ESB\DebitCard\XbrdWdlCardPswdCntMod.cs" />
+    <Compile Include="ESB\DepositAccount\AccrdIntrstInq.cs" />
+    <Compile Include="ESB\DepositAccount\AcctClsInq.cs" />
+    <Compile Include="ESB\Customer\CustIdntInq.cs" />
+    <Compile Include="ESB\Customer\CustProfMod.cs" />
+    <Compile Include="ESB\Customer\CustSummInq.cs" />
+    <Compile Include="ESB\DepositAccount\AcctInfoChngInq.cs" />
+    <Compile Include="ESB\DepositAccount\AcctPostRstrctHistInq.cs" />
+    <Compile Include="ESB\DepositAccount\AcctTxnDtlsInq.cs" />
+    <Compile Include="ESB\DepositAccount\AcctInfoMod.cs" />
+    <Compile Include="ESB\DepositAccount\HdlgChrgListInq.cs" />
+    <Compile Include="ESB\DepositAccount\BranchDailyCls.cs" />
+    <Compile Include="ESB\DepositAccount\AcctCls.cs" />
+    <Compile Include="ESB\DepositAccount\NPDLmtMod.cs" />
+    <Compile Include="ESB\DepositAccount\PreDsgntdAcctHistInq.cs" />
+    <Compile Include="ESB\DepositAccount\PreDsgntdAcctInq.cs" />
+    <Compile Include="ESB\DepositAccount\PreDsgntdAcctStatAdd.cs" />
+    <Compile Include="ESB\DepositAccount\PreDsgntdAcctStatInq.cs" />
+    <Compile Include="ESB\DepositAccount\PreDsgntdLmtHisInq.cs" />
+    <Compile Include="ESB\DepositAccount\PreDsgntdLmtMod.cs" />
+    <Compile Include="ESB\DepositAccount\TxnLmtListInq.cs" />
+    <Compile Include="ESB\DepositAccount\UnauthTxnListInq.cs" />
+    <Compile Include="ESB\DepositAccount\FISCTxnSummInq.cs" />
+    <Compile Include="ESB\DepositAccount\ZeroBalAcctInq.cs" />
+    <Compile Include="ESB\eLoan\AttchDocListInq.cs" />
+    <Compile Include="ESB\eLoan\AttchDocLnkInq.cs" />
+    <Compile Include="ESB\eLoan\DsbrInfoAdd.cs" />
+    <Compile Include="ESB\eLoan\LoanAppStatInq.cs" />
+    <Compile Include="ESB\eLoan\LoanCtrctAdd.cs" />
+    <Compile Include="ESB\eLoan\LoanRenewInfoInq.cs" />
+    <Compile Include="ESB\eLoan\LoanRenewStatMod.cs" />
+    <Compile Include="ESB\eLoan\LoanSalesQuoteAppealInq.cs" />
+    <Compile Include="ESB\eLoan\LoanSalesQuoteInq.cs" />
+    <Compile Include="ESB\eLoan\PrectrctInq.cs" />
+    <Compile Include="ESB\EsbModels.cs" />
+    <Compile Include="ESB\eStatement\CardPndngDtlsInq.cs" />
+    <Compile Include="ESB\eStatement\eStmtDtlsInq.cs" />
+    <Compile Include="ESB\Loan\eJCICActInq.cs" />
+    <Compile Include="ESB\Loan\LoanEarlyTermSim.cs" />
+    <Compile Include="ESB\Loan\OvrdListInq.cs" />
+    <Compile Include="ESB\Loan\LoanStatInq.cs" />
+    <Compile Include="ESB\Loan\PmtScheInq.cs" />
+    <Compile Include="ESB\PaymentOrder\FundXferAdd.cs" />
+    <Compile Include="ESB\PaymentOrder\FiscTxnLogDtlsInq.cs" />
+    <Compile Include="ESB\PaymentOrder\FiscTxnLogSummInq.cs" />
+    <Compile Include="ESB\PaymentOrder\PmtAdd.cs" />
+    <Compile Include="ESB\PaymentOrder\PmtInq.cs" />
+    <Compile Include="ESB\PaymentOrder\TWDFundXferAdd.cs" />
+    <Compile Include="ESB\Payment\UnlockInq.cs" />
+    <Compile Include="ESB\Payment\UnlockAdd.cs" />
+    <Compile Include="ESB\Payment\LockAdd.cs" />
+    <Compile Include="ESB\RewardPoints\PointCampGrpInq.cs" />
+    <Compile Include="ESB\RewardPoints\PointCampInq.cs" />
+    <Compile Include="ESB\RewardPoints\PointVndrInq.cs" />
+    <Compile Include="ESB\RewardPoints\RwdPntsAwardsAdd.cs" />
+    <Compile Include="ESB\RewardPoints\RwdPntsCustStatInq.cs" />
+    <Compile Include="ESB\RewardPoints\RwdPntsExpInq.cs" />
+    <Compile Include="ESB\RewardPoints\RwdPntsHistInq.cs" />
+    <Compile Include="ESB\RewardPoints\RwdPntsInq.cs" />
+    <Compile Include="ESB\RewardPoints\VndrRwdPntsInq.cs" />
+    <Compile Include="ESB\SelfChannel\SelfChanAcctBalDtlsInq.cs" />
+    <Compile Include="ESB\TDAccount\TDAcctDtlHisInq.cs" />
+    <Compile Include="ESB\TDAccount\TDAcctDtlInq.cs" />
+    <Compile Include="ESB\TDAccount\TDAcctOpnCalInq.cs" />
+    <Compile Include="ESB\TDAccount\TDCal.cs" />
+    <Compile Include="ESB\TDAccount\TDCalInq.cs" />
+    <Compile Include="ESB\TDAccount\TDCtrctCan.cs" />
+    <Compile Include="ESB\TDAccount\TDCtrctContMod.cs" />
+    <Compile Include="ESB\TDAccount\TDPreClsCal.cs" />
+    <Compile Include="ESB\TDAccount\TDTermCalCan.cs" />
+    <Compile Include="ESB\Wallet\WalletAutoLoadInq.cs" />
+    <Compile Include="ESB\Wallet\WalletProfInq.cs" />
+    <Compile Include="MIP\Resend.cs" />
+    <Compile Include="MIP\MsgSend.cs" />
+    <Compile Include="MIP\QueryResult.cs" />
+    <Compile Include="OTP\OtpModels.cs" />
+    <Compile Include="OTP\svGet_Device_Status.cs" />
+    <Compile Include="OTP\svVerify_SMS.cs" />
+    <Compile Include="OTP\svSend_SMS.cs" />
+    <Compile Include="OTP\svDeRegister.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\RegExConst.cs" />
+    <Compile Include="BMS\Common\Bank.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

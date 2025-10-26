@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Customer/CustProfAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>Customer</ServiceDomain>  
+      <OperationName>CustProfAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:CustProfAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>CU03</v11:TxnId>  
+        <v11:TxnNo>CU0300001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <!--Optional:-->  
+        <v11:ValidateOnly>false</v11:ValidateOnly>  
+        <!--Optional:-->  
+        <v11:Payload> 
+          <v11:CustEngName>Henry Lu</v11:CustEngName>  
+          <v11:CustChnName>盧小乖</v11:CustChnName>  
+          <!--1 or more repetitions:-->  
+          <v11:CustShrtNameInfo> 
+            <v11:CustShrtName>Henry</v11:CustShrtName> 
+          </v11:CustShrtNameInfo>  
+          <v11:Mnem>Y123789456</v11:Mnem>  
+          <v11:AOEmplNo>STR</v11:AOEmplNo>  
+          <v11:Sctr>1000</v11:Sctr>  
+          <v11:Indstry>STR</v11:Indstry>  
+          <v11:Tgt>999</v11:Tgt>  
+          <v11:CustStat>2</v11:CustStat>  
+          <v11:Natl>TW</v11:Natl>  
+          <v11:Res>TW</v11:Res>  
+          <v11:Lang>STR</v11:Lang>  
+          <v11:CustPermId>Y123789456</v11:CustPermId>  
+          <!--1 or more repetitions:-->  
+          <v11:CntctDtlsInfo> 
+            <!--Optional:-->  
+            <v11:ResPhnNo>TW</v11:ResPhnNo>  
+            <v11:MobNo>STR</v11:MobNo> 
+          </v11:CntctDtlsInfo>  
+          <v11:BirthDay>19740101</v11:BirthDay>  
+          <!--Optional:-->  
+          <v11:Gndr>MALE</v11:Gndr>  
+          <!--Optional:-->  
+          <v11:MrtlStat>SINGLE</v11:MrtlStat>  
+          <!--1 or more repetitions:-->  
+          <v11:AcctOpnRsnRec> 
+            <v11:AcctOpnRsn>STR</v11:AcctOpnRsn> 
+          </v11:AcctOpnRsnRec>  
+          <!--Optional:-->  
+          <v11:EduLvl>DEGREE</v11:EduLvl>  
+          <v11:IndstryType>060000</v11:IndstryType>  
+          <v11:IndstryObj>060000</v11:IndstryObj>  
+          <!--Optional:-->  
+          <v11:GrpCo>CORBAN</v11:GrpCo>  
+          <!--Optional:-->  
+          <v11:EmplNo>223432</v11:EmplNo>  
+          <!--Optional:-->  
+          <v11:DgtlAcctVrfy>2566-20200910</v11:DgtlAcctVrfy>  
+          <!--Optional:-->  
+          <v11:CIFCloseDt>20191225</v11:CIFCloseDt>  
+          <!--Optional:-->  
+          <v11:TaxFreeFlg>Y</v11:TaxFreeFlg>  
+          <!--Optional:-->  
+          <v11:PIPAFlg>Y</v11:PIPAFlg>  
+          <!--Optional:-->  
+          <v11:RelnRMCode>1</v11:RelnRMCode>  
+          <!--Optional:-->  
+          <v11:FXId>3</v11:FXId>  
+          <!--Optional:-->  
+          <v11:IndstryCode>25</v11:IndstryCode>  
+          <!--Optional:-->  
+          <v11:PIDIssLoc>63000000</v11:PIDIssLoc>  
+          <v11:NHIFlg>Y</v11:NHIFlg>  
+          <v11:Rsdnt183Flg>Y</v11:Rsdnt183Flg>  
+          <!--Optional:-->  
+          <v11:L3PtyXSellFlg>Y</v11:L3PtyXSellFlg>  
+          <!--Optional:-->  
+          <v11:StkhldrToken>STAKE HOLDER</v11:StkhldrToken>  
+          <v11:RsdntAddr> 
+            <v11:AddrZip>10040</v11:AddrZip>  
+            <v11:St>信義路五段</v11:St>  
+            <v11:Addr>190號</v11:Addr>  
+            <v11:TownCnty>台北市</v11:TownCnty>  
+            <v11:Cntry>台灣</v11:Cntry> 
+          </v11:RsdntAddr>  
+          <!--Optional:-->  
+          <v11:PinYinName>PinYin</v11:PinYinName>  
+          <!--Optional:-->  
+          <v11:LoanLmtTtl>11819.21</v11:LoanLmtTtl>  
+          <!--Optional:-->  
+          <v11:Cntry>台灣</v11:Cntry>  
+          <!--Optional:-->  
+          <v11:CIFAddDate>20191218</v11:CIFAddDate> 
+        </v11:Payload> 
+      </v11:ServiceBody> 
+    </v11:CustProfAddRq> 
+  </soap:Body> 
+</soap:Envelope>

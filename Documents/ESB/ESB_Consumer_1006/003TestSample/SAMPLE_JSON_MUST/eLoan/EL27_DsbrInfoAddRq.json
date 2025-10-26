@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "eLoan",
+    "OperationName" : "DsbrInfoAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "DsbrInfoAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "EL27",
+        "TxnNo" : "af3a317b-1720-4faa-983f-62855b9be0f9DAdUCFBdVg9d"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "S999999999",
+        "AppRefNo" : "YYYYMMDD999SS9999",
+        "AppNo" : "YYYYMMDD999SS9999S",
+        "RmtBankType" : "1",
+        "BankCode" : "8230001",
+        "RepmtCycl" : "1"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "BankCard",
+    "OperationName" : "BankCardHistInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "BankCardHistInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "BC05",
+        "TxnNo" : "BC0500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "CardHistRec" : [ {
+          "CusPermtId" : "A223456789",
+          "ChnName" : "陳正卡",
+          "CardType" : "1",
+          "CardTypeName" : "Visa Debit",
+          "CardFace" : "VC",
+          "CardFaceName" : "VISA普卡",
+          "CardAtt" : "0",
+          "CardAttName" : "正卡",
+          "DbAcctNo" : "0001200000001888",
+          "CardNo" : "4020160418174011",
+          "OldCardNo" : "4020160418174444",
+          "CardStatCode" : "7",
+          "CardStatName" : "作廢",
+          "Date" : "2016/06/08",
+          "Time" : "15:28:20",
+          "SrcCode" : "TWCCS",
+          "TlrId" : "ESBUSER",
+          "CardGrade" : "W",
+          "GrpCode" : "0000",
+          "ElekCardType" : "0"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

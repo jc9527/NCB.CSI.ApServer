@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "PointCampAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "PointCampAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP11",
+        "TxnNo" : "RP1100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "E000",
+        "RtrnDesc" : "200 {E000}",
+        "PointCampAddRec" : {
+          "FnctCode" : "ADD"
+        }
+      }
+    }
+  }
+}

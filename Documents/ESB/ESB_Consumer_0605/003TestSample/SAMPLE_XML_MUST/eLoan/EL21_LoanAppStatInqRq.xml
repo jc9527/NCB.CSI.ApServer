@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/eLoan/LoanAppStatInqRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>eLoan</ServiceDomain>  
+      <OperationName>LoanAppStatInq</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:LoanAppStatInqRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>EL21</v11:TxnId>  
+        <v11:TxnNo>af3a317b-1720-4faa-983f-62855b9be0f9DAdUCFBdVg9d</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <!--Optional:-->  
+        <v11:CustPermId>S999999999</v11:CustPermId>  
+        <!--Optional:-->  
+        <v11:AppRefNo>YYYYMMDD999SS9999</v11:AppRefNo> 
+      </v11:ServiceBody> 
+    </v11:LoanAppStatInqRq> 
+  </soap:Body> 
+</soap:Envelope>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://https://www.nextbank.com.tw//xsd/TW/DebitCard/DbCardLmtModRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>DebitCard</ServiceDomain>  
+      <OperationName>DbCardLmtMod</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:DbCardLmtModRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>DC05</v11:TxnId>  
+        <v11:TxnNo>DC0500001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:RtrnCode>00</v11:RtrnCode> 
+      </v11:ServiceBody> 
+    </v11:DbCardLmtModRs> 
+  </soap:Body> 
+</soap:Envelope>

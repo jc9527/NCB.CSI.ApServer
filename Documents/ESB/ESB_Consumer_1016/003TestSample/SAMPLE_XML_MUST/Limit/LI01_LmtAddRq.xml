@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Limit/LmtAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>Limit</ServiceDomain>  
+      <OperationName>LmtAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:LmtAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>LI01</v11:TxnId>  
+        <v11:TxnNo>LI0100001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <!--Optional:-->  
+        <v11:ValidateOnly>false</v11:ValidateOnly>  
+        <v11:LmtFeeType>1</v11:LmtFeeType>  
+        <v11:LmtId>NEW</v11:LmtId>  
+        <!--Optional:-->  
+        <v11:LbltyNo>1000000004</v11:LbltyNo>  
+        <!--Optional:-->  
+        <v11:LmtProdId>8100</v11:LmtProdId>  
+        <!--Optional:-->  
+        <v11:AppNo>ELOAN12034</v11:AppNo>  
+        <!--Optional:-->  
+        <v11:Ccy>TWD</v11:Ccy>  
+        <!--Optional:-->  
+        <v11:AvailFlg>Y</v11:AvailFlg>  
+        <!--Optional:-->  
+        <v11:ApprvDate>20191203</v11:ApprvDate>  
+        <!--Optional:-->  
+        <v11:DfltApprvDate>20191203</v11:DfltApprvDate>  
+        <v11:RvwFreq>20201203M0101</v11:RvwFreq>  
+        <v11:LmtExpDate>20201203</v11:LmtExpDate>  
+        <!--Optional:-->  
+        <v11:AppDate>20201203</v11:AppDate>  
+        <!--Optional:-->  
+        <v11:LmtEffData>20201203</v11:LmtEffData>  
+        <v11:ExtblLmtExpDate>20201204</v11:ExtblLmtExpDate>  
+        <!--Optional:-->  
+        <v11:LmtAmt>65000</v11:LmtAmt>  
+        <!--Optional:-->  
+        <v11:MaxLmtAmt>65000</v11:MaxLmtAmt>  
+        <!--Optional:-->  
+        <v11:LmtType>FIXED</v11:LmtType>  
+        <!--Optional:-->  
+        <v11:AllwLmtCancFlg>1</v11:AllwLmtCancFlg>  
+        <v11:LmtCtrctExpDate>20271203</v11:LmtCtrctExpDate>  
+        <!--Optional:-->  
+        <v11:LmtFeeInfo> 
+          <v11:DbAcct>88610000000034</v11:DbAcct>  
+          <v11:ChrgDate>20191203</v11:ChrgDate>  
+          <!--1 or more repetitions:-->  
+          <v11:ChrgCodeRec> 
+            <v11:ChrgCode>LIMITSETFEE</v11:ChrgCode> 
+          </v11:ChrgCodeRec>  
+          <!--1 or more repetitions:-->  
+          <v11:HdlgChrgAmtRec> 
+            <v11:HdlgChrgAmt>2000</v11:HdlgChrgAmt> 
+          </v11:HdlgChrgAmtRec> 
+        </v11:LmtFeeInfo>  
+        <!--Zero or more repetitions:-->  
+        <v11:OvrrdRec></v11:OvrrdRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:UpdtDateRec></v11:UpdtDateRec>  
+        <!--Optional:-->  
+        <v11:APIKey>IF05005</v11:APIKey> 
+      </v11:ServiceBody> 
+    </v11:LmtAddRq> 
+  </soap:Body> 
+</soap:Envelope>

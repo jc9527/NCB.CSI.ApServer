@@ -1,0 +1,38 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardResndAppntInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "DbCardResndAppntInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC17",
+        "TxnNo" : "DC1700001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "CardNoRec" : [ {
+          "CardNo" : "4563020616112800",
+          "CustChnName" : "王小明",
+          "NewEndDate" : "20010101",
+          "ToCMSFlg" : "Y"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

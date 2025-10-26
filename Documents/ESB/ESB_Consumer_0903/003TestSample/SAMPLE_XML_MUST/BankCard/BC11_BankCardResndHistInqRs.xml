@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/BankCard/BankCardResndHistInqRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>BankCard</ServiceDomain>  
+      <OperationName>BankCardResndHistInq</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:BankCardResndHistInqRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>BC11</v11:TxnId>  
+        <v11:TxnNo>BC1100001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:RtrnCode>00</v11:RtrnCode>  
+        <!--Optional:-->  
+        <v11:RtrnDesc>200{00}</v11:RtrnDesc>  
+        <!--Zero or more repetitions:-->  
+        <v11:CardResndHistRec> 
+          <v11:CustPermId>A113456789</v11:CustPermId>  
+          <v11:CardChnName>林正卡</v11:CardChnName>  
+          <v11:CardType>1</v11:CardType>  
+          <v11:CardTypeName>Visa Debit</v11:CardTypeName>  
+          <v11:CardFace>VC</v11:CardFace>  
+          <v11:CardFaceName>VISA普卡</v11:CardFaceName>  
+          <v11:CardAtt>0</v11:CardAtt>  
+          <v11:CardAttName>正卡</v11:CardAttName>  
+          <v11:DbAcctNo>0001200000001234</v11:DbAcctNo>  
+          <v11:CardNo>4020160604105628</v11:CardNo>  
+          <v11:OldCardNo>4020160418174444</v11:OldCardNo>  
+          <v11:ResndDate>2016/06/04</v11:ResndDate>  
+          <v11:ResndSrcId>CMS</v11:ResndSrcId>  
+          <v11:ResndAppId>1122</v11:ResndAppId>  
+          <v11:AcidntType>A</v11:AcidntType>  
+          <v11:AcidntTypeName>掛失</v11:AcidntTypeName>  
+          <v11:AcidntDate>2016/01/02</v11:AcidntDate>  
+          <v11:AcidntSrcId>TWCCS</v11:AcidntSrcId>  
+          <v11:AcidntAppId>ESBUSER</v11:AcidntAppId> 
+        </v11:CardResndHistRec>  
+        <!--Optional:-->  
+        <v11:ControlRec> 
+          <v11:CurPage>1</v11:CurPage>  
+          <v11:NoOfCurPage>1</v11:NoOfCurPage>  
+          <v11:TtlPageNo>1</v11:TtlPageNo>  
+          <v11:NoOfRec>1</v11:NoOfRec> 
+        </v11:ControlRec> 
+      </v11:ServiceBody> 
+    </v11:BankCardResndHistInqRs> 
+  </soap:Body> 
+</soap:Envelope>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/eLoan/LoanRenewStatModRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>eLoan</ServiceDomain>  
+      <OperationName>LoanRenewStatMod</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:LoanRenewStatModRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>EL26</v11:TxnId>  
+        <v11:TxnNo>af3a317b-1720-4faa-983f-62855b9be0f9DAdUCFBdVg9d</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:CustPermId>S999999999</v11:CustPermId>  
+        <v11:AppNo>YYYYMMDD999SS9999S</v11:AppNo>  
+        <v11:RenewFlg>1</v11:RenewFlg>  
+        <!--Optional:-->  
+        <v11:NonRenewRsn>1</v11:NonRenewRsn>  
+        <v11:IPAddr>STR</v11:IPAddr>  
+        <v11:RplyDate>yyyy-MM-ddTHH:mm:ssZ</v11:RplyDate> 
+      </v11:ServiceBody> 
+    </v11:LoanRenewStatModRq> 
+  </soap:Body> 
+</soap:Envelope>

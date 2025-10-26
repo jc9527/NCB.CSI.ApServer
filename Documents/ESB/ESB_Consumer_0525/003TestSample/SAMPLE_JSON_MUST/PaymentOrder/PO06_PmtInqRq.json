@@ -1,0 +1,26 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "PmtInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "PmtInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO06",
+        "TxnNo" : "PO0600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "StartDate" : "2016-05-24",
+        "EndDate" : "2016-11-25",
+        "CustPermId" : "A123456789"
+      }
+    }
+  }
+}

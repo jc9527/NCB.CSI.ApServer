@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "CardMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CardModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC09",
+        "TxnNo" : "DC0900001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CardNo" : "4563020616112800",
+        "BlkCode1" : "1",
+        "UpdtDate" : "20190608",
+        "UpdtTime" : "115814",
+        "UpdtUserID" : "user1",
+        "LostFeeFlg" : "Y"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "TDAccount",
+    "OperationName" : "TDTermCalCan",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "TDTermCalCanRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "TD16",
+        "TxnNo" : "TD1600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "AcctNo" : "08640000000158",
+        "ValidateOnly" : false,
+        "Payload" : {
+          "PreClsOpt" : "1"
+        }
+      }
+    }
+  }
+}

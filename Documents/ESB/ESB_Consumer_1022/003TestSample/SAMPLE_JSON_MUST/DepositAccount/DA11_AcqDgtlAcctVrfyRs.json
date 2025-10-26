@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "AcqDgtlAcctVrfy",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "AcqDgtlAcctVrfyRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA11",
+        "TxnNo" : "DA1100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "4001"
+        "RtrnDesc" : "200{4001}",
+        "AcctType" : "02",
+        "VrfyRslt" : "00",
+        "AcctVrfyRslt" : "00"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "NostroAcctOpn",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "NostroAcctOpnRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA19",
+        "TxnNo" : "DA1900001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "NostroAcctId" : "601086",
+        "CustPermId" : "999999",
+        "ProdCode" : "6010",
+        "Ccy" : "TWD",
+        "ReconAcct" : "Y",
+        "CntngntIntrstType" : "B"
+      }
+    }
+  }
+}

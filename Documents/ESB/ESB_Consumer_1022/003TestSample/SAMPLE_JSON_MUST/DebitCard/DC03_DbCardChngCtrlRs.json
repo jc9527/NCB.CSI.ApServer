@@ -1,0 +1,25 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardChngCtrl",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "DbCardChngCtrlRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC03",
+        "TxnNo" : "DC0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+      }
+    }
+  }
+}

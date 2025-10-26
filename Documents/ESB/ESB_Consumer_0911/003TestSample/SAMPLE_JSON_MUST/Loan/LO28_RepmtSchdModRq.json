@@ -1,0 +1,33 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "RepmtSchdMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "RepmtSchdModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO28",
+        "TxnNo" : "LO2800001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "ArrngId" : "NEW",
+          "ProdId" : "STR",
+          "EffDate" : "STR",
+          "StlInfo" : [ {
+            "DbAcctFlg" : "STR",
+            "CrAcctFlg" : "STR"
+          } ]
+        }
+      }
+    }
+  }
+}

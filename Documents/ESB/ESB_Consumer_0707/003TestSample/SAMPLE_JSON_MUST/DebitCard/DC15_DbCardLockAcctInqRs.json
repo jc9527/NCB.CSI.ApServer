@@ -1,0 +1,37 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardLockAcctInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "DbCardLockAcctInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC15",
+        "TxnNo" : "DC1500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "CardTxnRec" : [ {
+          "CardNo" : "4563020616112800",
+          "AcctNo" : "4563020616112800",
+          "AcctType" : "2"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

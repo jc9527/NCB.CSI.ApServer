@@ -1,0 +1,27 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardLmtInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "DbCardLmtInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC04",
+        "TxnNo" : "DC0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "PageNo" : 1,
+        "NoOfPage" : 200,
+        "InqType" : "2",
+        "InqKeyId" : "5211958800000591"
+      }
+    }
+  }
+}

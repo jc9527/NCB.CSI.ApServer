@@ -1,0 +1,763 @@
+Date: Sat, 14 Nov 2020 21:47:18 +0800 (CST)
+Message-ID: <1669990035.31986.1605361638627@gcp-confluence.nextbank.com.tw>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_31985_501866675.1605361638627"
+
+------=_Part_31985_501866675.1605361638627
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>=E5=AE=A2=E6=9C=8D - =E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>=E5=AE=A2=E6=9C=8D - =E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=87=
+=E6=96=99</h1>
+    <div class=3D"Section1">
+        <div class=3D"confluence-information-macro confluence-information-m=
+acro-information">
+<p class=3D"title">Purpose</p>
+<span class=3D"aui-icon aui-icon-small aui-iconfont-info confluence-informa=
+tion-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<h1 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-Purpose">Purpose</h1>
+<p>=E5=AE=A2=E6=9C=8D=E4=BA=BA=E5=93=A1=E6=9C=83=E5=BE=9E=E5=85=B6=E7=B3=BB=
+=E7=B5=B1=E4=BB=8B=E9=9D=A2=E5=8D=94=E5=8A=A9=E7=94=A8=E6=88=B6=E4=BF=AE=E6=
+=94=B9=E6=9C=83=E5=93=A1=E8=B3=87=E6=96=99=EF=BC=8C=E7=95=B6=E4=BF=AE=E6=94=
+=B9=E9=83=A8=E5=88=86=E6=9C=83=E5=93=A1=E8=B3=87=E6=96=99=E6=99=82=EF=BC=8C=
+=E7=82=BA=E7=B6=AD=E6=8C=81=E8=B3=87=E6=96=99=E4=B8=80=E8=87=B4=E6=80=A7=EF=
+=BC=8C=E9=A0=88=E4=B8=80=E4=BD=B5=E4=BF=AE=E6=94=B9T24=E7=9A=84=E7=94=A8=E6=
+=88=B6=E8=B3=87=E6=96=99=E3=80=82</p>
+<h1 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-Goal">Goal</h1>
+<p>=E5=85=B1=E5=9B=9B=E5=80=8B=E6=AC=84=E4=BD=8D</p>
+<ol>
+<li><strong>=E4=BD=BF=E7=94=A8=E8=80=85=E4=BB=A3=E8=99=9F</strong></li>
+<li><strong>=E6=89=8B=E6=A9=9F</strong></li>
+<li><strong>email</strong></li>
+<li><strong>=E9=80=9A=E8=A8=8A=E5=9C=B0=E5=9D=80</strong></li>
+</ol>
+<p>=E6=8F=90=E4=BE=9B=E4=B8=80=E9=9A=BB=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99=E7=9A=84API=EF=BC=8C=E4=BF=AE=E6=94=B9=E5=BE=8C=E9=99=A4=
+=E4=BA=86=E6=9B=B4=E6=96=B0=E4=B8=AD=E5=8F=B0DB=EF=BC=8C=E4=B9=9F=E8=A6=81=
+=E4=B8=80=E4=BD=B5=E6=9B=B4=E6=96=B0T24=E7=9A=84=E5=B0=8D=E6=87=89=E6=AC=84=
+=E4=BD=8D=E3=80=82</p>
+<p>1.&nbsp;=E4=BD=BF=E7=94=A8=E8=80=85=E4=BB=A3=E8=99=9F &lt;- =E5=8E=9F=E6=
+=9C=AC=E5=B0=B1=E5=83=85=E5=AD=98=E5=9C=A8=E6=96=BC=E4=B8=AD=E5=8F=B0</p>
+<p>2.&nbsp;=E6=89=8B=E6=A9=9F=E3=80=81email=E3=80=81=E9=80=9A=E8=A8=8A=E5=
+=9C=B0=E5=9D=80 &lt;- =E6=A0=B8=E5=BF=83CIF=E4=B9=9F=E6=9C=89=EF=BC=8C=E6=
+=89=80=E4=BB=A5=E9=80=8F=E9=81=8E=E4=B8=AD=E5=8F=B0API=EF=BC=8C=E6=9B=B4=E6=
+=96=B0=E4=B8=AD=E5=8F=B0=E8=B3=87=E6=96=99=E5=BE=8C=E5=86=8D=E6=9B=B4=E6=96=
+=B0CIF</p>
+<p><span style=3D"color: rgb(23,43,77);"><br></span></p>
+</div>
+</div>
+<p><br></p>
+<p><style type=3D"text/css">/*<![CDATA[*/
+div.rbtoc1605361638432 {padding: 0px;}
+div.rbtoc1605361638432 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1605361638432 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style></p>
+<div class=3D"toc-macro rbtoc1605361638432">=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-Purpose">Purpose</a></li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-Goal">Goal</a></li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-EntryPoint">Entry Point</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-Method:POST">Method: POST</a></li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-URI:/intranet/api/v1.0/member/UpdateMemberInfo">URI:&nbs=
+p;/intranet/api/v1.0/member/UpdateMemberInfo</a></li>=20
+</ul> </li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-Request">Request</a></li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-=E7=A8=8B=E5=BC=8F=E9=82=8F=E8=BC=AF">=E7=A8=8B=E5=BC=8F=
+=E9=82=8F=E8=BC=AF</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-RequestExample">Request Example</a></li>=20
+</ul> </li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-Response">Response</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-=E6=88=90=E5=8A=9F">=E6=88=90=E5=8A=9F</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-ResponseSuccessExample">Response Success Example</a></li=
+>=20
+</ul> </li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-=E5=A4=B1=E6=95=97">=E5=A4=B1=E6=95=97</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-ResponseFailExample">Response Fail Example</a></li>=20
+</ul> </li>=20
+</ul> </li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-ESBTargets">ESB Targets</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-CU20_CustProfSync=EF=BC=88=E5=90=8C=E6=AD=A5=E7=95=B0=E5=
+=8B=95CIF=E8=B3=87=E6=96=99=EF=BC=89">CU20_CustProfSync=EF=BC=88=E5=90=8C=
+=E6=AD=A5=E7=95=B0=E5=8B=95CIF=E8=B3=87=E6=96=99=EF=BC=89</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-TxnId:CU20">TxnId : CU20</a></li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-ServiceDomain:Customer">ServiceDomain :&nbsp;Customer</a=
+></li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-OperationName:CustProfSync">OperationName :&nbsp;CustPro=
+fSync</a></li>=20
+</ul> </li>=20
+</ul> </li>=20
+<li><a href=3D"#id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=
+=E8=B3=87=E6=96=99-ErrorCode">Error Code</a></li>=20
+</ul>=20
+</div>
+<p></p>
+<p><br></p>
+<h1 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-EntryPoint">Entry Point</h1>
+<h2 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-Method:POST">Method: POST</h2>
+<h2 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-URI:/intranet/api/v1.0/member/UpdateMemberInfo">URI:&nbsp;/int=
+ranet<span style=3D"color: rgb(23,43,77);">/api/v1.0/member/UpdateMemberInf=
+o</span></h2>
+<p><br></p>
+<h1 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-Request">Request</h1>
+<div class=3D"table-wrap">
+<table class=3D"wrapped confluenceTable">
+<colgroup>
+<col style=3D"width: 141.0px;">
+<col style=3D"width: 60.0px;">
+<col style=3D"width: 83.0px;">
+<col style=3D"width: 144.0px;">
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh">=E6=AC=84=E4=BD=8D=E5=90=8D=E7=A8=B1</th>
+<th class=3D"confluenceTh">=E5=9E=8B=E6=85=8B</th>
+<th colspan=3D"1" class=3D"confluenceTh">=E5=BF=85=E5=A1=AB/=E9=81=B8=E5=A1=
+=AB</th>
+<th class=3D"confluenceTh">=E8=AA=AA=E6=98=8E</th>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">cifNo</td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">M</td>
+<td colspan=3D"1" class=3D"confluenceTd">CIFNo</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">phone</td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd">=E6=89=8B=E6=A9=9F</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">email</td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd">email</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68=
+);">maillingCity</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68=
+);">=E9=80=9A=E8=A8=8A=E5=9C=B0=E5=9D=80-=E7=B8=A3</span><span style=3D"col=
+or: rgb(68,68,68);">=E5=B8=82</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68=
+);">mailingDistrict</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68=
+);">=E9=80=9A=E8=A8=8A=E5=9C=B0=E5=9D=80-=E9=84=89=E9=8E=AE=E5=B8=82=E5=8D=
+=80&nbsp;</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68=
+);">mailingAddress</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68=
+);">=E9=80=9A=E8=A8=8A=E5=9C=B0=E5=9D=80-=E5=9C=B0=E5=9D=80</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68=
+);">mailingPostalCode</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68=
+);">=E9=80=9A=E8=A8=8A=E5=9C=B0=E5=9D=80-=E9=83=B5=E9=81=9E=E5=8D=80=E8=99=
+=9F</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(23,43,77=
+);">residentCity</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(23,43,77=
+);">=E6=88=B6=E7=B1=8D=E5=9C=B0=E5=9D=80-=E7=B8=A3=E5=B8=82</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(23,43,77=
+);">residentDistrict</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(23,43,77=
+);">=E6=88=B6=E7=B1=8D=E5=9C=B0=E5=9D=80-=E9=84=89=E9=8E=AE=E5=B8=82=E5=8D=
+=80</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(23,43,77=
+);">residentAddress</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(23,43,77=
+);">=E6=88=B6=E7=B1=8D=E5=9C=B0=E5=9D=80-=E5=9C=B0=E5=9D=80</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(23,43,77=
+);">residentPostalCode</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">String</td>
+<td colspan=3D"1" class=3D"confluenceTd">O</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(23,43,77=
+);">=E6=88=B6=E7=B1=8D=E5=9C=B0=E5=9D=80-=E9=83=B5=E9=81=9E=E5=8D=80=E8=99=
+=9F</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<h1 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-=E7=A8=8B=E5=BC=8F=E9=82=8F=E8=BC=AF">=E7=A8=8B=E5=BC=8F=E9=82=
+=8F=E8=BC=AF</h1>
+<ol>
+<li>=E5=88=A4=E6=96=B7cifNo=E6=98=AF=E5=90=A6=E6=9C=89=E5=80=BC=EF=BC=8C=E8=
+=8B=A5=E7=84=A1=E5=80=BC=EF=BC=8C=E5=9B=9E=E5=82=B3Error</li>
+<li>=E5=88=A4=E6=96=B7Request=E4=B8=AD=EF=BC=8C=E9=82=A3=E4=BA=9BData=E6=9C=
+=89=E5=80=BC=EF=BC=8C=E4=B8=94=E9=9D=9E=E7=82=BA=E7=A9=BA=E5=AD=97=E4=B8=B2
+<ol>
+<li><span style=3D"color: rgb(255,0,0);">=E8=8B=A5 rq.email =E6=9C=89=E5=B8=
+=B6=E4=B8=94=E4=B8=8D=E7=82=BA=E7=A9=BA=E5=80=BC=EF=BC=8C=E6=AA=A2=E6=9F=A5=
+Email=E6=98=AF=E5=90=A6=E7=82=BA=E4=B8=80=EF=BC=9B=E5=A6=82=E6=9E=9C=E4=B8=
+=8D=E5=94=AF=E4=B8=80=EF=BC=8C=E5=90=90 EMAIL_IS_EXIST</span>
+<ol>
+<li><span style=3D"color: rgb(255,0,0);">=E8=B3=87=E6=96=99=E8=A1=A8=EF=BC=
+=9AMember.MemberProfile</span></li>
+</ol></li>
+<li><span style=3D"color: rgb(255,0,0);">=E8=8B=A5&nbsp;rq.phone =E6=9C=89=
+=E5=B8=B6=E4=B8=94=E4=B8=8D=E7=82=BA=E7=A9=BA=E5=80=BC=EF=BC=8Ccall&nbsp;<s=
+pan style=3D"color: rgb(51,102,255);"><a href=3D"/pages/viewpage.action?pag=
+eId=3D53411910">CU18_CustIdntIn=EF=BC=88Email(=E6=89=8B=E6=A9=9F)=E6=9F=A5=
+=E8=A9=A2=EF=BC=89</a></span></span>
+<ol>
+<li><span style=3D"color: rgb(255,0,0);">CustInfo.CustPermId =E6=9C=89=E5=
+=80=BC=EF=BC=8C=E5=90=90 error&nbsp;PHONE_IS_EXIST</span></li>
+</ol></li>
+</ol></li>
+<li>=E4=BD=BF=E7=94=A8=E8=A6=81=E6=9B=B4=E6=96=B0=E7=9A=84=E8=B3=87=E6=96=
+=99=EF=BC=8C=E5=91=BC=E5=8F=ABDataProvider=EF=BC=8C=E6=9B=B4=E6=96=B0DB =E6=
+=9C=83=E5=93=A1=E6=AA=94</li>
+<li><span style=3D"color: rgb(23,43,77);">=E5=A6=82=E6=9E=9C residentCity =
+=E6=9C=89=E5=80=BC or residentDistrict=E6=9C=89=E5=80=BC or&nbsp;residentAd=
+dress=E6=9C=89=E5=80=BC or&nbsp;residentPostalCode =E6=9C=89=E5=80=BC=EF=BC=
+=8C=E4=B8=8D=E7=94=A8=E5=91=BC=E5=8F=AB CU20</span></li>
+<li>=E4=B8=8A=E8=BF=B0=E6=A2=9D=E4=BB=B6=E4=BB=A5=E5=A4=96 =EF=BC=9A
+<ol>
+<li>=E4=BD=BF=E7=94=A8=E8=A6=81=E6=9B=B4=E6=96=B0=E7=9A=84=E8=B3=87=E6=96=
+=99=EF=BC=8C<span style=3D"color: rgb(255,0,0);">=E5=91=BC=E5=8F=AB call&nb=
+sp;<span style=3D"color: rgb(51,102,255);"><a href=3D"/pages/viewpage.actio=
+n?pageId=3D53411859">CU20_CustProfSync=EF=BC=88=E5=90=8C=E6=AD=A5=E7=95=B0=
+=E5=8B=95CIF=E8=B3=87=E6=96=99=EF=BC=89</a></span></span></li>
+</ol></li>
+</ol>
+<h3 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-RequestExample">Request Example</h3>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: xml; gutter: false; theme: Confluence" data-theme=3D"Confluence">{
+  "cifNo": "0123456789",
+  "email": "abc@def.com",
+  "mailingAddress": "Zhongzheng Road",
+  "mailingDistrict": "Zhongzheng District",
+  "mailingPostalCode": 111,
+  "maillingCity": "taipei",
+  "phone": "0912345678"
+}</pre>=20
+</div>
+</div>
+<h1 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-Response">Response</h1>
+<p>=E7=84=A1</p>
+<h3 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-=E6=88=90=E5=8A=9F"><span>=E6=88=90=E5=8A=9F</span></h3>
+<div class=3D"table-wrap">
+<table class=3D"relative-table wrapped confluenceTable" style=3D"width: 538=
+.519px;">
+<colgroup>
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+</colgroup>
+<tbody>
+<tr>
+<td style=3D"text-align: left;" colspan=3D"2" class=3D"confluenceTd"><p>=E6=
+=AC=84=E4=BD=8D=E5=90=8D=E7=A8=B1</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E4=B8=AD=E6=96=
+=87=E5=90=8D=E7=A8=B1</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E6=AC=84=E4=BD=
+=8D</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E8=AA=AA=E6=98=
+=8E</p></td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd">=E5=80=
+=BC</td>
+</tr>
+<tr>
+<td style=3D"text-align: left;" colspan=3D"2" class=3D"confluenceTd"><pre c=
+lass=3D"hljs"><code class=3D"json"><span class=3D"hljs-attr">success</span>=
+</code></pre></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E5=9F=B7=E8=A1=
+=8C=E7=B5=90=E6=9E=9C</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>boolean</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><pre class=3D"hljs">=
+<code class=3D"json"><span class=3D"hljs-literal">false&nbsp;=E4=BB=A3=E8=
+=A1=A8=E5=A4=B1=E6=95=97</span></code></pre></td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd">true</=
+td>
+</tr>
+<tr>
+<td style=3D"text-align: left;" colspan=3D"2" class=3D"confluenceTd">data</=
+td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd">=E5=9B=
+=9E=E6=87=89=E8=B3=87=E8=A8=8A</td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd"><span =
+style=3D"color: rgb(23,43,77);">object</span></td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd"><br></=
+td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd"><br></=
+td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-ResponseSuccessExample">Response Success Example</h4>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">{
+    "success": true, // true =E8=A1=A8=E7=A4=BA=E8=AB=8B=E6=B1=82=E7=B5=90=
+=E6=9E=9C=E8=BF=94=E5=9B=9E=E6=88=90=E5=8A=9F
+    "data": {
+       =20
+    }
+}</pre>=20
+</div>
+</div>
+<h3 class=3D"hljs" id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=
+=E5=93=A1=E8=B3=87=E6=96=99-=E5=A4=B1=E6=95=97">=E5=A4=B1=E6=95=97</h3>
+<div class=3D"table-wrap">
+<table class=3D"relative-table wrapped confluenceTable" style=3D"width: 567=
+.407px;">
+<colgroup>
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+<col style=3D"width: 0.0px;">
+</colgroup>
+<tbody>
+<tr>
+<td style=3D"text-align: left;" colspan=3D"2" class=3D"confluenceTd"><p>=E6=
+=AC=84=E4=BD=8D=E5=90=8D=E7=A8=B1</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E4=B8=AD=E6=96=
+=87=E5=90=8D=E7=A8=B1</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E6=AC=84=E4=BD=
+=8D</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E8=AA=AA=E6=98=
+=8E</p></td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd">=E5=80=
+=BC</td>
+</tr>
+<tr>
+<td style=3D"text-align: left;" colspan=3D"2" class=3D"confluenceTd"><pre c=
+lass=3D"hljs"><code class=3D"json"><span class=3D"hljs-attr">success</span>=
+</code></pre></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E5=9F=B7=E8=A1=
+=8C=E7=B5=90=E6=9E=9C</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>boolean</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><pre class=3D"hljs">=
+<code class=3D"json"><span class=3D"hljs-literal">false&nbsp;=E4=BB=A3=E8=
+=A1=A8=E5=A4=B1=E6=95=97</span></code></pre></td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd">false<=
+/td>
+</tr>
+<tr>
+<td style=3D"text-align: left;" colspan=3D"2" class=3D"confluenceTd"><pre c=
+lass=3D"hljs"><code class=3D"json"><span class=3D"hljs-attr">error</span></=
+code></pre></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E5=9B=9E=E6=87=
+=89=E8=B3=87=E8=A8=8A</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>object</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p><br></p></td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd"><br></=
+td>
+</tr>
+<tr>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p><br></p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p><code class=3D"js=
+on"><span class=3D"hljs-attr">errorCode</span></code></p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd">=E9=8C=AF=E8=AA=A4=
+=E4=BB=A3=E7=A2=BC</td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>string</p></td>
+<td style=3D"text-align: left;" class=3D"confluenceTd"><p>=E6=AA=94=E6=A1=
+=88=E5=88=AA=E9=99=A4=E9=8C=AF=E8=AA=A4=E6=99=82=E7=9A=84=E4=BB=A3=E7=A2=BC=
+</p></td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd"><br></=
+td>
+</tr>
+<tr>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd"><br></=
+td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd"><code =
+class=3D"json"><span class=3D"hljs-string">errorMessage</span></code></td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd">=E9=8C=
+=AF=E8=AA=A4=E8=A8=8A=E6=81=AF</td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd">string=
+</td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd">=E6=AA=
+=94=E6=A1=88=E5=88=AA=E9=99=A4=E9=8C=AF=E8=AA=A4=E6=99=82=E7=9A=84=E9=8C=AF=
+=E8=AA=A4=E8=A8=8A=E6=81=AF</td>
+<td style=3D"text-align: left;" colspan=3D"1" class=3D"confluenceTd"><br></=
+td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-ResponseFailExample">Response Fail Example</h4>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">{&nbsp;
+  "success":&nbsp;false, // false =E8=A1=A8=E7=A4=BA=E9=8C=AF=E8=AA=A4=EF=
+=BC=8C=E5=9B=9E=E5=82=B3=E9=8C=AF=E8=AA=A4=E7=B5=90=E6=9E=9C=E3=80=82
+  "error": {&nbsp;
+    "errorCode": string, //=E4=BE=8B=E5=A4=96=E4=BB=A3=E7=A2=BC=EF=BC=8C=E4=
+=BB=A5 =E5=A4=A7=E5=AF=AB=E8=88=87=E5=BA=95=E7=B7=9A=E5=91=BD=E5=90=8D e.g:=
+&nbsp;"ORDER_NOT_FOUND"&nbsp;or&nbsp;"10001"
+    "errorMessage": string //=E4=BB=A3=E7=A2=BC=E7=9A=84=E6=8F=8F=E8=BF=B0=
+=E8=A8=8A=E6=81=AF=EF=BC=8C e.g:&nbsp;"The member does not found"&nbsp;
+  }
+}</pre>=20
+</div>
+</div>
+<h1 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-ESBTargets"><span><br>ESB Targets</span></h1>
+<h2 class=3D"auto-cursor-target" id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=
+=B9=E6=9C=83=E5=93=A1=E8=B3=87=E6=96=99-CU20_CustProfSync=EF=BC=88=E5=90=8C=
+=E6=AD=A5=E7=95=B0=E5=8B=95CIF=E8=B3=87=E6=96=99=EF=BC=89"><a href=3D"https=
+://gcp-confluence.nextbank.com.tw/pages/viewpage.action?pageId=3D53411859" =
+style=3D"text-decoration: none;" rel=3D"nofollow">CU20_CustProfSync=EF=BC=
+=88=E5=90=8C=E6=AD=A5=E7=95=B0=E5=8B=95CIF=E8=B3=87=E6=96=99=EF=BC=89</a></=
+h2>
+<h3 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-TxnId:CU20"><span>TxnId : CU20</span></h3>
+<h3 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-ServiceDomain:Customer"><span>ServiceDomain :&nbsp;Customer</s=
+pan></h3>
+<h3 id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=B9=E6=9C=83=E5=93=A1=E8=B3=
+=87=E6=96=99-OperationName:CustProfSync"><span>OperationName :&nbsp;</span>=
+CustProfSync</h3>
+<h1 class=3D"auto-cursor-target" id=3D"id-=E5=AE=A2=E6=9C=8D=E4=BF=AE=E6=94=
+=B9=E6=9C=83=E5=93=A1=E8=B3=87=E6=96=99-ErrorCode">Error Code</h1>
+<div class=3D"table-wrap">
+<table class=3D"wrapped confluenceTable">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh">=E4=BB=A3=E7=A2=BC</th>
+<th class=3D"confluenceTh">=E8=AA=AA=E6=98=8E</th>
+</tr>
+<tr>
+<td class=3D"confluenceTd">PHONE_IS_EXIST</td>
+<td class=3D"confluenceTd">=E6=89=8B=E6=A9=9F=E8=99=9F=E7=A2=BC=E5=B7=B2=E5=
+=AD=98=E5=9C=A8</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(0,0,0);"=
+>EMAIL_IS_EXIST</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">=E4=BF=A1=E7=AE=B1=E5=B7=B2=E5=AD=
+=98=E5=9C=A8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<div class=3D"table-wrap">
+<table class=3D"wrapped confluenceTable">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh">Table =E5=90=8D=E7=A8=B1</th>
+<th class=3D"confluenceTh">Schema</th>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68);">=E6=9C=83=
+=E5=93=A1=E8=A1=A8</span></td>
+<td class=3D"confluenceTd"><span style=3D"color: rgb(68,68,68);">Member.Mem=
+berProfile</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>
+------=_Part_31985_501866675.1605361638627--

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Limit/LmtModRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>Limit</ServiceDomain>  
+      <OperationName>LmtMod</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:LmtModRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>LI09</v11:TxnId>  
+        <v11:TxnNo>LI0900001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <!--Optional:-->  
+        <v11:ValidateOnly>false</v11:ValidateOnly>  
+        <v11:LmtRefNo>1000000679.0008100.01</v11:LmtRefNo>  
+        <!--Optional:-->  
+        <v11:AppNo>ELoan9883183</v11:AppNo>  
+        <!--Optional:-->  
+        <v11:Ccy>TWD</v11:Ccy>  
+        <v11:AvailFlg>Y</v11:AvailFlg>  
+        <!--Optional:-->  
+        <v11:ApprvDate>20191203</v11:ApprvDate>  
+        <!--Optional:-->  
+        <v11:DfltApprvDate>20191203</v11:DfltApprvDate>  
+        <!--Optional:-->  
+        <v11:RvwFreq>20201203M0101</v11:RvwFreq>  
+        <!--Optional:-->  
+        <v11:LmtExpDate>20201203</v11:LmtExpDate>  
+        <!--Optional:-->  
+        <v11:AppDate>20201203</v11:AppDate>  
+        <!--Optional:-->  
+        <v11:LmtEffData>20200506</v11:LmtEffData>  
+        <!--Optional:-->  
+        <v11:ExtblLmtExpDate>20210103</v11:ExtblLmtExpDate>  
+        <!--Optional:-->  
+        <v11:ApprvLmt>125000</v11:ApprvLmt>  
+        <!--Optional:-->  
+        <v11:ApprvMaxLmt>125000</v11:ApprvMaxLmt>  
+        <!--Optional:-->  
+        <v11:LmtType>FIXED</v11:LmtType>  
+        <!--Optional:-->  
+        <v11:AllwLmtCancFlg>1</v11:AllwLmtCancFlg>  
+        <!--Optional:-->  
+        <v11:LmtCtrctExpDate>20271203</v11:LmtCtrctExpDate>  
+        <!--Optional:-->  
+        <v11:GLTerm>51</v11:GLTerm>  
+        <!--Optional:-->  
+        <v11:FundPurp>05</v11:FundPurp>  
+        <!--Optional:-->  
+        <v11:CustType>02</v11:CustType>  
+        <!--Optional:-->  
+        <v11:MrtgType>00</v11:MrtgType>  
+        <!--Optional:-->  
+        <v11:LoanPurp>111</v11:LoanPurp>  
+        <!--Optional:-->  
+        <v11:FinSubType>B</v11:FinSubType>  
+        <!--Zero or more repetitions:-->  
+        <v11:RvwRec> 
+          <!--Optional:-->  
+          <v11:LastRvwDate>20191203</v11:LastRvwDate>  
+          <!--Optional:-->  
+          <v11:NextRvwDate>20191203</v11:NextRvwDate>  
+          <!--Optional:-->  
+          <v11:RvwRiskLvl>R2</v11:RvwRiskLvl>  
+          <!--Optional:-->  
+          <v11:RvwStatCode>A</v11:RvwStatCode> 
+        </v11:RvwRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:LmtUpdtRec> 
+          <!--Optional:-->  
+          <v11:LmtUpdtRsn>CURRENT</v11:LmtUpdtRsn>  
+          <!--Optional:-->  
+          <v11:LmtUpdtDate>20191203</v11:LmtUpdtDate> 
+        </v11:LmtUpdtRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:InstlmRec> 
+          <!--Optional:-->  
+          <v11:InstlmTerm>3M</v11:InstlmTerm>  
+          <!--Optional:-->  
+          <v11:InstlmRate>3.6</v11:InstlmRate> 
+        </v11:InstlmRec>  
+        <!--Optional:-->  
+        <v11:IPAddr>IP 172.10.100.22</v11:IPAddr> 
+      </v11:ServiceBody> 
+    </v11:LmtModRq> 
+  </soap:Body> 
+</soap:Envelope>

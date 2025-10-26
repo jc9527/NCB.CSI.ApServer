@@ -1,0 +1,38 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "TDAccount",
+    "OperationName" : "TDAcctOpnCalInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "TDAcctOpnCalInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "TD15",
+        "TxnNo" : "TD1500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnStatCode" : [ {
+          "RtrnCode" : "200",
+          "RtrnDesc" : "200{success}"
+        } ],
+        "HeaderInfo" : {
+          "Id" : "STR"
+        },
+        "TDCalInqRec" : [ {
+          "ArrngId" : "AA16152BTQWS"
+        } ],
+        "Payload" : {
+          "ArrngId" : "NEW",
+          "Chan" : "CCS"
+        }
+      }
+    }
+  }
+}

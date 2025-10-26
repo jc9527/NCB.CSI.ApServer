@@ -1,0 +1,28 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardLockDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "DbCardLockDtlsInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC06",
+        "TxnNo" : "DC0600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "PageNo" : 1,
+        "NoOfPage" : 10,
+        "CardNo" : "5211958800000591",
+        "StartCfgDate" : "20170101",
+        "EndCfgDate" : "20180131"
+      }
+    }
+  }
+}

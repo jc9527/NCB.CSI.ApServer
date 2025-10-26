@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/RewardPoints/PointCampAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>RewardPoints</ServiceDomain>  
+      <OperationName>PointCampAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:PointCampAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>RP11</v11:TxnId>  
+        <v11:TxnNo>RP1100001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:FnctType>ADD</v11:FnctType>  
+        <v11:PointCampType>1</v11:PointCampType>  
+        <!--Optional:-->  
+        <v11:CampPointAddCode>I</v11:CampPointAddCode>  
+        <v11:PointCampGrpNo>1</v11:PointCampGrpNo>  
+        <v11:CampName>周年大贈送</v11:CampName>  
+        <v11:PointBussType>賺錢</v11:PointBussType>  
+        <v11:StartDateTime>2019011508</v11:StartDateTime>  
+        <v11:EndDateTime>2019013123</v11:EndDateTime>  
+        <v11:ExpTypeCfg>FIX_DATE</v11:ExpTypeCfg>  
+        <!--Optional:-->  
+        <v11:VldDate>20190131</v11:VldDate>  
+        <v11:VndrCostCtr>13579</v11:VndrCostCtr> 
+      </v11:ServiceBody> 
+    </v11:PointCampAddRq> 
+  </soap:Body> 
+</soap:Envelope>

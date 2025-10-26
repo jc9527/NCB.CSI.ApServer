@@ -1,0 +1,65 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "CardApprvAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CardApprvAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC10",
+        "TxnNo" : "DC1000001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CardRec" : {
+          "AppDate" : "20141214",
+          "IssDate" : "20141214",
+          "TxnSrc" : "1",
+          "CardNo" : "0000000000000000",
+          "CardType" : "V1",
+          "CardAtt" : "0",
+          "MCardNo" : "0000000000000000",
+          "CustPermId" : "A123456789",
+          "CIFNo" : "1000000123",
+          "CardCustId" : "0000005",
+          "CardCIFNo" : "0000005",
+          "GrpCode" : "0000",
+          "SrcCode" : "000000",
+          "EffDateFrom" : "0515",
+          "EffDateTo" : "0520",
+          "BrchId" : "000",
+          "AcctNo" : "1234567890",
+          "CustChnName" : "王小明",
+          "CustEngName" : "Peter Wang",
+          "BirthDay" : "19800101",
+          "RelnCode" : "1",
+          "DayLmt" : 100000.0,
+          "MnthLmt" : 100000.0,
+          "ICCardFlg" : "Y",
+          "eMailAddr" : "hello@gmail.com",
+          "MobNo" : "910110110",
+          "SMSFlg" : "Y",
+          "eMailFlg" : "Y",
+          "PushAppFlg" : "Y",
+          "CashFlg" : "Y",
+          "HCEFlg" : "Y",
+          "SmartPayFlg" : "Y",
+          "SMSAmt" : 100000.0,
+          "SMSMinAmt" : 20000.0,
+          "AddrZip" : "100",
+          "MailAddr1" : "台北市松山區",
+          "MailAddr2" : "民生東路二段100號",
+          "AutoLoadFlg" : "O",
+          "FeeAmt" : 100.0,
+          "Natl" : "TW"
+        }
+      }
+    }
+  }
+}

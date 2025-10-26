@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/DebitCard/DbCardLockDtlsInqRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>DebitCard</ServiceDomain>  
+      <OperationName>DbCardLockDtlsInq</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:DbCardLockDtlsInqRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>DC06</v11:TxnId>  
+        <v11:TxnNo>DC0600001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:RtrnCode>00</v11:RtrnCode>  
+        <!--Optional:-->  
+        <v11:RtrnDesc>200{00}</v11:RtrnDesc>  
+        <!--Zero or more repetitions:-->  
+        <v11:CardLockRec> 
+          <v11:CustPermId>Q300919133</v11:CustPermId>  
+          <v11:CardNo>5412340000306832</v11:CardNo>  
+          <v11:CardAtt>0</v11:CardAtt>  
+          <v11:TxnDate>20160525</v11:TxnDate>  
+          <v11:TxnTime>120001</v11:TxnTime>  
+          <v11:Amt>130.0</v11:Amt>  
+          <v11:BlkAmt>130.0</v11:BlkAmt>  
+          <v11:IndsyCode>5812</v11:IndsyCode>  
+          <v11:TxnType>國外提款</v11:TxnType>  
+          <v11:ReqPmtDays>13</v11:ReqPmtDays>  
+          <v11:AuthCode>783218</v11:AuthCode>  
+          <v11:MrchCode>STARBUCKS</v11:MrchCode>  
+          <v11:CntryCode>US</v11:CntryCode>  
+          <v11:MrchNo>STR</v11:MrchNo>  
+          <v11:PosEntryType>STR</v11:PosEntryType>  
+          <v11:IsoRtrnCode>STR</v11:IsoRtrnCode>  
+          <v11:UnlockFlg>STR</v11:UnlockFlg>  
+          <v11:ReqPmtFlg>STR</v11:ReqPmtFlg> 
+        </v11:CardLockRec>  
+        <!--Optional:-->  
+        <v11:ControlRec> 
+          <v11:CurPage>1</v11:CurPage>  
+          <v11:NoOfCurPage>1</v11:NoOfCurPage>  
+          <v11:TtlPageNo>1</v11:TtlPageNo>  
+          <v11:NoOfRec>1</v11:NoOfRec> 
+        </v11:ControlRec> 
+      </v11:ServiceBody> 
+    </v11:DbCardLockDtlsInqRs> 
+  </soap:Body> 
+</soap:Envelope>

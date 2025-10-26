@@ -1,0 +1,32 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Payment",
+    "OperationName" : "LockAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LockAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "PA01",
+        "TxnNo" : "PA0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "TxnType" : 1,
+        "LockSeqNo" : "ACLK2002557245",
+        "LockInfo" : {
+          "AcctNo" : "88680000000026",
+          "LockAmt" : 5000,
+          "LockType" : "EVT-E-01",
+          "APIKey" : "NCB-IF17002"
+        }
+      }
+    }
+  }
+}

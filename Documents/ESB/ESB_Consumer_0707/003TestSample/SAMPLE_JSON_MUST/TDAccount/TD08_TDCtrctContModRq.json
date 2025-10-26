@@ -1,0 +1,35 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "TDAccount",
+    "OperationName" : "TDCtrctContMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "TDCtrctContModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "TD08",
+        "TxnNo" : "TD0800001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "ArrngId" : "STR",
+          "ProdId" : "STR",
+          "TxnType" : "DEPOSITS-UPDATE-ACCOUNT",
+          "RenewInfo" : {
+            "RenewPrd" : "STR",
+            "RenewDateType" : "STR",
+            "RenewDate" : "STR",
+            "RenewType" : "STR"
+          }
+        }
+      }
+    }
+  }
+}

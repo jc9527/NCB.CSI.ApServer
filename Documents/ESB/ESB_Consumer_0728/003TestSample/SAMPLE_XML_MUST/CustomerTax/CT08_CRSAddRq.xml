@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/CustomerTax/CRSAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>CustomerTax</ServiceDomain>  
+      <OperationName>CRSAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:CRSAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>CT08</v11:TxnId>  
+        <v11:TxnNo>CT0800001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <!--Optional:-->  
+        <v11:ValidateOnly>false</v11:ValidateOnly>  
+        <v11:CIFNo>1000000004</v11:CIFNo>  
+        <v11:CustType>INDIVIDUAL</v11:CustType>  
+        <v11:KYCFlg>YES</v11:KYCFlg>  
+        <v11:SelfCertfctnFlg>YES</v11:SelfCertfctnFlg>  
+        <v11:RegrCntry>STR</v11:RegrCntry>  
+        <!--1 or more repetitions:-->  
+        <v11:TINRec> 
+          <v11:TINCntry>TW</v11:TINCntry>  
+          <v11:TINCode>A123456789</v11:TINCode> 
+        </v11:TINRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:AddrTypeRec></v11:AddrTypeRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:PhnNoRec></v11:PhnNoRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:StndInstrctRec></v11:StndInstrctRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:HldrCntryRec></v11:HldrCntryRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:JointAcctRec></v11:JointAcctRec>  
+        <!--1 or more repetitions:-->  
+        <v11:CRSRec> 
+          <v11:ReqDate>20200601</v11:ReqDate>  
+          <v11:CRSCIFNo>1000000004</v11:CRSCIFNo> 
+        </v11:CRSRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:RptRec></v11:RptRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:INDICIARec></v11:INDICIARec>  
+        <!--Zero or more repetitions:-->  
+        <v11:NoTINRec></v11:NoTINRec>  
+        <!--Zero or more repetitions:-->  
+        <v11:FATCAAddr></v11:FATCAAddr>  
+        <!--Optional:-->  
+        <v11:APIKey>NCB-IF99002</v11:APIKey> 
+      </v11:ServiceBody> 
+    </v11:CRSAddRq> 
+  </soap:Body> 
+</soap:Envelope>

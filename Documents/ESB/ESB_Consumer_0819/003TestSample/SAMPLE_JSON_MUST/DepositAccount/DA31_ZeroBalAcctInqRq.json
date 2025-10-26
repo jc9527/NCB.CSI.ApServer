@@ -1,0 +1,28 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "ZeroBalAcctInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "ZeroBalAcctInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA31",
+        "TxnNo" : "DA3100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "PageInfo" : {
+          "PageSize" : 50,
+          "PageStart" : 1
+        },
+        "BrchId" : "TW8230001"
+      }
+    }
+  }
+}

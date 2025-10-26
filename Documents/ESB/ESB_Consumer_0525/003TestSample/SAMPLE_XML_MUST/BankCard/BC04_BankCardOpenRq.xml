@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/BankCard/BankCardOpenRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>BankCard</ServiceDomain>  
+      <OperationName>BankCardOpen</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:BankCardOpenRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>BC04</v11:TxnId>  
+        <v11:TxnNo>BC0400001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:CardNo>4312349000008629</v11:CardNo>  
+        <v11:KeyType>1</v11:KeyType>  
+        <v11:KeyVal>1010</v11:KeyVal> 
+      </v11:ServiceBody> 
+    </v11:BankCardOpenRq> 
+  </soap:Body> 
+</soap:Envelope>

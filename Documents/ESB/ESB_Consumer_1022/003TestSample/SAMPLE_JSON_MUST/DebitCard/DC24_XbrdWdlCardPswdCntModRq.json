@@ -1,0 +1,25 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "XbrdWdlCardPswdCntMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "XbrdWdlCardPswdCntModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC24",
+        "TxnNo" : "DC2400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CardNo" : "4563020616112800",
+        "UpdtUserId" : "joe"
+      }
+    }
+  }
+}

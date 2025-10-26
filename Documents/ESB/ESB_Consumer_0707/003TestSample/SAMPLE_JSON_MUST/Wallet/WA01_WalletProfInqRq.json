@@ -1,0 +1,27 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Wallet",
+    "OperationName" : "WalletProfInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "WalletProfInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "WA01",
+        "TxnNo" : "WA0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "InqPageNo" : 1,
+        "NoOfPage" : 200,
+        "CardNo" : "1111222233334444",
+        "WalletCardType" : "1"
+      }
+    }
+  }
+}

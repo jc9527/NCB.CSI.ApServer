@@ -1,0 +1,48 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardInstlmtInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "DbCardInstlmtInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC07",
+        "TxnNo" : "DC0700001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "RtrnDesc" : "200{00}",
+        "CardLmtRec" : [ {
+          "DbAcctNo" : "01000001982300",
+          "CustPermId" : "B169222431",
+          "AmtCcy" : "TWD",
+          "DayLmt" : 100000.0,
+          "MnthLmt" : 99999999.0,
+          "TempDDLmt" : 50000.0,
+          "StartTempDDLmtDate" : "20180201",
+          "EndTempDDLmtDate" : "20180220",
+          "TempMMLmt" : 1000000.0,
+          "StartTempMMLmtDate" : "20180201",
+          "EndTempMMLmtDate" : "20180228",
+          "CfgDate" : "20180125",
+          "CfgTime" : "230900",
+          "CfgUserId" : "joe"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

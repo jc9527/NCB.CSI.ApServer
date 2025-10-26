@@ -1,0 +1,64 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "BankCard",
+    "OperationName" : "BankCardAppStatInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "BankCardAppStatInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "BC07",
+        "TxnNo" : "BC0700001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "RtrnDesc" : "200{00}",
+        "CardStatRec" : [ {
+          "CustPermId" : "A123456789",
+          "CustChnName" : "王正卡",
+          "CustEngName" : "Casper",
+          "BirthDay" : "1966/02/05",
+          "CardNo" : "4312340000036975",
+          "DbAcctNo" : "01000000008188",
+          "CardType" : "1",
+          "CardTypeName" : "Visa Debit",
+          "CardAttr" : "0",
+          "CardAttrName" : "正卡",
+          "CardStatCode" : "9",
+          "CardStatName" : "掛失",
+          "DlvrMthd" : "0",
+          "DlvrMthdName" : "卡廠郵寄",
+          "DlvrBrch" : "00001",
+          "DlvrBrchName" : "內湖分行",
+          "AppDate" : "2016/08/02",
+          "VldYearMnth" : "0812",
+          "ExpYearMnth" : "0912",
+          "RgstrDate" : "2016/08/02",
+          "EffDate" : "2016/08/02",
+          "MakeDate" : "2016/08/02",
+          "ImgId" : "001",
+          "ElekCardType" : "0",
+          "ImgFlg" : "0",
+          "CardFace" : "MC",
+          "CardFaceName" : "Master普卡",
+          "CardGrade" : "W",
+          "GrpCode" : "0000",
+          "CVV2" : "STR"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

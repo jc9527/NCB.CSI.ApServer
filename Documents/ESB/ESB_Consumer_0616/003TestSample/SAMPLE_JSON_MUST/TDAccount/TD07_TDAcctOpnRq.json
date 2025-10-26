@@ -1,0 +1,40 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "TDAccount",
+    "OperationName" : "TDAcctOpn",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "TDAcctOpnRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "TD07",
+        "TxnNo" : "TD0700001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "ArrngId" : "NEW",
+          "CustInfo" : [ {
+            "CustId" : "STR"
+          } ],
+          "ProdId" : "STR",
+          "Ccy" : "STR",
+          "StlInfo" : [ {
+            "DbAcctFlg" : "STR",
+            "CrAcctFlg" : "STR",
+            "RefInfo" : [ {
+              "DbAcctNo" : "STR",
+              "CrAcctNo" : "STR"
+            } ]
+          } ]
+        }
+      }
+    }
+  }
+}

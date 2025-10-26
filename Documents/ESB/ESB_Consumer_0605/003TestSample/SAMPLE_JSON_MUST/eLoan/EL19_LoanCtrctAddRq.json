@@ -1,0 +1,34 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "eLoan",
+    "OperationName" : "LoanCtrctAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LoanCtrctAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "EL19",
+        "TxnNo" : "af3a317b-1720-4faa-983f-62855b9be0f9DAdUCFBdVg9d"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "S999999999",
+        "AppRefNo" : "YYYYMMDD999SS9999",
+        "AppNo" : "YYYYMMDD999SS9999S",
+        "GrntedRslt" : "1",
+        "AuthType" : "1",
+        "IdntyVrfyType" : "1",
+        "IdntyVrfyDate" : "yyyy-MM-ddTHH:mm:ssZ",
+        "RvwDate" : "yyyy-MM-dd",
+        "SgntrDate" : "yyyy-MM-dd",
+        "IdntyVrfyFlg" : "1",
+        "IdntyVrfyTellerDate" : "yyyy-MM-ddTHH:mm:ssZ"
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Limit",
+    "OperationName" : "LmtMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LmtModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LI09",
+        "TxnNo" : "LI0900001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "LmtRefNo" : "1000000679.0008100.01",
+        "AppNo" : "ELoan9883183",
+        "Ccy" : "TWD",
+        "AvailFlg" : "Y",
+        "ApprvDate" : "20191203",
+        "DfltApprvDate" : "20191203",
+        "RvwFreq" : "20201203M0101",
+        "LmtExpDate" : "20201203",
+        "AppDate" : "20201203",
+        "LmtEffData" : "20200506",
+        "ExtblLmtExpDate" : "20210103",
+        "ApprvLmt" : 125000,
+        "ApprvMaxLmt" : 125000,
+        "LmtType" : "FIXED",
+        "AllwLmtCancFlg" : "1",
+        "LmtCtrctExpDate" : "20271203",
+        "GLTerm" : "51",
+        "FundPurp" : "05",
+        "CustType" : "02",
+        "MrtgType" : "00",
+        "LoanPurp" : "111",
+        "FinSubType" : "B",
+        "RvwRec" : [ {
+          "LastRvwDate" : "20191203",
+          "NextRvwDate" : "20191203",
+          "RvwRiskLvl" : "R2",
+          "RvwStatCode" : "A"
+        } ],
+        "LmtUpdtRec" : [ {
+          "LmtUpdtRsn" : "CURRENT",
+          "LmtUpdtDate" : "20191203"
+        } ],
+        "InstlmRec" : [ {
+          "InstlmTerm" : "3M",
+          "InstlmRate" : 3.6
+        } ],
+        "IPAddr" : "IP 172.10.100.22"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+
+
+        SIT URL : [POST] https://api-sit.nextbank.com.tw/ap1/intranet/api/v1.0/common/GetTokenInfo
+        UAT URL : [POST] https://api-uat.nextbank.com.tw/ap1/intranet/api/v1.0/common/GetTokenInfo
+
+        Request :
+        {
+        "token": "xxx"
+}
+        
+        Response :
+{
+  "success": true,
+  "data": {
+    "idno": "xxxxxxxxxx"
+  }
+}
+{
+  "success": false,
+  "error": {
+    "errorCode": "ACCESS_TOKEN_INVALID",
+    "errorMessage": "access token 無效"
+  }
+}
+
+SIT Swagger-UI : http://10.40.12.81/swagger-ui.html#/Common/getTokenInfoUsingPOST
+UAT Swagger-UI : http://10.21.55.151/swagger-ui.html#/Common/getTokenInfoUsingPOST

@@ -1,0 +1,58 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardTxnDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "DbCardTxnDtlsInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC01",
+        "TxnNo" : "DC0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "RtrnDesc" : "200{00}",
+        "CardTxnRec" : [ {
+          "CustPermId" : "T320916197",
+          "LockSeqId" : "1600030101",
+          "TxnDate" : "20141121",
+          "PostDate" : "20160617",
+          "Desc" : "大潤發",
+          "Amt" : 1199.0,
+          "CardNo" : "5412340000289939",
+          "CardAtt" : "0",
+          "CustChnName" : "王小明",
+          "CntryCode" : "TW",
+          "CntryCodeName" : "TW",
+          "CntryAmt" : 1199.0,
+          "CntryAmtCcy" : "TWD",
+          "XchagDate" : "20141123",
+          "TxnType" : "05",
+          "TxnTypeName" : "消費",
+          "AuthCode" : "016290",
+          "MrchCode" : "7311",
+          "InstlmtCond" : "N",
+          "InstlmtRsltCode" : "4160",
+          "InstlmtRsltMsg" : "結果訊息",
+          "LoanBal" : 0,
+          "InstlmtFlg" : "N",
+          "PrcDate" : "20161117"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Remittance",
+    "OperationName" : "TWDOutWrdRmtAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "TWDOutWrdRmtAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "RE01",
+        "TxnNo" : "RE0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "OutWrdRmtInfo" : {
+          "PostDate" : "2016-01-02",
+          "HdlgChrg" : 100.0,
+          "RmtSeqNo" : "1000001",
+          "RtrnCode" : "4001"
+        }
+      }
+    }
+  }
+}

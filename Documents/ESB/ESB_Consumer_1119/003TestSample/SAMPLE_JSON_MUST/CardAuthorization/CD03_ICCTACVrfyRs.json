@@ -1,0 +1,26 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CardAuthorization",
+    "OperationName" : "ICCTACVrfy",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "ICCTACVrfyRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "CD03",
+        "TxnNo" : "CD0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "4001"
+        "RtrnDesc" : "200{4001}"
+      }
+    }
+  }
+}

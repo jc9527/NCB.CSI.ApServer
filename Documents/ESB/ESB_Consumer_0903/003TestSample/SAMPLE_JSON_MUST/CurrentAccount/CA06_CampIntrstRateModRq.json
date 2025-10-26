@@ -1,0 +1,66 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CurrentAccount",
+    "OperationName" : "CampIntrstRateMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CampIntrstRateModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CA06",
+        "TxnNo" : "CA0600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "ArrngId" : "AA19337RVXBB",
+        "CustRec" : [ {
+        } ],
+        "ProdName" : "AC.POCKET.SAV",
+        "TxnType" : "ACCOUNTS-INT.CAMPAIGN-ARRANGEMENT",
+        "RsnCode" : "Update Campaign Int",
+        "AcctInfo" : {
+          "CampRec" : [ {
+            "CampId" : "CMP202003",
+            "CampExpDate" : "2020032",
+            "CampInstrstType" : "CRINT2",
+            "CampIntrstMemo" : "CRINT2"
+          } ]
+        },
+        "MarginRuleRec" : [ {
+          "AcctMinBal" : 100000
+        } ],
+        "AcctRateInfo" : {
+        },
+        "PktAcctRateInfo" : {
+        },
+        "IntrstRec" : {
+          "IntrstTypeRec" : [ {
+            "IntrstType" : "CRINT1",
+            "IntrstMthd" : "CAPITALISE",
+            "IntrstPropRec" : [ {
+              "IntrstId" : "CRINT1"
+            } ],
+            "IntrstFreq" : "M0121"
+          } ]
+        },
+        "IPAddr" : "IP.172.20.15.192",
+        "DevNo" : "1",
+        "EntryDeptCode" : "N01",
+        "PrftCntr" : "N01",
+        "CostCntr" : "N01",
+        "AuthEmpId" : "HELEN",
+        "EntryEmplNo" : "string",
+        "VerName" : "AA.ARRANGEMENT.ACTIVITY,AA.API.NEW.NCB.1.0.0",
+        "EcoUnit" : "N01",
+        "APIKey" : "NCB-IF01009",
+        "MobLang" : "ENGLISH"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "ODLoanAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "ODLoanAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO31",
+        "TxnNo" : "LO3100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "TxnDesc" : "STR",
+          "ChanId" : "STR",
+          "AcctNo" : "STR",
+          "ODRepmtType" : "STR",
+          "Term" : "STR"
+        }
+      }
+    }
+  }
+}

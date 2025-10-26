@@ -1,0 +1,66 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "eLoan",
+    "OperationName" : "LoanSalesQuoteAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LoanSalesQuoteAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "EL02",
+        "TxnNo" : "af3a317b-1720-4faa-983f-62855b9be0f9DAdUCFBdVg9d"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "IBMBAppNo" : "STR",
+        "AppRefNo" : "YYYYMMDD999SS9999",
+        "AppDate" : "yyyy-MM-ddTHH:mm:ssZ",
+        "AppChan" : "01",
+        "QuoteInfo" : [ {
+          "AppNo" : "YYYYMMDD999SS9999S",
+          "LoanType" : "81003101",
+          "AppAmt" : 1,
+          "LoanPurp" : "000",
+          "LoanTerm" : 1,
+          "PnltyType" : "0"
+        } ],
+        "CustPermId" : "S999999999",
+        "CustName" : "STR",
+        "BirthDate" : "yyyy-MM-dd",
+        "EduLvl" : "4",
+        "MrtlStat" : "M",
+        "NoOfChild" : 1,
+        "AMLLevel" : "STR",
+        "AMLChkDate" : "yyyy-MM-dd",
+        "MailAddrType" : "1",
+        "AddrZip" : "100",
+        "City" : "A",
+        "TownCnty" : "03",
+        "St" : "STR",
+        "ResYear" : "99",
+        "ResMnth" : "00",
+        "MobNo" : "STR",
+        "eMailAddr" : "STR",
+        "CoName" : "STR",
+        "IndstryType" : "000000",
+        "IndstryCode" : "1",
+        "JobTitl" : "06",
+        "NoOfEmplYears" : "99",
+        "NoOfEmplMnths" : "99",
+        "MnthSlry" : 1,
+        "CoDept" : "STR",
+        "OffPhnNo" : "STR",
+        "AttDocInfo" : [ {
+          "AttDocType" : "R01",
+          "AttDocName" : "R01",
+          "AttDocId" : "STR"
+        } ]
+      }
+    }
+  }
+}

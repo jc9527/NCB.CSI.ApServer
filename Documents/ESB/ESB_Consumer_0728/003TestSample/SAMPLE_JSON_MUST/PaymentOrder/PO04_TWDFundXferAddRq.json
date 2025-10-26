@@ -1,0 +1,39 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "TWDFundXferAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "TWDFundXferAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO04",
+        "TxnNo" : "PO0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "A123456789",
+        "ChanId" : "APP",
+        "DbBankId" : "825",
+        "DbAcctNo" : "29887923",
+        "DbAmt" : 20000,
+        "CrBankId" : "009",
+        "CrAcctNo" : "23239232",
+        "TermChkCode" : "02398233",
+        "ICCMemo" : "備註",
+        "ICCSeqNo" : "29823203",
+        "ICCTAC" : "A0A1A2A3A4A5A6A7A8",
+        "SameIdFlg" : 1,
+        "TxnType" : "1234",
+        "DgtlAcctType" : "3A",
+        "TxnNo" : "2468013579",
+        "ChanTxnNo" : "1357902468"
+      }
+    }
+  }
+}

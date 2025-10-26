@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Customer/KYCChkCalRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>Customer</ServiceDomain>  
+      <OperationName>KYCChkCal</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:KYCChkCalRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>CU16</v11:TxnId>  
+        <v11:TxnNo>CU1600001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:LoginInfo> 
+          <v11:UserName>demo</v11:UserName>  
+          <v11:Pswd>gwg</v11:Pswd>  
+          <v11:Type>PROD</v11:Type> 
+        </v11:LoginInfo>  
+        <v11:KYCSrc> 
+          <!--1 or more repetitions:-->  
+          <v11:CustProfInfo> 
+            <v11:CustNo>A186580262</v11:CustNo>  
+            <v11:CustChnName>陳家豪</v11:CustChnName>  
+            <!--Optional:-->  
+            <v11:St>台北市敦化南路二段95號8樓</v11:St>  
+            <!--Optional:-->  
+            <v11:City>台北市</v11:City>  
+            <!--Optional:-->  
+            <v11:AddrZip>106046</v11:AddrZip>  
+            <!--Optional:-->  
+            <v11:Cntry>TW</v11:Cntry>  
+            <!--Optional:-->  
+            <v11:Natl>TW</v11:Natl>  
+            <!--Optional:-->  
+            <v11:Indstry>50000-宗教、非營利事業與團體</v11:Indstry>  
+            <!--Optional:-->  
+            <v11:BirthDay>20200229</v11:BirthDay>  
+            <!--Optional:-->  
+            <v11:CustType>1</v11:CustType>  
+            <!--Optional:-->  
+            <v11:CustPermId>669509555</v11:CustPermId>  
+            <!--Optional:-->  
+            <v11:BirthCity>台北市</v11:BirthCity>  
+            <!--Optional:-->  
+            <v11:Gndr>M</v11:Gndr> 
+          </v11:CustProfInfo> 
+        </v11:KYCSrc> 
+      </v11:ServiceBody> 
+    </v11:KYCChkCalRq> 
+  </soap:Body> 
+</soap:Envelope>

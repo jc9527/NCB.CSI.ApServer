@@ -1,0 +1,39 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "PreDsgntdAcctInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "PreDsgntdAcctInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA05",
+        "TxnNo" : "DA0500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "DbAcctInfo" : [ {
+          "DbAcctNo" : "1200000992000"
+        } ],
+        "CrAcctInfo" : [ {
+          "AliasName" : "Test",
+          "CrBankId" : "013",
+          "CrAcctNo" : "2200000992003",
+          "SameIdFlg" : false,
+          "LmtAmt" : 10000.0,
+          "AmtCcy" : "TWD",
+          "EffDate" : "2019-08-12",
+          "UpdtDate" : "2019-09-12"
+        } ]
+      }
+    }
+  }
+}

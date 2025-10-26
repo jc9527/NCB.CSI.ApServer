@@ -1,0 +1,31 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Wallet",
+    "OperationName" : "WalletNoAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "WalletNoAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "WA04",
+        "TxnNo" : "WA0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "CardNoInfo" : {
+          "GrpCode" : "0000",
+          "CardFace" : "MP",
+          "WalletNo" : "04810000199"
+        }
+      }
+    }
+  }
+}

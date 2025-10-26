@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Created by IISI ESB TEAM-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.iisigroup.com/xsd/TW/DemoService/OneToOneRq/v1" xmlns:ns1="http://www.iisigroup.com/xsd/TW/DemoService/OneToOneRs/v1" xmlns:ns2="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:tns0="http://www.iisigroup.com/wsdl/TW/DemoService/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DemoService" targetNamespace="http://www.iisigroup.com/wsdl/TW/DemoService/v1">  
+  <wsdl:types> 
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.iisigroup.com/xsd/TW/DemoService/OneToOneRq/v1" targetNamespace="http://www.iisigroup.com/xsd/TW/DemoService/OneToOneRq/v1" elementFormDefault="qualified" attributeFormDefault="qualified">  
+      <complexType name="ServiceHeaderType"> 
+        <sequence> 
+          <element name="TxnId" type="string"> 
+            <annotation/> 
+          </element>  
+          <element name="TxnNo" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="SvcVer" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="NoOfTxns" type="decimal"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="ChkSum" type="decimal"> 
+            <annotation/> 
+          </element> 
+        </sequence> 
+      </complexType>  
+      <complexType name="SignonType"> 
+        <sequence> 
+          <element name="CustId" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="CustPswd" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="AuthToken" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="MAC" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="SessKey" type="string"> 
+            <annotation/> 
+          </element> 
+        </sequence> 
+      </complexType>  
+      <element name="ServiceHeader" type="tns:ServiceHeaderType"/>  
+      <element name="Signon" type="tns:SignonType"/>  
+      <element name="OneToOneRq" type="tns:OneToOneRq"/>  
+      <complexType name="OneToOneRq"> 
+        <sequence> 
+          <element name="ServiceHeader" type="tns:ServiceHeaderType"/>  
+          <element name="Signon" type="tns:SignonType"/>  
+          <element ref="tns:ServiceBody"/>  
+          <!-- desc="服務內容" --> 
+        </sequence> 
+      </complexType>  
+      <element name="ServiceBody" type="tns:ServiceBody"/>  
+      <complexType name="ServiceBody"> 
+        <sequence> 
+          <element ref="tns:RqTransform"/>  
+          <!-- desc="RqTransform群組" -->  
+          <element ref="tns:InterfaceProxy"/>  
+          <!-- desc="InterfaceProxy群組" -->  
+          <element ref="tns:RsTransform"/>  
+          <!-- desc="RsTransform群組" --> 
+        </sequence> 
+      </complexType>  
+      <element name="RqTransform" type="tns:RqTransform"/>  
+      <complexType name="RqTransform"> 
+        <sequence> 
+          <element name="Pass" type="string"/>  
+          <!-- desc="測試開關" -->  
+          <element name="ErrorCode" type="string" minOccurs="0"/>  
+          <!-- desc="錯誤代碼" --> 
+        </sequence> 
+      </complexType>  
+      <element name="InterfaceProxy" type="tns:InterfaceProxy"/>  
+      <complexType name="InterfaceProxy"> 
+        <sequence> 
+          <element name="Pass" type="string"/>  
+          <!-- desc="測試開關" -->  
+          <element name="ErrorCode" type="string" minOccurs="0"/>  
+          <!-- desc="錯誤代碼" -->  
+          <element name="TimeOut" type="string" minOccurs="0"/>  
+          <!-- desc="逾時值" --> 
+        </sequence> 
+      </complexType>  
+      <element name="RsTransform" type="tns:RsTransform"/>  
+      <complexType name="RsTransform"> 
+        <sequence> 
+          <element name="Pass" type="string"/>  
+          <!-- desc="測試開關" -->  
+          <element name="ErrorCode" type="string" minOccurs="0"/>  
+          <!-- desc="錯誤代碼" --> 
+        </sequence> 
+      </complexType> 
+    </schema>  
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.iisigroup.com/xsd/TW/DemoService/OneToOneRs/v1" targetNamespace="http://www.iisigroup.com/xsd/TW/DemoService/OneToOneRs/v1" elementFormDefault="qualified" attributeFormDefault="qualified">  
+      <complexType name="ServiceHeaderType"> 
+        <sequence> 
+          <element name="TxnId" type="string"> 
+            <annotation/> 
+          </element>  
+          <element name="TxnNo" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="SvcVer" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="NoOfTxns" type="decimal"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="ChkSum" type="decimal"> 
+            <annotation/> 
+          </element> 
+        </sequence> 
+      </complexType>  
+      <complexType name="SignonType"> 
+        <sequence> 
+          <element name="CustId" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="CustPswd" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="AuthToken" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="MAC" type="string"> 
+            <annotation/> 
+          </element>  
+          <element minOccurs="0" name="SessKey" type="string"> 
+            <annotation/> 
+          </element> 
+        </sequence> 
+      </complexType>  
+      <element name="ServiceHeader" type="tns:ServiceHeaderType"/>  
+      <element name="Signon" type="tns:SignonType"/>  
+      <element name="OneToOneRs" type="tns:OneToOneRs"/>  
+      <complexType name="OneToOneRs"> 
+        <sequence> 
+          <element name="ServiceHeader" type="tns:ServiceHeaderType"/>  
+          <element name="Signon" type="tns:SignonType"/>  
+          <element ref="tns:ServiceBody"/>  
+          <!-- desc="服務內容" --> 
+        </sequence> 
+      </complexType>  
+      <element name="ServiceBody" type="tns:ServiceBody"/>  
+      <complexType name="ServiceBody"> 
+        <sequence> 
+          <element name="RtrnCode" type="string"/>  
+          <!-- desc="回應代碼" -->  
+          <element name="RtrnDesc" type="string" minOccurs="0"/>  
+          <!-- desc="回應代碼說明" --> 
+        </sequence> 
+      </complexType> 
+    </schema>  
+    <xsd:schema xmlns="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1">  
+      <xsd:attributeGroup name="encodingStyle"> 
+        <xsd:attribute form="unqualified" name="encodingStyle" type="xsd:anySimpleType"/> 
+      </xsd:attributeGroup>  
+      <xsd:element name="Envelope" type="Envelope"/>  
+      <xsd:complexType name="Envelope"> 
+        <xsd:sequence> 
+          <xsd:element ref="Header"/>  
+          <xsd:element ref="Body"/>  
+          <xsd:element minOccurs="0" ref="Fault"/> 
+        </xsd:sequence> 
+      </xsd:complexType>  
+      <xsd:element name="Header" type="Header"/>  
+      <xsd:complexType name="Header"> 
+        <xsd:sequence> 
+          <xsd:element name="ChannelID" type="xsd:string"/>  
+          <xsd:element name="ServiceDomain" type="xsd:string"/>  
+          <xsd:element name="OperationName" type="xsd:string"/>  
+          <xsd:element name="ConsumerID" type="xsd:string"/>  
+          <xsd:element minOccurs="0" name="SourceRegion" type="xsd:string"/>  
+          <xsd:element minOccurs="0" name="DestinationRegion" type="xsd:string"/>  
+          <xsd:element name="TransactionID" type="xsd:string"/>  
+          <xsd:element minOccurs="0" name="TrackingID" type="xsd:string"/>  
+          <xsd:element minOccurs="0" name="UUID" type="xsd:string"/>  
+          <xsd:element minOccurs="0" name="CorrelationID" type="xsd:string"/>  
+          <xsd:element name="RqTimestamp" type="xsd:dateTime"/>  
+          <xsd:element minOccurs="0" name="RsTimestamp" type="xsd:dateTime"/> 
+        </xsd:sequence>  
+        <xsd:attribute ref="mustUnderstand"/> 
+      </xsd:complexType>  
+      <xsd:element name="Body" type="Body"/>  
+      <xsd:complexType name="Body"> 
+        <xsd:sequence> 
+          <xsd:any namespace="##any" processContents="lax"/> 
+        </xsd:sequence> 
+      </xsd:complexType>  
+      <xsd:attribute name="mustUnderstand"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:boolean"> 
+            <xsd:pattern value="1|true|0|false"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:attribute>  
+      <xsd:attribute name="actor" type="xsd:anyURI"/>  
+      <xsd:simpleType name="encodingStyle"> 
+        <xsd:restriction base="xsd:anyURI"/> 
+      </xsd:simpleType>  
+      <xsd:element name="Fault" type="FaultDetail"/>  
+      <xsd:complexType name="FaultDetail"> 
+        <xsd:sequence> 
+          <xsd:element name="ErrorCode" type="xsd:string"/>  
+          <xsd:element name="ErrorString" type="xsd:string"/> 
+        </xsd:sequence> 
+      </xsd:complexType> 
+    </xsd:schema> 
+  </wsdl:types>  
+  <wsdl:service name="DemoService"> 
+    <wsdl:port name="HTTPPortTypeEndpoint" binding="tns0:HTTPPortTypeEndpoint"> 
+      <soap:address location="http://10.1.1.1:12800/BusinessServices/ServiceMediationService.serviceagent/ServiceMediationOperation"/> 
+    </wsdl:port> 
+  </wsdl:service>  
+  <wsdl:portType name="PortType"> 
+    <wsdl:operation name="OneToOne"> 
+      <wsdl:input message="tns0:OneToOneRequest"/>  
+      <wsdl:output message="tns0:OneToOneResponse"/>  
+      <wsdl:fault name="fault" message="tns0:OneToOneFault"/> 
+    </wsdl:operation> 
+  </wsdl:portType>  
+  <wsdl:binding name="HTTPPortTypeEndpoint" type="tns0:PortType"> 
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>  
+    <wsdl:operation name="OneToOne"> 
+      <soap:operation style="document" soapAction="/BusinessServices/DemoService/OneToOne/V1/Operation" soapActionRequired="true"/>  
+      <wsdl:input> 
+        <soap:body use="literal" parts="body"/>  
+        <soap:header use="literal" message="tns0:OneToOneRequest" part="header"/> 
+      </wsdl:input>  
+      <wsdl:output> 
+        <soap:body use="literal" parts="body"/>  
+        <soap:header use="literal" message="tns0:OneToOneResponse" part="header"/> 
+      </wsdl:output>  
+      <wsdl:fault name="fault"> 
+        <soap:fault use="literal" name="fault"/>  
+        <soap:header use="literal" message="tns0:HeaderMessage" part="header"/> 
+      </wsdl:fault> 
+    </wsdl:operation> 
+  </wsdl:binding>  
+  <wsdl:message name="OneToOneRequest"> 
+    <wsdl:part name="header" element="ns2:Header"/>  
+    <wsdl:part name="body" element="ns0:OneToOneRq"/> 
+  </wsdl:message>  
+  <wsdl:message name="OneToOneResponse"> 
+    <wsdl:part name="header" element="ns2:Header"/>  
+    <wsdl:part name="body" element="ns1:OneToOneRs"/> 
+  </wsdl:message>  
+  <wsdl:message name="OneToOneFault"> 
+    <wsdl:part name="fault" element="ns2:Fault"/> 
+  </wsdl:message>  
+  <wsdl:message name="HeaderMessage"> 
+    <wsdl:part name="header" element="ns2:Header"/> 
+  </wsdl:message> 
+</wsdl:definitions>

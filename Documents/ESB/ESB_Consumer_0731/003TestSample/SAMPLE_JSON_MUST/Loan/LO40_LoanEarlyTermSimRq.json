@@ -1,0 +1,28 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "LoanEarlyTermSim",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LoanEarlyTermSimRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO40",
+        "TxnNo" : "LO4000001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "ArrngId" : "STR",
+          "ProdId" : "STR"
+        }
+      }
+    }
+  }
+}

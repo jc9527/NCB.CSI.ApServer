@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "FISCTxnSummInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "FISCTxnSummInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA35",
+        "TxnNo" : "DA3500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "PageInfo" : {
+          "PageSize" : 50,
+          "PageStart" : 1,
+          "PageToken" : "201904170622107608.01,99"
+        },
+        "InqDate" : "20200522"
+      }
+    }
+  }
+}

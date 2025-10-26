@@ -1,0 +1,26 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "BankCard",
+    "OperationName" : "BankCardResndChk",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "BankCardResndChkRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "BC08",
+        "TxnNo" : "BC0800001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "A223456789",
+        "DbAcctNo" : "0001200000001888",
+        "ResndType" : "A"
+      }
+    }
+  }
+}

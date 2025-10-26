@@ -1,0 +1,34 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "NPDLmtMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "NPDLmtModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA22",
+        "TxnNo" : "DA2200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "ArrngId" : "AA16152BTQWS",
+          "ArrngRulesInfo" : {
+            "RuleInfo" : [ {
+              "PrdcVal1" : "STR",
+              "PrdcVal2" : "STR",
+              "PrdcVal3" : "STR"
+            } ]
+          }
+        }
+      }
+    }
+  }
+}

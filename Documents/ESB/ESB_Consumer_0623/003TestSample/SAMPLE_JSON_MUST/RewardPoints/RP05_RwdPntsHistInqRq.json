@@ -1,0 +1,28 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "RwdPntsHistInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "RwdPntsHistInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP05",
+        "TxnNo" : "RP050001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "NoOfPage" : 10,
+        "PageNo" : 1,
+        "MmbId" : "999123456789",
+        "StartDate" : "20190608",
+        "EndDate" : "20190609"
+      }
+    }
+  }
+}

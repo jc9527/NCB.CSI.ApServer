@@ -1,0 +1,30 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CustomerTax",
+    "OperationName" : "WHTInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "WHTInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CT01",
+        "TxnNo" : "CT0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "PageInfo" : {
+          "PageSize" : 50,
+          "PageStart" : 1,
+          "PageToken" : "201904170622107608.01,99"
+        },
+        "CustPermId" : "A123456789",
+        "StartDateEndDate" : "20200102 20200515"
+      }
+    }
+  }
+}

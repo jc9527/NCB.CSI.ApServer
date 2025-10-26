@@ -1,0 +1,61 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "BankCard",
+    "OperationName" : "BankCardApp",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "BankCardAppRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "BC06",
+        "TxnNo" : "BC0600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CIFNo" : "2334567599",
+        "CustPermId" : "1234544890",
+        "CustChnName" : "王小明",
+        "CustEngName" : "Wan ShiaoMing",
+        "BirthDay" : "1980/01/01",
+        "MobNo" : "091234567",
+        "AddrZip" : "103",
+        "MailAddr1" : "台北市大安區",
+        "MailAddr2" : "台北市大安區",
+        "CardType" : "1",
+        "DayLmt" : 1000.0,
+        "MnthLmt" : 50000.0,
+        "NonRsrvdFundXferFlg" : "1",
+        "XbrdrWdlFlg" : "1",
+        "SmartPayFlg" : "1",
+        "DlvrMthd" : "0",
+        "DbAcctNo" : "1231231000000029",
+        "HCE" : "0",
+        "SMSFlg" : "1",
+        "PushAppFlg" : "0",
+        "eMailFlg" : "0",
+        "SMSAmt" : 12.0,
+        "eMailAddr" : "123@gmail.com",
+        "EmrgIssCardFLG" : "1",
+        "DsgntCardNo" : "0",
+        "ImgId" : "1",
+        "DbAcctInfo" : [ {
+          "DbAcctNo" : "1111222233334444"
+        } ],
+        "CrBankInfo" : [ {
+          "CrBankId" : "013",
+          "CrAcctNo" : "2111222233334443"
+        } ],
+        "SubAcctFlg" : "N",
+        "CardGrade" : "W",
+        "GrpCode" : "0000",
+        "ElekCardType" : "0",
+        "Natl" : "TW"
+      }
+    }
+  }
+}

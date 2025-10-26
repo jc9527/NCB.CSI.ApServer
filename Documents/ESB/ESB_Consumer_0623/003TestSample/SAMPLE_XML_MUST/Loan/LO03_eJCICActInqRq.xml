@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Loan/eJCICActInqRq/v1">
+   <soap:Header>
+      <v1:Header v1:mustUnderstand="true">
+         <ChannelID>ESB</ChannelID>
+         <ServiceDomain>Loan</ServiceDomain>
+         <OperationName>eJCICActInq</OperationName>
+         <ConsumerID>TWESB</ConsumerID>
+         <TransactionID>T1222222</TransactionID>
+         <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>
+      </v1:Header>
+   </soap:Header>
+   <soap:Body>
+      <v11:eJCICActInqRq>
+         <v11:ServiceHeader>
+            <v11:TxnId>LO03</v11:TxnId>
+            <v11:TxnNo>LO0300001</v11:TxnNo>
+         </v11:ServiceHeader>
+         <v11:Signon>
+            <v11:CustId>ESBUSER</v11:CustId>
+         </v11:Signon>
+         <v11:ServiceBody>
+            <v11:BankId>888</v11:BankId>
+            <v11:BrchId>1000</v11:BrchId>
+            <v11:JCICTxnId>QZ21</v11:JCICTxnId>
+            <v11:InqSysType>CCS</v11:InqSysType>
+            <v11:MsgId>Z1234AABB</v11:MsgId>
+            <v11:ChrgCode>1000</v11:ChrgCode>
+            <v11:InqEmplId>testUser</v11:InqEmplId>
+            <v11:InqEmplName>測試使用者</v11:InqEmplName>
+            <v11:InqRsnCode>A1A</v11:InqRsnCode>
+            <v11:InqDeptCode>10.100.110.12</v11:InqDeptCode>
+            <v11:CustPermId>A123456789</v11:CustPermId>
+            <!--Optional:-->
+            <v11:IssDate>2006-04-09</v11:IssDate>
+            <!--Optional:-->
+            <v11:IssType>3</v11:IssType>
+            <!--Optional:-->
+            <v11:BirthDay>1934-11-04</v11:BirthDay>
+            <!--Optional:-->
+            <v11:PicFreeFlg>0</v11:PicFreeFlg>
+            <!--Optional:-->
+            <v11:IssLoc>10003000</v11:IssLoc>
+            <v11:SendJCICFlg>Y</v11:SendJCICFlg>
+         </v11:ServiceBody>
+      </v11:eJCICActInqRq>
+   </soap:Body>
+</soap:Envelope>

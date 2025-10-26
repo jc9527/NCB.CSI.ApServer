@@ -1,0 +1,87 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "BankCard",
+    "OperationName" : "BankCardSummInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "BankCardSummInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "BC01",
+        "TxnNo" : "BC0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "RtrnDesc" : "200{00}",
+        "BankCardRec" : [ {
+          "CIFNo" : "12300",
+          "CustPermId" : "A123456789",
+          "CustChnName" : "王正卡",
+          "CustEngName" : "Main Wang",
+          "BirthDay" : "1966/02/05",
+          "MobNo" : "0922123123",
+          "AddrZip" : "110",
+          "MailAddr1" : "台北市信義區",
+          "MailAddr2" : "信義路信義街999號",
+          "CardType" : "1",
+          "CardTypeName" : "Visa Debit",
+          "CardFace" : "VC",
+          "CardFaceName" : "VISA普卡",
+          "AmtCcy" : "TWD",
+          "DayLmt" : 99999.0,
+          "MnthLmt" : 99999.0,
+          "NPDFundXfer" : "0",
+          "XbrdrWdl" : "1",
+          "SmartPayFlg" : "1",
+          "DlvrMthd" : "0",
+          "DlvrMthdName" : "卡廠郵寄",
+          "DbAcctNo" : "01000000008188",
+          "HCE" : "0",
+          "SMSFlg" : "0",
+          "PushAppFlg" : "0",
+          "eMailFlg" : "0",
+          "SMSAmt" : 1000.0,
+          "eMailAddr" : "123@gmail.com",
+          "CardNo" : "4312340000036975",
+          "CardStat" : "8",
+          "CardIssueStat" : "掛失",
+          "EffDateFrom" : "0116",
+          "VldDate" : "0121",
+          "AppDate" : "2015/01/23",
+          "CardAttr" : "0",
+          "CardAttrName" : "正卡",
+          "RelnCode" : "STR",
+          "RelnCodeName" : "子女",
+          "PriCIFNo" : "32300",
+          "PriCustId" : "22300",
+          "PriCardNo" : "1234123412341234",
+          "SrcId" : "TWCCS",
+          "TlrId" : "ESBUSER",
+          "PriBirthDay" : "2000/01/23",
+          "PriMobNo" : "0910102026",
+          "CardLmtShrtAmt" : 1000.0,
+          "EffDate" : "2016/06/23",
+          "ImgId" : "1",
+          "ElekCardType" : "0",
+          "ImgFlg" : "0",
+          "CardGrade" : "W",
+          "GrpCode" : "0",
+          "CVV2" : "STR"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

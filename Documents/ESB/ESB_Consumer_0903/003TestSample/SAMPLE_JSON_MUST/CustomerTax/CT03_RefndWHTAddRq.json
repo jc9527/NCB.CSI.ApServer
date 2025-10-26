@@ -1,0 +1,40 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CustomerTax",
+    "OperationName" : "RefndWHTAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "RefndWHTAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CT03",
+        "TxnNo" : "CT0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "AcctNoRec" : [ {
+            "AcctNo" : "STR"
+          } ],
+          "IntrstDateInfo" : [ {
+            "IntrstDate" : "STR"
+          } ],
+          "RefundTaxAmtInfo" : [ {
+            "RefundTaxAmt" : 12.0
+          } ],
+          "RecSeqNoInfo" : [ {
+            "RecSeqNo" : "STR"
+          } ],
+          "CrCcy" : "STR",
+          "CrAcctNo" : "STR"
+        }
+      }
+    }
+  }
+}

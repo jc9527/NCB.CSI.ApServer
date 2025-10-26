@@ -1,0 +1,52 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardLockDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "DbCardLockDtlsInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC06",
+        "TxnNo" : "DC0600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "RtrnDesc" : "200{00}",
+        "CardLockRec" : [ {
+          "CustPermId" : "Q300919133",
+          "CardNo" : "5412340000306832",
+          "CardAtt" : "0",
+          "TxnDate" : "20160525",
+          "TxnTime" : "120001",
+          "Amt" : 130.0,
+          "BlkAmt" : 130.0,
+          "IndsyCode" : "5812",
+          "TxnType" : "國外提款",
+          "ReqPmtDays" : 13,
+          "AuthCode" : "783218",
+          "MrchCode" : "STARBUCKS",
+          "CntryCode" : "US",
+          "MrchNo" : "STR",
+          "PosEntryType" : "STR",
+          "IsoRtrnCode" : "STR",
+          "UnlockFlg" : "STR",
+          "ReqPmtFlg" : "STR"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

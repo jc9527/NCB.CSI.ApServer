@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "RwdPntsXferAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "RwdPntsXferAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP03",
+        "TxnNo" : "RP0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "DbMmbId" : "1200000001",
+        "CrMmbId" : "1200000002",
+        "DbCustPermId" : "A123456789",
+        "CrCustPermId" : "A234567891",
+        "HdlgChrgFlg" : "Y",
+        "XferPnts" : 100
+      }
+    }
+  }
+}

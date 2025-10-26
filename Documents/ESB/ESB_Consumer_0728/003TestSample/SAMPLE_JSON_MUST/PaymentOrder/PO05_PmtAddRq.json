@@ -1,0 +1,44 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "PmtAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "PmtAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO05",
+        "TxnNo" : "PO0500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "TxNo" : "122345000001",
+        "ChanId" : "APP",
+        "CustPermId" : "S123456789",
+        "CustChnName" : "王春嬌",
+        "PayerAcctId" : "10305070902",
+        "PrcDate" : "2016-01-01",
+        "CurAmt" : 100,
+        "CustPayeeId" : "S123456789",
+        "PayeeAcctId" : "00000001",
+        "PayeeName" : "134562436436",
+        "PayeeBankId" : "009",
+        "GPS" : "1234",
+        "TxnNo" : "2468013579",
+        "ChanTxnNo" : "1357902468",
+        "MobLang" : "English",
+        "DgtlAcctType" : "3A",
+        "IPAddr" : "10.1.1.1",
+        "IMEI" : "123456789012",
+        "FISCMemo" : "財金附言",
+        "Memo1" : "Remark1",
+        "Memo2" : "Remark2"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/PaymentOrder/PmtAddRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>PaymentOrder</ServiceDomain>  
+      <OperationName>PmtAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:PmtAddRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>PO05</v11:TxnId>  
+        <v11:TxnNo>PO0500001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:RtrnCode>0000</v11:RtrnCode>  
+        <!--Optional:-->  
+        <v11:RtrnDesc>200{0000}</v11:RtrnDesc>  
+        <!--Optional:-->  
+        <v11:PmtAddInfo> 
+          <v11:TxNo>122345000001</v11:TxNo>  
+          <v11:PostDate>2016-01-01</v11:PostDate>  
+          <v11:CurAmt>10000</v11:CurAmt>  
+          <v11:HdlgChrg>500</v11:HdlgChrg>  
+          <v11:AvailBal>90500</v11:AvailBal>  
+          <v11:AcctBal>90500</v11:AcctBal>  
+          <v11:FISCTxnNo>12345000001</v11:FISCTxnNo>  
+          <v11:FISCRtrnCode>4001</v11:FISCRtrnCode> 
+        </v11:PmtAddInfo> 
+      </v11:ServiceBody> 
+    </v11:PmtAddRs> 
+  </soap:Body> 
+</soap:Envelope>

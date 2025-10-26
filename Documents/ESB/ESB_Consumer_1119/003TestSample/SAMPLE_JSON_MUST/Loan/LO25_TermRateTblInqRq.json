@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "TermRateTblInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "TermRateTblInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO25",
+        "TxnNo" : "LO2500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "PageInfo" : {
+          "PageSize" : 50,
+          "PageStart" : 1,
+          "PageToken" : "201904170622107608.01,99"
+        },
+        "AcctNo" : "84910000000116"
+      }
+    }
+  }
+}

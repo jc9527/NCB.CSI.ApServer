@@ -1,0 +1,25 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CardAuthorization",
+    "OperationName" : "XbrdrWdlCardPswdRst",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "XbrdrWdlCardPswdRstRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CD02",
+        "TxnNo" : "CD0200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CardNo" : "4020160418174010",
+        "PinBlk" : "123456"
+      }
+    }
+  }
+}

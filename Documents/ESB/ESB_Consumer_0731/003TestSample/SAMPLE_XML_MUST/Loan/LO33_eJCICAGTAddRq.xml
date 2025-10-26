@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Loan/eJCICAGTAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>Loan</ServiceDomain>  
+      <OperationName>eJCICAGTAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:eJCICAGTAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>LO33</v11:TxnId>  
+        <v11:TxnNo>LO3300001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:BankId>888</v11:BankId>  
+        <v11:BrchId>1000</v11:BrchId>  
+        <v11:JCICTxnId>RAGT</v11:JCICTxnId>  
+        <v11:InqSysId>CCS</v11:InqSysId>  
+        <v11:MsgId>Z1234AABB</v11:MsgId>  
+        <v11:ChrgCode>1000</v11:ChrgCode>  
+        <v11:InqEmplId>testUser</v11:InqEmplId>  
+        <v11:InqEmplName>測試使用者</v11:InqEmplName>  
+        <v11:InqRsnCode>A1A</v11:InqRsnCode>  
+        <v11:InqDeptCode>10.100.110.12</v11:InqDeptCode>  
+        <v11:BankCode>STR</v11:BankCode>  
+        <v11:CustPermId>STR</v11:CustPermId>  
+        <v11:AGTVer>STR</v11:AGTVer>  
+        <v11:AGTDate>STR</v11:AGTDate>  
+        <v11:RsrvdInqDate>STR</v11:RsrvdInqDate>  
+        <v11:CustChnName>STR</v11:CustChnName>  
+        <v11:CustIP>STR</v11:CustIP>  
+        <v11:PhnNo>STR</v11:PhnNo>  
+        <v11:VrfyRsltCode>Y</v11:VrfyRsltCode> 
+      </v11:ServiceBody> 
+    </v11:eJCICAGTAddRq> 
+  </soap:Body> 
+</soap:Envelope>

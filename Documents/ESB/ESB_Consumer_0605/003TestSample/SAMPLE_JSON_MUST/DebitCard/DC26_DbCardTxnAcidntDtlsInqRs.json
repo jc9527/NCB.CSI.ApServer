@@ -1,0 +1,41 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardTxnAcidntDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "DbCardTxnAcidntDtlsInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC26",
+        "TxnNo" : "DC2600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "CardNoRec" : [ {
+          "CardNo" : "4563020616112800",
+          "LcyTxnFlg" : "STR",
+          "XbrdrTxnFlg" : "20160501",
+          "XbrdrWdlFlg" : "20160501",
+          "ElekCardAutoLoadFlg" : "STR",
+          "ElekCardFlg" : "STR",
+          "BillNo" : "1000000001"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

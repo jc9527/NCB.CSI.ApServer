@@ -1,0 +1,30 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "RwdPntsAwardsAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "RwdPntsAwardsAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP04",
+        "TxnNo" : "RP0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "E000",
+        "RtrnDesc" : "200 {E000}",
+        "RwdPntsAwardsAddInfo" : {
+          "MmbId" : "A123456789",
+          "CampId" : 29887923
+        }
+      }
+    }
+  }
+}

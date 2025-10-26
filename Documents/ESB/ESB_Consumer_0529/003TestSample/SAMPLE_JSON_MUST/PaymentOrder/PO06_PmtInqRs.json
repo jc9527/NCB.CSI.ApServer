@@ -1,0 +1,54 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "PmtInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "PmtInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO06",
+        "TxnNo" : "PO0600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "0000"
+        "RtrnDesc" : "200{0000}",
+        "PmtInqRec" : [ {
+          "TxNo" : "122345000001",
+          "ChanId" : "APP",
+          "CustPermId" : "A123456789",
+          "PayerAcctId" : "0000000000000001",
+          "PayerBankId" : "827",
+          "PrcDate" : "2016-05-24",
+          "PostDate" : "2016-05-24",
+          "CurAmt" : 10000.0,
+          "HdlgChrg" : 500.0,
+          "AvailBal" : 1000.0,
+          "AcctBal" : 1000.0,
+          "DbMemo1" : "STR",
+          "DbMemo2" : "STR",
+          "DbMemo3" : "STR",
+          "FiscMemo" : "STR",
+          "PayeePermId" : "S123456789",
+          "PayeeAcctId" : "0000000000000002",
+          "PayeeBankId" : "007",
+          "CrMemo1" : "STR",
+          "CrMemo2" : "STR",
+          "FISCTxnNo" : "12345000001",
+          "TxnFlow" : "1503010000"
+        } ],
+        "ControlRec" : {
+          "EOFFlg" : "N",
+          "NextInqKeyId" : "STR"
+        }
+      }
+    }
+  }
+}

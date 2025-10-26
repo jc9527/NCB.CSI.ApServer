@@ -1,0 +1,70 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "SelfChannel",
+    "OperationName" : "SelfChanAcctBalDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "SelfChanAcctBalDtlsInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "SC01",
+        "TxnNo" : "SC0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "SelfChanAvailBalRec" : {
+          "ATMWdlBalInfo" : {
+            "ATMWdlLmt" : 12.0,
+            "ATMWdlAmt" : 12.0,
+            "ATMWdlDayLmt" : 12.0,
+            "AmtCcy" : "TWD"
+          },
+          "ATMWdrwlCardlssBalInfo" : {
+            "ATMWdrwlCardlssLmt" : 200.0,
+            "ATMWdrwlCardlssAmt" : 200.0,
+            "ATMWdrwlCardlssDayLmt" : 200.0,
+            "AmtCcy" : "TWD"
+          },
+          "ATMPDBalInfo" : {
+            "ATMPDLmt" : 12.0,
+            "ATMPDAmt" : 12.0,
+            "ATMPDDayLmt" : 12.0,
+            "AmtCcy" : "TWD"
+          },
+          "eBillAvailBalInfo" : {
+            "eBillMinAcctLmt" : 12.0,
+            "eBillMinAcctLmtUsed" : 12.0,
+            "eBillMinAcctDayLmt" : 12.0,
+            "eBillMinAcctMnthLmt" : 12.0,
+            "eBillMinAcctMnthUsed" : 12.0,
+            "eBillMinAcctMnthAvail" : 12.0,
+            "eBillMaxAcctLmt" : 12.0,
+            "eBillMaxAcctLmtUsed" : 12.0,
+            "eBillMaxAcctDayLmt" : 12.0,
+            "eBillBankCardLmt" : 12.0,
+            "eBillBankCardUsed" : 12.0,
+            "eBillBankCardDayLmt" : 12.0,
+            "AmtCcy" : "TWD"
+          },
+          "DgtlAcctType3NPDAvailBalInfo" : {
+            "DgtlAcctType3NPDLmt" : 12.0,
+            "DgtlAcctType3NPDAmt" : 12.0,
+            "DgtlAcctType3NPDDayLmt" : 12.0,
+            "DgtlAcctType3NPDMnthLmt" : 12.0,
+            "DgtlAcctType3NPDMnthAmt" : 12.0,
+            "DgtlAcctType3NPDMnthAvail" : 12.0,
+            "AmtCcy" : "TWD"
+          }
+        }
+      }
+    }
+  }
+}

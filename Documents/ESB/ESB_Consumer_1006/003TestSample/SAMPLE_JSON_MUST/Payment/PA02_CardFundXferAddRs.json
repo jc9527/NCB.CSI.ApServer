@@ -1,0 +1,50 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Payment",
+    "OperationName" : "CardFundXferAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "CardFundXferAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "PA02",
+        "TxnNo" : "PA0200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnStatCode" : [ {
+          "RtrnCode" : "200",
+          "RtrnDesc" : "200{success}"
+        } ],
+        "HeaderInfo" : {
+          "Id" : "AAACT193372H91D4ZL"
+        },
+        "FundXferInfo" : {
+          "LockSeqNo" : "ACLK2002557245",
+          "FundXferType" : "AC",
+          "AcctNo" : "84980000000026",
+          "AmtCcy" : "TWD",
+          "TxnAmt" : 5000,
+          "IPAddr" : "IP.172.20.15.192",
+          "DevNo" : "1",
+          "EntryDeptCode" : "N01",
+          "PrftCntr" : "N01",
+          "CostCntr" : "N01",
+          "AuthEmpId" : "HELEN",
+          "EntryEmplNo" : "string",
+          "VerName" : "AA.ARRANGEMENT.ACTIVITY,AA.API.NEW.NCB.1.0.0",
+          "EcoUnit" : "N01",
+          "APIKey" : "NCB-IF17003",
+          "MobLang" : "ENGLISH",
+          "Chan" : "CCS"
+        }
+      }
+    }
+  }
+}

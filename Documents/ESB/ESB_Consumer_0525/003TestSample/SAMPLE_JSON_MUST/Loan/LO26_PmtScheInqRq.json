@@ -1,0 +1,31 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "PmtScheInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "PmtScheInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO26",
+        "TxnNo" : "LO2600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "PageInfo" : {
+          "PageSize" : 50,
+          "PageStart" : 1,
+          "PageToken" : "201904170622107608.01,99"
+        },
+        "ArrngId" : "AA193371J8K3",
+        "SchdStartDate" : "20200103",
+        "SchdEndDate" : "20200303"
+      }
+    }
+  }
+}

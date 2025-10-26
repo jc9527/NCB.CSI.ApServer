@@ -1,0 +1,41 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CustomerTax",
+    "OperationName" : "FATCAAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "FATCAAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "CT06",
+        "TxnNo" : "CT0600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnStatCode" : [ {
+          "RtrnCode" : "200",
+          "RtrnDesc" : "200{success}"
+        } ],
+        "HeaderInfo" : {
+          "Id" : "1000000004"
+        },
+        "RsrvdAcctNoInfo" : {
+          "CustType" : "Individual",
+          "BirthDayFlg" : "NO",
+          "Res" : "JP",
+          "TaxRes" : "TW",
+          "FATCAStat" : "NON.US.ACCOUNT",
+          "StatChngDate" : "20200103",
+          "APIKey" : "NCB-IF99002",
+          "Chan" : "CCS"
+        }
+      }
+    }
+  }
+}

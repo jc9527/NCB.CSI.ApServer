@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Customer/CustProfCMSSyncRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>Customer</ServiceDomain>  
+      <OperationName>CustProfCMSSync</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:CustProfCMSSyncRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>CU14</v11:TxnId>  
+        <v11:TxnNo>CU1400001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:FnctCode>02</v11:FnctCode>  
+        <v11:CIFNo>2334567599</v11:CIFNo>  
+        <v11:CustPermId>A123454489</v11:CustPermId>  
+        <v11:CustEngName>Wan ShiaoMing</v11:CustEngName>  
+        <v11:CustChnName>王小明</v11:CustChnName>  
+        <v11:AddrZip>105</v11:AddrZip>  
+        <v11:MailAddr1>台北市松山區</v11:MailAddr1>  
+        <v11:MailAddr2>民生東路四段133號</v11:MailAddr2>  
+        <v11:BirthDay>1980-01-01</v11:BirthDay>  
+        <v11:MobNo>091234567</v11:MobNo>  
+        <v11:EMailAddr>123@gmail.com</v11:EMailAddr>  
+        <v11:Nationality>TW</v11:Nationality>  
+        <v11:CIFCloseDt>STR</v11:CIFCloseDt> 
+      </v11:ServiceBody> 
+    </v11:CustProfCMSSyncRq> 
+  </soap:Body> 
+</soap:Envelope>

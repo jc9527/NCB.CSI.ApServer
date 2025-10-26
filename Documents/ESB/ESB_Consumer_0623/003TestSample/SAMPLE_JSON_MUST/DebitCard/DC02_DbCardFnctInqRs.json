@@ -1,0 +1,42 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardFnctInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "DbCardFnctInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC02",
+        "TxnNo" : "DC0200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "CardBlkRec" : [ {
+          "CardNo" : "4563020616112800",
+          "CardName" : "馬爾濟斯",
+          "CustPermId" : "K221222991",
+          "CardType" : "0",
+          "CardAtt" : "V1",
+          "RelnCode" : "1",
+          "ExpYearMnth" : "0116",
+          "CntlrId" : "joe",
+          "Memo" : "客服人員異動註記說明"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

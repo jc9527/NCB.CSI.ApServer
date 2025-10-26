@@ -1,0 +1,31 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Payment",
+    "OperationName" : "UnlockAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "UnlockAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "PA04",
+        "TxnNo" : "PA0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CardNo" : "4563020616112800",
+        "TxnDate" : "20160501",
+        "TxnTime" : "123456",
+        "AuthKey" : "016290",
+        "TxnAmt" : 1000.0,
+        "LockSeqNo" : "ACLK1615297806",
+        "UpdtUserId" : "joe",
+        "SprvsrlId" : "joe"
+      }
+    }
+  }
+}

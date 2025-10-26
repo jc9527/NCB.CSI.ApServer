@@ -1,0 +1,34 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Payment",
+    "OperationName" : "CardFundXferAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CardFundXferAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "PA02",
+        "TxnNo" : "PA0200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "TxnType" : 1,
+        "Id" : "AAACT193372H91D4ZL",
+        "LockInfo" : {
+          "LockSeqNo" : "ACLK2002557245",
+          "FundXferType" : "AC",
+          "AcctNo" : "84980000000026",
+          "AmtCcy" : "TWD",
+          "TxnAmt" : 5000,
+          "APIKey" : "NCB-IF17003"
+        }
+      }
+    }
+  }
+}

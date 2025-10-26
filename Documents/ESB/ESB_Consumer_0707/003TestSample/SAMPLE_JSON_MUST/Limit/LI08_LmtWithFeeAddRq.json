@@ -1,0 +1,60 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Limit",
+    "OperationName" : "LmtWithFeeAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LmtWithFeeAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LI08",
+        "TxnNo" : "LI0800001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "LmtId" : "NEW",
+        "LbltyNo" : "1000000004",
+        "LmtProdId" : "8100",
+        "AppNo" : "ELOAN12034",
+        "Ccy" : "TWD",
+        "AvailFlg" : "Y",
+        "ApprvDate" : "20191203",
+        "DfltApprvDate" : "20191203",
+        "RvwFreq" : "20201203M0101",
+        "LmtExpDate" : "20201203",
+        "AppDate" : "20201203",
+        "LmtEffData" : "20201203",
+        "ExtblLmtExpDate" : "20201204",
+        "LmtAmt" : 65000,
+        "MaxLmtAmt" : 65000,
+        "LmtType" : "FIXED",
+        "AllwLmtCancFlg" : "1",
+        "LmtCtrctExpDate" : "20271203",
+        "DbAcct" : "88610000000034",
+        "ChrgDate" : "20191203",
+        "ChrgCodeRec" : [ {
+          "ChrgCode" : "LIMITSETFEE"
+        } ],
+        "HdlgChrgAmtRec" : [ {
+          "HdlgChrgAmt" : 2000
+        } ],
+        "AckRec" : [ {
+        } ],
+        "LmtRefNoRec" : [ {
+          "LmtRefNo" : "Extra Details"
+        } ],
+        "OvrrdRec" : [ {
+        } ],
+        "UpdtDateRec" : [ {
+        } ],
+        "APIKey" : "IF05005"
+      }
+    }
+  }
+}

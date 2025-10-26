@@ -1,0 +1,46 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Wallet",
+    "OperationName" : "WalletProfInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "WalletProfInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "WA01",
+        "TxnNo" : "WA0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "RtrnDesc" : "200{00}",
+        "WalletProfRec" : [ {
+          "CardNo" : "200000022",
+          "WalletNo" : "04810000090",
+          "WalletStat" : "N",
+          "AmtCcy" : "TWD",
+          "CanDate" : "20160501",
+          "CanRsn" : "C",
+          "AutoLoadFlg" : "C",
+          "AutoLoadDate" : "20160501",
+          "AutoLoadTime" : "115814",
+          "AutoLoadUserId" : "100000002",
+          "AutoLoadCanTime" : "115814",
+          "CanAutoLoadUserId" : "100000002"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

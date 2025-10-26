@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CardlessPayment",
+    "OperationName" : "WdrwlCardlssFnctMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "WdrwlCardlssFnctModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CL01",
+        "TxnNo" : "CL0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "A123456789",
+        "AcctNo" : "29887923",
+        "ChanId" : "APP",
+        "WdrwlCardlessFlg" : true,
+        "BrchId" : "02398233",
+        "UserId" : "1234"
+      }
+    }
+  }
+}

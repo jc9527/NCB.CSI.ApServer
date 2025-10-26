@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/DebitCard/TxnAcidntAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>DebitCard</ServiceDomain>  
+      <OperationName>TxnAcidntAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:TxnAcidntAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>DC22</v11:TxnId>  
+        <v11:TxnNo>DC2200001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:BillNo>1000000001</v11:BillNo>  
+        <v11:AppType>1</v11:AppType>  
+        <v11:AppCode>1</v11:AppCode> 
+      </v11:ServiceBody> 
+    </v11:TxnAcidntAddRq> 
+  </soap:Body> 
+</soap:Envelope>

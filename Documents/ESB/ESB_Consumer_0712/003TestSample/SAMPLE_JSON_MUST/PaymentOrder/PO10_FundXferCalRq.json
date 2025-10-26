@@ -1,0 +1,31 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "FundXferCal",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "FundXferCalRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO10",
+        "TxnNo" : "PO1000001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : true,
+        "Payload" : {
+          "TxnType" : "AC01",
+          "DbAcctNo" : "23939889",
+          "CrAcctNo" : "28825252",
+          "CrCcy" : "TWD",
+          "CrAmt" : 3500
+        }
+      }
+    }
+  }
+}

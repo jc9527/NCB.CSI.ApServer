@@ -1,0 +1,31 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "eStatement",
+    "OperationName" : "eStmtDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "eStmtDtlsInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "ES05",
+        "TxnNo" : "ES0500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "0000"
+        "RtrnDesc" : "200 {0000}",
+        "StmtRec" : {
+          "CustPermId" : "A123456789",
+          "CustName" : "TryWang",
+          "MobNo" : "0912345678"
+        }
+      }
+    }
+  }
+}

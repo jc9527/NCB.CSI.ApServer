@@ -1,0 +1,21 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "GrpCodeInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "GrpCodeInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC11",
+        "TxnNo" : "DC1100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      }
+    }
+  }
+}

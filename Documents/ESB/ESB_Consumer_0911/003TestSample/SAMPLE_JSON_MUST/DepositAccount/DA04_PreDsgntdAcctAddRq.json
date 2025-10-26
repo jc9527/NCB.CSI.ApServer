@@ -1,0 +1,32 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "PreDsgntdAcctAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "PreDsgntdAcctAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA04",
+        "TxnNo" : "DA0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "A123456789",
+        "FnctCode" : "Insert",
+        "PreDsgntdType" : "In",
+        "AliasName" : "Test",
+        "BankId" : "048",
+        "AcctNo" : "0001200001000200",
+        "SameIdFlg" : false,
+        "UpdtUserId" : "USER001",
+        "UpdtBrchId" : "9999"
+      }
+    }
+  }
+}

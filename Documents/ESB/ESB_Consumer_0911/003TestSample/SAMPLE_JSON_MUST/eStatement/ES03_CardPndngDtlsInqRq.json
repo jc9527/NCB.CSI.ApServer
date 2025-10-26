@@ -1,0 +1,25 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "eStatement",
+    "OperationName" : "CardPndngDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CardPndngDtlsInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "ES03",
+        "TxnNo" : "ES0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "A123456789",
+        "InqMnth" : "201601"
+      }
+    }
+  }
+}

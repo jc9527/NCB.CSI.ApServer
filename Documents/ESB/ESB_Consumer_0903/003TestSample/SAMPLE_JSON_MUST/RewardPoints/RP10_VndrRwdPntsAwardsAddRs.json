@@ -1,0 +1,33 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "VndrRwdPntsAwardsAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "VndrRwdPntsAwardsAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP10",
+        "TxnNo" : "RP1000001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "E000",
+        "RtrnDesc" : "200 {E000}",
+        "VndrRwdPntsAwardsAddInfo" : {
+          "VndrName" : "Test Vender Name",
+          "VndrMmbId" : "AA2468013579",
+          "TxnCode" : "29887923001122334455",
+          "TxnType" : 3,
+          "RwdPnts" : 300
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CardAuthorization",
+    "OperationName" : "ICCTACVrfy",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "ICCTACVrfyRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CD03",
+        "TxnNo" : "CD0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "A123456789",
+        "ChanId" : "CCS",
+        "DbAcctNo" : "1234567890123450",
+        "TermChkCode" : "90099772",
+        "ICCMemo" : "轉帳",
+        "ICCSeqNo" : "29097737",
+        "ICCTAC" : "4321123443211230"
+      }
+    }
+  }
+}

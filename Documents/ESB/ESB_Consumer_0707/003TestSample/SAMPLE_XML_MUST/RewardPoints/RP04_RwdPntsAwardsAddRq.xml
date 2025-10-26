@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/RewardPoints/RwdPntsAwardsAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>RewardPoints</ServiceDomain>  
+      <OperationName>RwdPntsAwardsAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:RwdPntsAwardsAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>RP04</v11:TxnId>  
+        <v11:TxnNo>RP0400001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:MmbId>A123456789</v11:MmbId>  
+        <!--Optional:-->  
+        <v11:CustPermId>A123456789</v11:CustPermId>  
+        <!--Optional:-->  
+        <v11:CCSId>0002468</v11:CCSId>  
+        <v11:CampId>29887923</v11:CampId>  
+        <v11:TxnCode>29887923001122334455</v11:TxnCode>  
+        <v11:TxnType>3</v11:TxnType>  
+        <v11:RwdPnts>300.0</v11:RwdPnts>  
+        <!--Optional:-->  
+        <v11:ShrtPoint>300.0</v11:ShrtPoint> 
+      </v11:ServiceBody> 
+    </v11:RwdPntsAwardsAddRq> 
+  </soap:Body> 
+</soap:Envelope>

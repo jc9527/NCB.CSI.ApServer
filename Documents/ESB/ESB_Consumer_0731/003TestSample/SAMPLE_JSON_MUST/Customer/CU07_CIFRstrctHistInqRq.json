@@ -1,0 +1,31 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Customer",
+    "OperationName" : "CIFRstrctHistInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CIFRstrctHistInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CU07",
+        "TxnNo" : "CU0700001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "PageInfo" : {
+          "PageSize" : 50,
+          "PageStart" : 1,
+          "PageToken" : "201904170622107608.01"
+        },
+        "CustPermId" : "Y123789456",
+        "CIFNo" : "1000000013",
+        "PostRstrctCode" : "6"
+      }
+    }
+  }
+}

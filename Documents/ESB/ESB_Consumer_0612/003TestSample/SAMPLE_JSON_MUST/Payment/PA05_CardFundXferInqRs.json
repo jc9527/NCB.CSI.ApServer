@@ -1,0 +1,41 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Payment",
+    "OperationName" : "CardFundXferInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "CardFundXferInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "PA05",
+        "TxnNo" : "PA0500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "CardNoRec" : [ {
+          "CardNo" : "4563020616112800",
+          "AmtCcy" : "TWD",
+          "TxnDate" : "20160501",
+          "PostDate" : "20160501",
+          "ChartAcct" : "STR",
+          "WorkBal" : 1000.0,
+          "BillNo" : "1000000001"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

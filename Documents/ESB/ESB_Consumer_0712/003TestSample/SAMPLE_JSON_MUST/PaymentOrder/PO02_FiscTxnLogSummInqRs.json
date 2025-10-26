@@ -1,0 +1,41 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "FiscTxnLogSummInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "FiscTxnLogSummInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO02",
+        "TxnNo" : "PO0200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "TxnLogRec" : [ {
+          "TxnDate" : "2015-12-06",
+          "TxnTime" : "12:30:00",
+          "AcqBankId" : "100",
+          "TxnSeqNo" : "0123456",
+          "TxnPCode" : "1234",
+          "DbAmt" : 12.0,
+          "AmtCcy" : "TWD",
+          "DbAcctNo" : "3333222255551111",
+          "CardNo" : "2021233"
+        } ],
+        "ControlRec" : {
+          "EOFFlg" : "Y",
+          "NextInqKeyId" : "2016010132165497894561"
+        }
+      }
+    }
+  }
+}

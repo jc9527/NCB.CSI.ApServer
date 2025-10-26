@@ -1,0 +1,26 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "TxnAcidntAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "TxnAcidntAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC22",
+        "TxnNo" : "DC2200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "BillNo" : "1000000001",
+        "AppType" : "1",
+        "AppCode" : "11"
+      }
+    }
+  }
+}

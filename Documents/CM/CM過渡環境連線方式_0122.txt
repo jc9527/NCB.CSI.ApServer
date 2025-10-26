@@ -1,0 +1,3 @@
+CM過度環境之API網址 (port 80):http://10.1.1.27/NCBRestful/
+依照API文件說明，以UploadFile舉例，其API連結為 http://10.1.1.27/NCBRestful/api/UploadFile/
+其他API功能連結請參照API文件說明。

@@ -1,0 +1,68 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "BankCard",
+    "OperationName" : "BankCardResndChk",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "BankCardResndChkRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "BC08",
+        "TxnNo" : "BC0800001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "PriCardResndInfo" : {
+          "CIFNo" : "12301",
+          "CustPermId" : "A223456789",
+          "CustChnName" : "陳正卡",
+          "CustEngName" : "Main Cheng",
+          "BirthDay" : "12/5/56",
+          "MobNo" : "923223123",
+          "AddrZip" : "105",
+          "MailAddr1" : "台北市松山區",
+          "MailAddr2" : "民生東路100號",
+          "CardType" : "1",
+          "CardTypeName" : "Visa Debit",
+          "CardFace" : "VC",
+          "CardFaceName" : "VISA普卡",
+          "AmtCcy" : "TWD",
+          "DayLmt" : 99999.0,
+          "MnthLmt" : 99999.0,
+          "NonRsrvdFundXferFlg" : "0",
+          "XbrdrWdlFlg" : "0",
+          "SmartPayFlg" : "0",
+          "DlvrMthd" : "0",
+          "DlvrMthdName" : "卡廠郵寄",
+          "DlvrBrch" : "888",
+          "DlvrBrchName" : "總行",
+          "DbAcctNo" : "1234000012340000",
+          "HCEFlag" : "0",
+          "SMSFlg" : "0",
+          "PushAppFlg" : "0",
+          "eMailFlg" : "1",
+          "SMSAmt" : 10000.0,
+          "eMailAddr" : "hello@gmail.com",
+          "DsgntCarFlg" : "0",
+          "CardNo" : "4001200000001880",
+          "EffDateFrom" : "0116",
+          "EffDateTo" : "0220",
+          "CardFlg" : "0",
+          "Img" : "3",
+          "CardGrade" : "W",
+          "GrpCode" : "0000",
+          "ElekCardType" : "0",
+          "Natl" : "TW"
+        }
+      }
+    }
+  }
+}

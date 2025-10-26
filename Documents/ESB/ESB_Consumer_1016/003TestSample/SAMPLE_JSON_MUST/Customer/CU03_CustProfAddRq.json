@@ -1,0 +1,80 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Customer",
+    "OperationName" : "CustProfAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CustProfAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CU03",
+        "TxnNo" : "CU0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "CustEngName" : "Henry Lu",
+          "CustChnName" : "盧小乖",
+          "CustShrtNameInfo" : [ {
+            "CustShrtName" : "Henry"
+          } ],
+          "Mnem" : "Y123789456",
+          "AOEmplNo" : "STR",
+          "Sctr" : "1000",
+          "Indstry" : "STR",
+          "Tgt" : "999",
+          "CustStat" : "2",
+          "Natl" : "TW",
+          "Res" : "TW",
+          "Lang" : "STR",
+          "CustPermId" : "Y123789456",
+          "CntctDtlsInfo" : [ {
+            "ResPhnNo" : "TW",
+            "MobNo" : "STR"
+          } ],
+          "BirthDay" : "19740101",
+          "Gndr" : "MALE",
+          "MrtlStat" : "SINGLE",
+          "AcctOpnRsnRec" : [ {
+            "AcctOpnRsn" : "STR"
+          } ],
+          "EduLvl" : "DEGREE",
+          "IndstryType" : "060000",
+          "IndstryObj" : "060000",
+          "GrpCo" : "CORBAN",
+          "EmplNo" : "223432",
+          "DgtlAcctVrfy" : "2566-20200910",
+          "CIFCloseDt" : "20191225",
+          "TaxFreeFlg" : "Y",
+          "PIPAFlg" : "Y",
+          "RelnRMCode" : "1",
+          "FXId" : "3",
+          "IndstryCode" : "25",
+          "PIDIssLoc" : "63000000",
+          "NHIFlg" : "Y",
+          "Rsdnt183Flg" : "Y",
+          "L3PtyXSellFlg" : "Y",
+          "StkhldrToken" : "STAKE HOLDER",
+          "RsdntAddr" : {
+            "AddrZip" : "10040",
+            "St" : "信義路五段",
+            "Addr" : "190號",
+            "TownCnty" : "台北市",
+            "Cntry" : "台灣"
+          },
+          "PinYinName" : "PinYin",
+          "LoanLmtTtl" : 11819.21,
+          "Cntry" : "台灣",
+          "CIFAddDate" : "20191218",
+          "DsbltyCardExpDate" : "20201203"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Customer",
+    "OperationName" : "KYCChkCal",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "KYCChkCalRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "CU16",
+        "TxnNo" : "CU1600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "-100",
+        "RtrnDesc" : "400{ Cannot establish database connection. }",
+        "KYCRsltRec" : [ {
+          "CustNo" : "A186580262"
+        } ]
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "PointCampInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "PointCampInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP12",
+        "TxnNo" : "RP1200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "FnctCode" : "QRY",
+        "CampName" : "周年大贈送"
+      }
+    }
+  }
+}

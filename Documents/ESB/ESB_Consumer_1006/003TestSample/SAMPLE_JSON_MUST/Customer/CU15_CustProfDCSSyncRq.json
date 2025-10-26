@@ -1,0 +1,35 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Customer",
+    "OperationName" : "CustProfDCSSync",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CustProfDCSSyncRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CU15",
+        "TxnNo" : "CU1500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "FnctCode" : "02",
+        "CIFNo" : "2334567599",
+        "CustPermId" : "A123454489",
+        "CustEngName" : "Wan ShiaoMing",
+        "CustChnName" : "王小明",
+        "AddrZip" : "105",
+        "MailAddr1" : "台北市松山區",
+        "MailAddr2" : "民生東路四段133號",
+        "BirthDay" : "1980-01-01",
+        "MobNo" : "091234567",
+        "EMailAddr" : "123@gmail.com",
+        "Natl" : "TW"
+      }
+    }
+  }
+}

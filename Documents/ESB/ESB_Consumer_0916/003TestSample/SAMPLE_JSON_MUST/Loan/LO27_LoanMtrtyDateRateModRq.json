@@ -1,0 +1,41 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "LoanMtrtyDateRateMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LoanMtrtyDateRateModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO27",
+        "TxnNo" : "LO2700001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "ArrngId" : "AA19337S79NM",
+        "CustRec" : [ {
+        } ],
+        "ProdName" : "AL.TERM.LN",
+        "Ccy" : "TWD",
+        "TxnType" : "LENDING-RENEGOTIATE-ARRANGEMENT",
+        "EffDate" : "20201203",
+        "CmmtmntInfo" : {
+        },
+        "PrncplIntrstRec" : {
+        },
+        "PnltyIntrstRec" : {
+        },
+        "PmtRec" : {
+        },
+        "IPAddr" : "IP 172.100.10.22",
+        "APIKey" : "IF05007"
+      }
+    }
+  }
+}

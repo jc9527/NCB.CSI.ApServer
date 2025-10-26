@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/BankCard/BankCardResndChkRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>BankCard</ServiceDomain>  
+      <OperationName>BankCardResndChk</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:BankCardResndChkRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>BC08</v11:TxnId>  
+        <v11:TxnNo>BC0800001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:RtrnCode>00</v11:RtrnCode>  
+        <!--Optional:-->  
+        <v11:RtrnDesc>200{00}</v11:RtrnDesc>  
+        <!--Optional:-->  
+        <v11:PriCardResndInfo> 
+          <v11:CIFNo>12301</v11:CIFNo>  
+          <v11:CustPermId>A223456789</v11:CustPermId>  
+          <v11:CustChnName>陳正卡</v11:CustChnName>  
+          <v11:CustEngName>Main Cheng</v11:CustEngName>  
+          <v11:BirthDay>12/5/56</v11:BirthDay>  
+          <v11:MobNo>923223123</v11:MobNo>  
+          <v11:AddrZip>105</v11:AddrZip>  
+          <v11:MailAddr1>台北市松山區</v11:MailAddr1>  
+          <v11:MailAddr2>民生東路100號</v11:MailAddr2>  
+          <v11:CardType>1</v11:CardType>  
+          <v11:CardTypeName>Visa Debit</v11:CardTypeName>  
+          <v11:CardFace>VC</v11:CardFace>  
+          <v11:CardFaceName>VISA普卡</v11:CardFaceName>  
+          <v11:AmtCcy>TWD</v11:AmtCcy>  
+          <v11:DayLmt>99999</v11:DayLmt>  
+          <v11:MnthLmt>99999</v11:MnthLmt>  
+          <v11:NonRsrvdFundXferFlg>0</v11:NonRsrvdFundXferFlg>  
+          <v11:XbrdrWdlFlg>0</v11:XbrdrWdlFlg>  
+          <v11:SmartPayFlg>0</v11:SmartPayFlg>  
+          <v11:DlvrMthd>0</v11:DlvrMthd>  
+          <v11:DlvrMthdName>卡廠郵寄</v11:DlvrMthdName>  
+          <!--Optional:-->  
+          <v11:DlvrBrch>888</v11:DlvrBrch>  
+          <!--Optional:-->  
+          <v11:DlvrBrchName>總行</v11:DlvrBrchName>  
+          <v11:DbAcctNo>1234000012340000</v11:DbAcctNo>  
+          <v11:HCEFlag>0</v11:HCEFlag>  
+          <v11:SMSFlg>0</v11:SMSFlg>  
+          <v11:PushAppFlg>0</v11:PushAppFlg>  
+          <v11:eMailFlg>1</v11:eMailFlg>  
+          <v11:SMSAmt>10000</v11:SMSAmt>  
+          <v11:eMailAddr>hello@gmail.com</v11:eMailAddr>  
+          <v11:DsgntCarFlg>0</v11:DsgntCarFlg>  
+          <v11:CardNo>4001200000001880</v11:CardNo>  
+          <!--Optional:-->  
+          <v11:EffDateFrom>0116</v11:EffDateFrom>  
+          <!--Optional:-->  
+          <v11:EffDateTo>0220</v11:EffDateTo>  
+          <v11:CardFlg>0</v11:CardFlg>  
+          <v11:Img>3</v11:Img>  
+          <v11:CardGrade>W</v11:CardGrade>  
+          <v11:GrpCode>0000</v11:GrpCode>  
+          <v11:ElekCardType>0</v11:ElekCardType>  
+          <v11:Natl>TW</v11:Natl> 
+        </v11:PriCardResndInfo> 
+      </v11:ServiceBody> 
+    </v11:BankCardResndChkRs> 
+  </soap:Body> 
+</soap:Envelope>

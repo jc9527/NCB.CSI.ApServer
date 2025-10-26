@@ -1,0 +1,56 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "FiscTxnLogDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "FiscTxnLogDtlsInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO03",
+        "TxnNo" : "PO0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "TxnLogDtlsRec" : {
+          "AcqBankId" : "007",
+          "TermNo" : "12345678",
+          "ChanId" : "APP",
+          "TxnDate" : "2016-01-01",
+          "TxnTime" : "12:01:01",
+          "TxnPCode" : "2522",
+          "TxnAmt" : 12.0,
+          "OrigAmt" : 12.0,
+          "AmtCcy" : "TWD",
+          "ForExRate" : 12.0,
+          "CrAcctNo" : "1111222233334444",
+          "CrBankId" : "007",
+          "DbCardNo" : "6666555544443333",
+          "DbAcctNo" : "6666555544443333",
+          "DbBankId" : "100",
+          "DestBankId" : "001",
+          "FISCDate" : "2016-01-01",
+          "TlrNo" : "12345678",
+          "ATMSeqNo" : "1234567",
+          "T24VerNo" : "VERSION",
+          "T24Memo" : "MEMO",
+          "HdlgChrg" : 12.0,
+          "ExpDate" : "0126",
+          "TxnType" : "1234",
+          "DgtlAcctType" : "3A",
+          "AvailBal" : 1000.0,
+          "AcctBal" : 1000.0,
+          "TxnFlow" : "8102300000"
+        }
+      }
+    }
+  }
+}

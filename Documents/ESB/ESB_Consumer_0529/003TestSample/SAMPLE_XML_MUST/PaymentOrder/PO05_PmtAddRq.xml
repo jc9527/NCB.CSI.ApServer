@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/PaymentOrder/PmtAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>PaymentOrder</ServiceDomain>  
+      <OperationName>PmtAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:PmtAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>PO05</v11:TxnId>  
+        <v11:TxnNo>PO0500001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:TxNo>122345000001</v11:TxNo>  
+        <v11:ChanId>APP</v11:ChanId>  
+        <v11:CustPermId>S123456789</v11:CustPermId>  
+        <!--Optional:-->  
+        <v11:CustChnName>王春嬌</v11:CustChnName>  
+        <v11:PayerAcctId>10305070902</v11:PayerAcctId>  
+        <v11:PrcDate>2016-01-01</v11:PrcDate>  
+        <v11:CurAmt>100</v11:CurAmt>  
+        <v11:CustPayeeId>S123456789</v11:CustPayeeId>  
+        <v11:PayeeAcctId>00000001</v11:PayeeAcctId>  
+        <!--Optional:-->  
+        <v11:PayeeName>134562436436</v11:PayeeName>  
+        <v11:PayeeBankId>009</v11:PayeeBankId>  
+        <v11:GPS>1234</v11:GPS>  
+        <v11:TxnNo>2468013579</v11:TxnNo>  
+        <v11:MobLang>English</v11:MobLang>  
+        <v11:DgtlAcctType>3A</v11:DgtlAcctType>  
+        <v11:IPAddr>10.1.1.1</v11:IPAddr>  
+        <v11:IMEI>123456789012</v11:IMEI>  
+        <v11:FISCMemo>財金附言</v11:FISCMemo>  
+        <v11:Memo1>Remark1</v11:Memo1>  
+        <v11:Memo2>Remark2</v11:Memo2> 
+      </v11:ServiceBody> 
+    </v11:PmtAddRq> 
+  </soap:Body> 
+</soap:Envelope>

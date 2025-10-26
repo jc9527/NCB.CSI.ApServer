@@ -1,0 +1,39 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "AcctInfoMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "AcctInfoModRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA21",
+        "TxnNo" : "DA2100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnStatCode" : [ {
+          "RtrnCode" : "200",
+          "RtrnDesc" : "200{success}"
+        } ],
+        "HeaderInfo" : {
+        },
+        "CustInfo" : {
+          "ArrngId" : "AA19337Z8L29",
+          "ProdName" : "AC.DCS",
+          "Ccy" : "TWD",
+          "EffDate" : "20191203",
+          "RsnCode" : "Open DCS AC",
+          "MainAcctNo" : "88691223344556",
+          "Chan" : "CCS"
+        }
+      }
+    }
+  }
+}

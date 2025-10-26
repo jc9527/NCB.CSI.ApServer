@@ -1,0 +1,26 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "BankCard",
+    "OperationName" : "BankCardOpen",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "BankCardOpenRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "BC04",
+        "TxnNo" : "BC0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CardNo" : "4312349000008629",
+        "KeyType" : "1",
+        "KeyVal" : "1010"
+      }
+    }
+  }
+}

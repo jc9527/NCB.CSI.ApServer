@@ -1,0 +1,36 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "RwdPntsHistInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "RwdPntsHistInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP05",
+        "TxnNo" : "RP050001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "E000",
+        "RtrnDesc" : "200 {E000}",
+        "RwdPntsHistInqInfo" : [ {
+          "TxnDate" : "20151206",
+          "TxnTime" : "123000",
+          "CampId" : 29887923,
+          "CampName" : "周年慶",
+          "PntsAwrds" : 20.0,
+          "PntsRed" : 10.0,
+          "TxnType" : 1,
+          "AvailPnts" : 5000.0
+        } ]
+      }
+    }
+  }
+}

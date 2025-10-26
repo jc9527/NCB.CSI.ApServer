@@ -1,0 +1,274 @@
+{
+  "swagger": "2.0",
+  "host": "10.1.1.1:12805",
+  "basePath": "/",
+  "info": {
+    "version": "1.0",
+    "title": "Summary about the new REST service.",
+    "description": "Summary about the new REST service."
+  },
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/apicommon": {
+      "post": {
+        "summary": "",
+        "description": "",
+        "operationId": "post-apicommon",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/amf"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "a string to be returned"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "amf": {
+      "type": "object",
+      "required": [
+        "ambody"
+      ],
+      "properties": {
+        "amheader": {
+          "$ref": "#/definitions/amheader"
+        },
+        "ambody": {
+          "$ref": "#/definitions/ambody"
+        }
+      }
+    },
+    "amheader": {
+      "type": "object",
+      "required": [
+        "RqTimestamp",
+        "OperationName",
+        "ConsumerID",
+        "ChannelID",
+        "ServiceDomain",
+        "TransactionID"
+      ],
+      "properties": {
+        "ChannelID": {
+          "type": "string",
+          "example": "ESB"
+        },
+        "ServiceDomain": {
+          "type": "string",
+          "example": "DemoService"
+        },
+        "OperationName": {
+          "type": "string",
+          "example": "OneToOne"
+        },
+        "ConsumerID": {
+          "type": "string",
+          "example": "TWESB"
+        },
+        "SourceRegion": {
+          "type": "string"
+        },
+        "DestinationRegion": {
+          "type": "string"
+        },
+        "TransactionID": {
+          "type": "string",
+          "example": "T1222222"
+        },
+        "TrackingID": {
+          "type": "string"
+        },
+        "UUID": {
+          "type": "string"
+        },
+        "CorrelationID": {
+          "type": "string"
+        },
+        "RqTimestamp": {
+          "type": "string",
+          "example": "2015-12-06T12:01:01.00+08:00"
+        },
+        "RsTimestamp": {
+          "type": "string",
+          "example": "2015-12-06T12:01:10.00+08:00"
+        }
+      }
+    },
+    "ambody": {
+      "type": "object",
+      "required": [
+        "OneToOneRq"
+      ],
+      "properties": {
+        "OneToOneRq": {
+          "$ref": "#/definitions/OneToOneRq"
+        }
+      }
+    },
+    "OneToOneRq": {
+      "type": "object",
+      "required": [
+        "Signon",
+        "ServiceBody",
+        "ServiceHeader"
+      ],
+      "properties": {
+        "ServiceHeader": {
+          "$ref": "#/definitions/ServiceHeader"
+        },
+        "Signon": {
+          "$ref": "#/definitions/Signon"
+        },
+        "ServiceBody": {
+          "$ref": "#/definitions/ServiceBody"
+        }
+      }
+    },
+    "ServiceHeader": {
+      "type": "object",
+      "required": [
+        "TxnId",
+        "TxnNo"
+      ],
+      "properties": {
+        "TxnId": {
+          "type": "string",
+          "example": "DO01"
+        },
+        "TxnNo": {
+          "type": "string",
+          "example": "DO010001"
+        },
+        "SvcVer": {
+          "type": "string"
+        },
+        "NoOfTxns": {
+          "type": "string"
+        },
+        "ChkSum": {
+          "type": "string"
+        }
+      }
+    },
+    "Signon": {
+      "type": "object",
+      "required": [
+        "CustId"
+      ],
+      "properties": {
+        "CustId": {
+          "type": "string",
+          "example": "ESBUSER"
+        },
+        "CustPswd": {
+          "type": "string",
+          "example": "123456"
+        },
+        "AuthToken": {
+          "type": "string"
+        },
+        "MAC": {
+          "type": "string"
+        },
+        "SessKey": {
+          "type": "string"
+        }
+      }
+    },
+    "ServiceBody": {
+      "required": [
+        "RqTransform",
+        "InterfaceProxy",
+        "RsTransform"
+      ],
+      "properties": {
+        "RqTransform": {
+          "$ref": "#/definitions/RqTransform"
+        },
+        "InterfaceProxy": {
+          "$ref": "#/definitions/InterfaceProxy"
+        },
+        "RsTransform": {
+          "$ref": "#/definitions/RsTransform"
+        }
+      }
+    },
+    "RqTransform": {
+      "required": [
+        "Pass"
+      ],
+      "description": "Notice:{} Desc:{RqTransform群組}",
+      "properties": {
+        "Pass": {
+          "description": "Type:{string} Format: {string} Notice:{} Desc:{測試開關}",
+          "type": "string",
+          "example": "Y"
+        },
+        "ErrorCode": {
+          "description": "Type:{string} Format: {string} Notice:{} Desc:{錯誤代碼}",
+          "type": "string",
+          "example": "0903"
+        }
+      }
+    },
+    "InterfaceProxy": {
+      "required": [
+        "Pass"
+      ],
+      "description": "Notice:{} Desc:{InterfaceProxy群組}",
+      "properties": {
+        "Pass": {
+          "description": "Type:{string} Format: {string} Notice:{} Desc:{測試開關}",
+          "type": "string",
+          "example": "Y"
+        },
+        "ErrorCode": {
+          "description": "Type:{string} Format: {string} Notice:{} Desc:{錯誤代碼}",
+          "type": "string",
+          "example": "0903"
+        },
+        "TimeOut": {
+          "description": "Type:{string} Format: {string} Notice:{} Desc:{逾時值}",
+          "type": "string",
+          "example": "5000"
+        }
+      }
+    },
+    "RsTransform": {
+      "required": [
+        "Pass"
+      ],
+      "description": "Notice:{} Desc:{RsTransform群組}",
+      "properties": {
+        "Pass": {
+          "description": "Type:{string} Format: {string} Notice:{} Desc:{測試開關}",
+          "type": "string",
+          "example": "Y"
+        },
+        "ErrorCode": {
+          "description": "Type:{string} Format: {string} Notice:{} Desc:{錯誤代碼}",
+          "type": "string",
+          "example": "0903"
+        }
+      }
+    }
+  }
+}

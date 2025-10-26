@@ -1,0 +1,69 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "LoanAcctOpn",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LoanAcctOpnRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO07",
+        "TxnNo" : "LO0700001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "ArrngId" : "NEW",
+        "CustRec" : [ {
+          "CIFNo" : "1000000177"
+        } ],
+        "ProdName" : "AL.TERM.LN",
+        "Ccy" : "TWD",
+        "EffDate" : "STR",
+        "AcctInfo" : {
+          "GLTerm" : "51",
+          "OvrdIntrstDate" : "20191203"
+        },
+        "InExtFeeRec" : {
+          "FixAmt" : 100
+        },
+        "DsbrFeeRec" : {
+          "FixAmt" : 1000
+        },
+        "MntncFeeInfo" : {
+          "FixAmt" : 1000
+        },
+        "OvdFeeRec" : {
+          "FixAmt" : 400
+        },
+        "PrncplIntrstRec" : {
+        },
+        "PnltyIntrstRec" : {
+        },
+        "LmtInfo" : {
+          "LmtRefNo" : "8100",
+          "LmtSeqNo" : "02"
+        },
+        "PmtRec" : {
+        },
+        "SettlemInfo" : [ {
+          "DbAcctFlg" : "YES",
+          "CrAcctFlg" : "YES"
+        } ],
+        "CmmtmntInfo" : {
+          "LoanAmt" : 40000,
+          "MtrtyDate" : "20200503",
+          "RcvrType" : "NO",
+          "LmtModFlg" : "YES"
+        },
+        "IPAddr" : "IP 172.100.10.22",
+        "APIKey" : "NCB-IF05003"
+      }
+    }
+  }
+}

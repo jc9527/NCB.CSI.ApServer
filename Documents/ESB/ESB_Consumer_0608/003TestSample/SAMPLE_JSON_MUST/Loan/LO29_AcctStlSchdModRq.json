@@ -1,0 +1,33 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "AcctStlSchdMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "AcctStlSchdModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO29",
+        "TxnNo" : "LO2900001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "ArrngId" : "NEW",
+          "ProdId" : "STR",
+          "EffDate" : "STR",
+          "StlInfo" : [ {
+            "DbAcctFlg" : "STR",
+            "CrAcctFlg" : "STR"
+          } ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "SelfChannel",
+    "OperationName" : "SelfChanAcctBalDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "SelfChanAcctBalDtlsInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "SC01",
+        "TxnNo" : "SC0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "AcctNo" : "1111222233334444"
+      }
+    }
+  }
+}

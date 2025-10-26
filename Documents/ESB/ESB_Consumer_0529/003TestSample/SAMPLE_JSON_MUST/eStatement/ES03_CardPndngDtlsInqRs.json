@@ -1,0 +1,35 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "eStatement",
+    "OperationName" : "CardPndngDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "CardPndngDtlsInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "ES03",
+        "TxnNo" : "ES0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "0000"
+        "RtrnDesc" : "200 {0000}",
+        "CardPndngDtlsInqRec" : [ {
+          "TxnType" : "遞延附款",
+          "TxnDate" : "12/13/19",
+          "PostDate" : "12/14/19",
+          "TxnCtt" : "加油站",
+          "TxnAmt" : "1000",
+          "CntryCode" : "台北市",
+          "AmtCcy" : "TWD"
+        } ]
+      }
+    }
+  }
+}

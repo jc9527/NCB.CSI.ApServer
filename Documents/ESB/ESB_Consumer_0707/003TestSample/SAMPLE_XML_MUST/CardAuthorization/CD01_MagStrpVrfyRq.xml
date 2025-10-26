@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/CardAuthorization/MagStrpVrfyRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>CardAuthorization</ServiceDomain>  
+      <OperationName>MagStrpVrfy</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:MagStrpVrfyRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>CD01</v11:TxnId>  
+        <v11:TxnNo>CD0100001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:CardNo>4000123456789010</v11:CardNo>  
+        <v11:PinBlk>7A7BFCC4E3B1B461</v11:PinBlk>  
+        <v11:TxnType>1</v11:TxnType>  
+        <v11:VrfyType>0</v11:VrfyType> 
+      </v11:ServiceBody> 
+    </v11:MagStrpVrfyRq> 
+  </soap:Body> 
+</soap:Envelope>

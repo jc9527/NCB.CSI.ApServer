@@ -1,0 +1,46 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CurrentAccount",
+    "OperationName" : "CampIntrstRateCan",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CampIntrstRateCanRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CA07",
+        "TxnNo" : "CA0700001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "ArrngId" : "80170000000016",
+        "CustRec" : [ {
+        } ],
+        "ProdName" : "AC.POCKET.SAV",
+        "TxnType" : "ACCOUNTS-CHANGE-CRINT2.FWDATE",
+        "EffDate" : "20200322",
+        "RsnCode" : "Update future dated CAMPAIGN INT",
+        "PktAcctRateInfo" : {
+          "RateInfo" : [ {
+            "FltRate" : "-"
+          } ]
+        },
+        "IPAddr" : "IP.172.20.15.192",
+        "DevNo" : "1",
+        "EntryDeptCode" : "N01",
+        "PrftCntr" : "N01",
+        "CostCntr" : "N01",
+        "AuthEmpId" : "HELEN",
+        "EntryEmplNo" : "HELEN",
+        "VerName" : "AA.ARRANGEMENT.ACTIVITY,AA.API.NEW.NCB.1.0.0",
+        "EcoUnit" : "N01",
+        "APIKey" : "NCB-IF01010"
+      }
+    }
+  }
+}

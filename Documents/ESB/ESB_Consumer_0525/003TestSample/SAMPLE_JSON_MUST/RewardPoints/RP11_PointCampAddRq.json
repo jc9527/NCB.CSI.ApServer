@@ -1,0 +1,34 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "PointCampAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "PointCampAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP11",
+        "TxnNo" : "RP1100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "FnctType" : "ADD",
+        "PointCampType" : 1,
+        "CampPointAddCode" : "I",
+        "PointCampGrpNo" : 1,
+        "CampName" : "周年大贈送",
+        "PointBussType" : "賺錢",
+        "StartDateTime" : "2019011508",
+        "EndDateTime" : "2019013123",
+        "ExpTypeCfg" : "FIX_DATE",
+        "VldDate" : "20190131",
+        "VndrCostCtr" : 13579
+      }
+    }
+  }
+}

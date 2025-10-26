@@ -1,0 +1,25 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "VndrRwdPntsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "VndrRwdPntsInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP09",
+        "TxnNo" : "RP090001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "VndrName" : "HP",
+        "VndrMmbId" : "AA2468013579"
+      }
+    }
+  }
+}

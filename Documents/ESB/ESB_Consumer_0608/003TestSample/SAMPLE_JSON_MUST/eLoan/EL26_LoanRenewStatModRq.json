@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "eLoan",
+    "OperationName" : "LoanRenewStatMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LoanRenewStatModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "EL26",
+        "TxnNo" : "af3a317b-1720-4faa-983f-62855b9be0f9DAdUCFBdVg9d"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "S999999999",
+        "AppNo" : "YYYYMMDD999SS9999S",
+        "RenewFlg" : "1",
+        "NonRenewRsn" : "1",
+        "IPAddr" : "STR",
+        "RplyDate" : "yyyy-MM-ddTHH:mm:ssZ"
+      }
+    }
+  }
+}

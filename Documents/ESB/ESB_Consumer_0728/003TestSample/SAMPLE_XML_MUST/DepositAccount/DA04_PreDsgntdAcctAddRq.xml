@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/DepositAccount/PreDsgntdAcctAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>DepositAccount</ServiceDomain>  
+      <OperationName>PreDsgntdAcctAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:PreDsgntdAcctAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>DA04</v11:TxnId>  
+        <v11:TxnNo>DA0400001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:CustPermId>A123456789</v11:CustPermId>  
+        <v11:FnctCode>Insert</v11:FnctCode>  
+        <v11:PreDsgntdType>In</v11:PreDsgntdType>  
+        <!--Optional:-->  
+        <v11:AliasName>Test</v11:AliasName>  
+        <!--Optional:-->  
+        <v11:BankId>048</v11:BankId>  
+        <v11:AcctNo>0001200001000200</v11:AcctNo>  
+        <!--Optional:-->  
+        <v11:SameIdFlg>1</v11:SameIdFlg>  
+        <v11:UpdtUserId>USER001</v11:UpdtUserId>  
+        <v11:UpdtBrchId>9999</v11:UpdtBrchId> 
+      </v11:ServiceBody> 
+    </v11:PreDsgntdAcctAddRq> 
+  </soap:Body> 
+</soap:Envelope>

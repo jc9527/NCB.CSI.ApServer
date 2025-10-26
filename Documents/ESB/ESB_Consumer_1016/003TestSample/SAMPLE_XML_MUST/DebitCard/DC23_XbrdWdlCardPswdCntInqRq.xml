@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/DebitCard/XbrdWdlCardPswdCntInqRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>DebitCard</ServiceDomain>  
+      <OperationName>XbrdWdlCardPswdCntInq</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:XbrdWdlCardPswdCntInqRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>DC23</v11:TxnId>  
+        <v11:TxnNo>DC2300001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:InqPageNo>1</v11:InqPageNo>  
+        <v11:NoOfPage>10</v11:NoOfPage>  
+        <v11:CardNo>4563020616112800</v11:CardNo> 
+      </v11:ServiceBody> 
+    </v11:XbrdWdlCardPswdCntInqRq> 
+  </soap:Body> 
+</soap:Envelope>

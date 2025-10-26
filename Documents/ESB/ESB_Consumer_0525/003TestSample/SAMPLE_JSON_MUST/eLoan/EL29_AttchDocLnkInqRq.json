@@ -1,0 +1,27 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "eLoan",
+    "OperationName" : "AttchDocLnkInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "AttchDocLnkInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "EL29",
+        "TxnNo" : "af3a317b-1720-4faa-983f-62855b9be0f9DAdUCFBdVg9d"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "AttchDocLnkInqRec" : [ {
+          "AttDocType" : "R01",
+          "AttDocId" : "STR"
+        } ]
+      }
+    }
+  }
+}

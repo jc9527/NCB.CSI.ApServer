@@ -1,0 +1,56 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Limit",
+    "OperationName" : "LmtMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "LmtModRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "LI09",
+        "TxnNo" : "LI0900001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnStatCode" : [ {
+          "RtrnCode" : "200",
+          "RtrnDesc" : "200{success}"
+        } ],
+        "HeaderInfo" : {
+          "Id" : "AAACT19337LLMBKL0P"
+        },
+        "CustInfo" : {
+          "AppNo" : "ELoan9883183",
+          "Ccy" : "TWD",
+          "AvailFlg" : "Y",
+          "ApprvDate" : "20191203",
+          "DfltApprvDate" : "20191203",
+          "RvwFreq" : "20201203M0101",
+          "LmtExpDate" : "20201203",
+          "AppDate" : "20201203",
+          "LmtEffData" : "20200506",
+          "ExtblLmtExpDate" : "20210103",
+          "ApprvLmt" : 125000,
+          "ApprvMaxLmt" : 125000,
+          "LmtType" : "FIXED",
+          "AllwLmtCancFlg" : "1",
+          "LmtCtrctExpDate" : "20271203",
+          "GLTerm" : "51",
+          "FundPurp" : "05",
+          "CustType" : "02",
+          "MrtgType" : "00",
+          "LoanPurp" : "111",
+          "FinSubType" : "B",
+          "IPAddr" : "IP 172.10.100.22",
+          "Chan" : "CCS"
+        }
+      }
+    }
+  }
+}

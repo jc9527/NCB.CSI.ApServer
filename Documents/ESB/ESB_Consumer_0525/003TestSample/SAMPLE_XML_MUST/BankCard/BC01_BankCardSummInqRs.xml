@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/BankCard/BankCardSummInqRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>BankCard</ServiceDomain>  
+      <OperationName>BankCardSummInq</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:BankCardSummInqRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>BC01</v11:TxnId>  
+        <v11:TxnNo>BC0100001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:RtrnCode>00</v11:RtrnCode>  
+        <!--Optional:-->  
+        <v11:RtrnDesc>200{00}</v11:RtrnDesc>  
+        <!--Zero or more repetitions:-->  
+        <v11:BankCardRec> 
+          <v11:CIFNo>12300</v11:CIFNo>  
+          <v11:CustPermId>A123456789</v11:CustPermId>  
+          <v11:CustChnName>王正卡</v11:CustChnName>  
+          <v11:CustEngName>Main Wang</v11:CustEngName>  
+          <v11:BirthDay>1966/02/05</v11:BirthDay>  
+          <v11:MobNo>0922123123</v11:MobNo>  
+          <v11:AddrZip>110</v11:AddrZip>  
+          <v11:MailAddr1>台北市信義區</v11:MailAddr1>  
+          <v11:MailAddr2>信義路信義街999號</v11:MailAddr2>  
+          <v11:CardType>1</v11:CardType>  
+          <v11:CardTypeName>Visa Debit</v11:CardTypeName>  
+          <v11:CardFace>VC</v11:CardFace>  
+          <v11:CardFaceName>VISA普卡</v11:CardFaceName>  
+          <v11:AmtCcy>TWD</v11:AmtCcy>  
+          <v11:DayLmt>99999.0</v11:DayLmt>  
+          <v11:MnthLmt>99999.0</v11:MnthLmt>  
+          <v11:NPDFundXfer>0</v11:NPDFundXfer>  
+          <v11:XbrdrWdl>1</v11:XbrdrWdl>  
+          <v11:SmartPayFlg>1</v11:SmartPayFlg>  
+          <v11:DlvrMthd>0</v11:DlvrMthd>  
+          <v11:DlvrMthdName>卡廠郵寄</v11:DlvrMthdName>  
+          <v11:DbAcctNo>01000000008188</v11:DbAcctNo>  
+          <v11:HCE>0</v11:HCE>  
+          <v11:SMSFlg>0</v11:SMSFlg>  
+          <v11:PushAppFlg>0</v11:PushAppFlg>  
+          <v11:eMailFlg>0</v11:eMailFlg>  
+          <v11:SMSAmt>1000.0</v11:SMSAmt>  
+          <v11:eMailAddr>123@gmail.com</v11:eMailAddr>  
+          <v11:CardNo>4312340000036975</v11:CardNo>  
+          <v11:CardStat>8</v11:CardStat>  
+          <v11:CardIssueStat>掛失</v11:CardIssueStat>  
+          <!--Optional:-->  
+          <v11:EffDateFrom>0116</v11:EffDateFrom>  
+          <!--Optional:-->  
+          <v11:VldDate>0121</v11:VldDate>  
+          <v11:AppDate>2015/01/23</v11:AppDate>  
+          <v11:CardAttr>0</v11:CardAttr>  
+          <v11:CardAttrName>正卡</v11:CardAttrName>  
+          <v11:RelnCode>STR</v11:RelnCode>  
+          <v11:RelnCodeName>子女</v11:RelnCodeName>  
+          <v11:PriCIFNo>32300</v11:PriCIFNo>  
+          <v11:PriCustId>22300</v11:PriCustId>  
+          <v11:PriCardNo>1234123412341234</v11:PriCardNo>  
+          <v11:SrcId>TWCCS</v11:SrcId>  
+          <v11:TlrId>ESBUSER</v11:TlrId>  
+          <v11:PriBirthDay>2000/01/23</v11:PriBirthDay>  
+          <v11:PriMobNo>0910102026</v11:PriMobNo>  
+          <v11:CardLmtShrtAmt>1000.0</v11:CardLmtShrtAmt>  
+          <!--Optional:-->  
+          <v11:EffDate>2016/06/23</v11:EffDate>  
+          <v11:ImgId>1</v11:ImgId>  
+          <v11:ElekCardType>0</v11:ElekCardType>  
+          <v11:ImgFlg>0</v11:ImgFlg>  
+          <v11:CardGrade>W</v11:CardGrade>  
+          <v11:GrpCode>0</v11:GrpCode> 
+        </v11:BankCardRec>  
+        <!--Optional:-->  
+        <v11:ControlRec> 
+          <v11:CurPage>1</v11:CurPage>  
+          <v11:NoOfCurPage>1</v11:NoOfCurPage>  
+          <v11:TtlPageNo>1</v11:TtlPageNo>  
+          <v11:NoOfRec>1</v11:NoOfRec> 
+        </v11:ControlRec> 
+      </v11:ServiceBody> 
+    </v11:BankCardSummInqRs> 
+  </soap:Body> 
+</soap:Envelope>

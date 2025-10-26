@@ -1,0 +1,8 @@
+{ 
+	"NodeName":"CC", 
+	"UserID":"NCBTest", 
+	"UnitCode":"002", 
+	"ApplyNO":"NCBTest001(*)",
+	"Lastest":false,
+	"Text":"¶È­­NCB´ú¸Õ¨Ï¥Î" 
+} 

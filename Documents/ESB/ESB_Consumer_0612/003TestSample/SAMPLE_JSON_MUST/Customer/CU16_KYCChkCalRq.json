@@ -1,0 +1,45 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Customer",
+    "OperationName" : "KYCChkCal",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "KYCChkCalRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CU16",
+        "TxnNo" : "CU1600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "LoginInfo" : {
+          "UserName" : "demo",
+          "Pswd" : "gwg",
+          "Type" : "PROD"
+        },
+        "KYCSrc" : {
+          "CustProfInfo" : [ {
+            "CustNo" : "A186580262",
+            "CustChnName" : "陳家豪",
+            "St" : "台北市敦化南路二段95號8樓",
+            "City" : "台北市",
+            "AddrZip" : "106046",
+            "Cntry" : "TW",
+            "Natl" : "TW",
+            "Indstry" : "K6412",
+            "BirthDay" : "20200229",
+            "CustType" : "1",
+            "CustPermId" : "669509555",
+            "BirthCity" : "台北市",
+            "Gndr" : "M"
+          } ]
+        }
+      }
+    }
+  }
+}

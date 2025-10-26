@@ -1,0 +1,38 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "LoanEarlyTermCalInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "LoanEarlyTermCalInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO39",
+        "TxnNo" : "LO3900001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnStatCode" : [ {
+          "RtrnCode" : "200",
+          "RtrnDesc" : "200{200}"
+        } ],
+        "PageInfo" : {
+          "PageSize" : 10,
+          "PageStart" : 0,
+          "NoOfRec" : 99,
+          "PageToken" : "201904170622107608.01,99"
+        },
+        "Audit" : {
+        },
+        "LoanEarlyTermCalInqRec" : [ {
+        } ]
+      }
+    }
+  }
+}

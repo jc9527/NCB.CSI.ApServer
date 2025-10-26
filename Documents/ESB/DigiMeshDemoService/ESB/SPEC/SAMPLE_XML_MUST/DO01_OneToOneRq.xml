@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.iisigroup.com/xsd/TW/DemoService/OneToOneRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>DemoService</ServiceDomain>  
+      <OperationName>OneToOne</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:OneToOneRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>DO01</v11:TxnId>  
+        <v11:TxnNo>DO010001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId>  
+        <!--Optional:-->  
+        <v11:CustPswd>123456</v11:CustPswd> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:RqTransform> 
+          <v11:Pass>Y</v11:Pass>  
+          <!--Optional:-->  
+          <v11:ErrorCode>0903</v11:ErrorCode> 
+        </v11:RqTransform>  
+        <v11:InterfaceProxy> 
+          <v11:Pass>Y</v11:Pass>  
+          <!--Optional:-->  
+          <v11:ErrorCode>0903</v11:ErrorCode>  
+          <!--Optional:-->  
+          <v11:TimeOut>5000</v11:TimeOut> 
+        </v11:InterfaceProxy>  
+        <v11:RsTransform> 
+          <v11:Pass>Y</v11:Pass>  
+          <!--Optional:-->  
+          <v11:ErrorCode>0903</v11:ErrorCode> 
+        </v11:RsTransform> 
+      </v11:ServiceBody> 
+    </v11:OneToOneRq> 
+  </soap:Body> 
+</soap:Envelope>

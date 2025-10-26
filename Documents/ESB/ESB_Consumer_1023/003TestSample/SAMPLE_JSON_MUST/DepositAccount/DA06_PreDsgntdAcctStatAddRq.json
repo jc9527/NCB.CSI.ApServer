@@ -1,0 +1,31 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "PreDsgntdAcctStatAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "PreDsgntdAcctStatAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA06",
+        "TxnNo" : "DA0600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "H123964256",
+        "ChanId" : "APP",
+        "IBMBNpdXferFlg" : 0,
+        "ATMNpdXferFlg" : 0,
+        "PDXferFlg" : 0,
+        "ATMWdlFlg" : 0,
+        "UpdtUserId" : "USER001",
+        "UpdtBrchId" : "9999"
+      }
+    }
+  }
+}

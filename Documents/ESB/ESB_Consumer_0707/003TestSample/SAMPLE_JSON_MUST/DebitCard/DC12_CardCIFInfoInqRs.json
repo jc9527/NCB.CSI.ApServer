@@ -1,0 +1,46 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "CardCIFInfoInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "CardCIFInfoInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC12",
+        "TxnNo" : "DC1200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "CustProfInfo" : [ {
+          "CardNo" : "4312340000147145",
+          "CardAtt" : "0",
+          "CIFNo" : "8989100004",
+          "SMSFlg" : "Y",
+          "eMailFlg" : "Y",
+          "PushAppFlg" : "Y",
+          "SMSAmt" : 1230.0,
+          "AmtCcy" : "TWD",
+          "CashFlg" : "N",
+          "SmartPayFlg" : "N",
+          "HCEFlg" : "N",
+          "SMSMinAmt" : 0.0,
+          "RelnCode" : "1"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

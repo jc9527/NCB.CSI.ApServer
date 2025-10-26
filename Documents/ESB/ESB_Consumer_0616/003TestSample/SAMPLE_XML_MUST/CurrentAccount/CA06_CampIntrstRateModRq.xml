@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/CurrentAccount/CampIntrstRateModRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>CurrentAccount</ServiceDomain>  
+      <OperationName>CampIntrstRateMod</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:CampIntrstRateModRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>CA06</v11:TxnId>  
+        <v11:TxnNo>CA0600001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <!--Optional:-->  
+        <v11:ValidateOnly>false</v11:ValidateOnly>  
+        <v11:ArrngId>AA19337RVXBB</v11:ArrngId>  
+        <!--Zero or more repetitions:-->  
+        <v11:CustRec></v11:CustRec>  
+        <v11:ProdName>AC.POCKET.SAV</v11:ProdName>  
+        <v11:TxnType>ACCOUNTS-UPDATE-CRINT1</v11:TxnType>  
+        <!--Optional:-->  
+        <v11:RsnCode>Update Campaign Int</v11:RsnCode>  
+        <!--Optional:-->  
+        <v11:AcctInfo> 
+          <!--1 or more repetitions:-->  
+          <v11:CampRec> 
+            <v11:CampId>CMP202003</v11:CampId>  
+            <!--Optional:-->  
+            <v11:CampExpDate>2020032</v11:CampExpDate>  
+            <v11:CampInstrstType>CRINT2</v11:CampInstrstType>  
+            <!--Optional:-->  
+            <v11:CampIntrstMemo>CRINT2</v11:CampIntrstMemo> 
+          </v11:CampRec> 
+        </v11:AcctInfo>  
+        <!--Zero or more repetitions:-->  
+        <v11:MarginRuleRec> 
+          <!--Optional:-->  
+          <v11:AcctMinBal>100000</v11:AcctMinBal> 
+        </v11:MarginRuleRec>  
+        <!--Optional:-->  
+        <v11:AcctRateInfo></v11:AcctRateInfo>  
+        <!--Optional:-->  
+        <v11:PktAcctRateInfo> 
+          <v11:RateInfo> 
+            <!--Optional:-->  
+            <v11:FltRate>1</v11:FltRate>  
+            <v11:MrgnInfo> 
+              <!--Optional:-->  
+              <v11:MrgnRateAdd>7.5</v11:MrgnRateAdd> 
+            </v11:MrgnInfo>  
+            <!--Optional:-->  
+            <v11:TierAmt>100000</v11:TierAmt> 
+          </v11:RateInfo> 
+        </v11:PktAcctRateInfo>  
+        <!--Optional:-->  
+        <v11:IntrstRec> 
+          <!--1 or more repetitions:-->  
+          <v11:IntrstTypeRec> 
+            <v11:IntrstType>CRINT1</v11:IntrstType>  
+            <v11:IntrstMthd>CAPITALISE</v11:IntrstMthd>  
+            <!--1 or more repetitions:-->  
+            <v11:IntrstPropRec> 
+              <v11:IntrstId>CRINT1</v11:IntrstId> 
+            </v11:IntrstPropRec>  
+            <!--Optional:-->  
+            <v11:IntrstFreq>M0121</v11:IntrstFreq> 
+          </v11:IntrstTypeRec> 
+        </v11:IntrstRec>  
+        <!--Optional:-->  
+        <v11:IPAddr>IP.172.20.15.192</v11:IPAddr>  
+        <!--Optional:-->  
+        <v11:DevNo>1</v11:DevNo>  
+        <!--Optional:-->  
+        <v11:EntryDeptCode>N01</v11:EntryDeptCode>  
+        <!--Optional:-->  
+        <v11:PrftCntr>N01</v11:PrftCntr>  
+        <!--Optional:-->  
+        <v11:CostCntr>N01</v11:CostCntr>  
+        <!--Optional:-->  
+        <v11:AuthEmpId>HELEN</v11:AuthEmpId>  
+        <!--Optional:-->  
+        <v11:EntryEmplNo>string</v11:EntryEmplNo>  
+        <!--Optional:-->  
+        <v11:VerName>AA.ARRANGEMENT.ACTIVITY,AA.API.NEW.NCB.1.0.0</v11:VerName>  
+        <!--Optional:-->  
+        <v11:EcoUnit>N01</v11:EcoUnit>  
+        <!--Optional:-->  
+        <v11:APIKey>NCB-IF01009</v11:APIKey>  
+        <!--Optional:-->  
+        <v11:MobLang>ENGLISH</v11:MobLang> 
+      </v11:ServiceBody> 
+    </v11:CampIntrstRateModRq> 
+  </soap:Body> 
+</soap:Envelope>

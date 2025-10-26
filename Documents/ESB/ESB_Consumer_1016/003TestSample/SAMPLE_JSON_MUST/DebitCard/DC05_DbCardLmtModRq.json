@@ -1,0 +1,35 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardLmtMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "DbCardLmtModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC05",
+        "TxnNo" : "DC0500001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CardNo" : "5211958800000591",
+        "DayLmt" : 100000,
+        "MnthLmt" : 99999999,
+        "TempDDLmt" : 100,
+        "StartTempDDLmtDate" : "20180201",
+        "EndTempDDLmtDate" : "20180228",
+        "TempMMLmt" : 1000,
+        "StartTempMMLmtDate" : "201802",
+        "EndTempMMLmtDate" : "201803",
+        "UpdDate" : "20180125",
+        "UpdTime" : "093800",
+        "UpdtUserId" : "1547"
+      }
+    }
+  }
+}

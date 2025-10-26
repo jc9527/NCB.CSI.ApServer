@@ -1,0 +1,66 @@
+{
+  "source": "api",
+  "send_date": "",
+  "data" : [
+    {
+      "project_category_code" : "00001",
+      "email" : "1",
+      "sms" : "1",
+      "push": "1",
+      "name": "test",      
+      "toemail": "whchao@cht.com.tw",
+      "mobilephone": "0912345678",
+      "cust_id": "A123456789",     
+      "broadcast": "string",
+      "email_content": "",
+      "sms_content": "",
+      "para": 
+      {
+       "name" : "趙O婷",
+     
+      },
+      "push_option" : [
+       {
+        "param":       
+        {
+        "name" : "趙O婷",
+        
+        },
+         "broadcast": "1",
+         "content_type": "0",
+         "content": ""
+        }
+      ]
+    },
+    {
+      
+      "project_category_code" : "00001",
+      "email" : "1",
+      "sms" : "1",
+      "push": "1", 
+      "name": "test2",            
+      "toemail": "whchao@cht.com.tw", 
+      "mobilephone": "0912345678",
+      "cust_id": "A123456780",     
+      "broadcast": "string", 
+      "email_content": "",
+      "sms_content": "",
+      "para": 
+      {
+       "name" : "趙O婷",
+      
+      },
+      "push_option" : [
+       {
+        "param":       
+        {
+        "name" : "趙O婷",
+        },
+         "broadcast": "1",
+         "content_type": "0",
+         "content": ""
+        }
+      ]
+    }
+  ]
+}

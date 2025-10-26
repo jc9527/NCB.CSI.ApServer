@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/eStatement/CardPndngDtlsInqRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>eStatement</ServiceDomain>  
+      <OperationName>CardPndngDtlsInq</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:CardPndngDtlsInqRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>ES03</v11:TxnId>  
+        <v11:TxnNo>ES0300001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:RtrnCode>0000</v11:RtrnCode>  
+        <!--Optional:-->  
+        <v11:RtrnDesc>200 {0000}</v11:RtrnDesc>  
+        <!--Zero or more repetitions:-->  
+        <v11:CardPndngDtlsInqRec> 
+          <!--Optional:-->  
+          <v11:TxnType>遞延附款</v11:TxnType>  
+          <!--Optional:-->  
+          <v11:TxnDate>12/13/19</v11:TxnDate>  
+          <!--Optional:-->  
+          <v11:PostDate>12/14/19</v11:PostDate>  
+          <!--Optional:-->  
+          <v11:TxnCtt>加油站</v11:TxnCtt>  
+          <!--Optional:-->  
+          <v11:TxnAmt>1000</v11:TxnAmt>  
+          <!--Optional:-->  
+          <v11:CntryCode>台北市</v11:CntryCode>  
+          <!--Optional:-->  
+          <v11:AmtCcy>TWD</v11:AmtCcy> 
+        </v11:CardPndngDtlsInqRec> 
+      </v11:ServiceBody> 
+    </v11:CardPndngDtlsInqRs> 
+  </soap:Body> 
+</soap:Envelope>

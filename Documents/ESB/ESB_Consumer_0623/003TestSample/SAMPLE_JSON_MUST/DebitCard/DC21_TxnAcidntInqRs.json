@@ -1,0 +1,85 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "TxnAcidntInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "TxnAcidntInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC21",
+        "TxnNo" : "DC2100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "RtrnDesc" : "200{00}",
+        "CardNoRec" : [ {
+          "BillNo" : "1000000001",
+          "PostDate" : "20160501",
+          "TxnDate" : "20160501",
+          "CardNo" : "STR",
+          "AmtCcy" : "TWD",
+          "OrigAmt" : 12.0,
+          "TWDAmt" : 12.0,
+          "MrchName" : "STR",
+          "MrchCity" : "STR",
+          "AuthKey" : "STR",
+          "TxnCode" : "STR",
+          "RiskType" : "STR",
+          "CntlrNo" : "STR",
+          "XbrdrOrgType" : "STR",
+          "LockSeqNo" : "STR",
+          "PrbTxnAddDate" : "20160501",
+          "PrbTxnAddCntlDate" : "20160501",
+          "PrbTxnClsDate" : "20160501",
+          "PrbTxnClsCntlDate" : "20160501",
+          "RctLastRtrnDate" : "20160501",
+          "RctRcvDate" : "20160501",
+          "RctSendDate" : "20160501",
+          "RctRjctDate" : "20160501",
+          "RtrvlReqAddDate" : "20160501",
+          "RtrvlReqClsDate" : "20160501",
+          "DbClsAddDate" : "20160501",
+          "DbClsCntlDate" : "20160501",
+          "FrstDbExpDate" : "20160501",
+          "FrstDbSendDate" : "20160501",
+          "FrstDbAddDate" : "20160501",
+          "FrstDbCntlDate" : "20160501",
+          "FrstDbDsbrAddDate" : "20160501",
+          "FrstDbDsbrCntlDate" : "20160501",
+          "PrmptSentDate" : "20160501",
+          "PrmptExpDate" : "20160501",
+          "PrmptAddDate" : "20160501",
+          "PrmptCntlDate" : "20160501",
+          "ScndDbExpDate" : "20160501",
+          "ScndDbSendDate" : "20160501",
+          "ScndDbAddDate" : "20160501",
+          "ScndDbCntlDate" : "20160501",
+          "ScndDbDsbrDate" : "20160501",
+          "ScndDbDsbrCntlDate" : "20160501",
+          "PreArbitDate" : "20160501",
+          "PreArbitExpDate" : "20160501",
+          "PreArbitAddDate" : "20160501",
+          "PreArbitCntlDate" : "20160501",
+          "ArbitDate" : "20160501",
+          "ArbitExpDate" : "20160501",
+          "ArbitAddDate" : "20160501",
+          "ArbitCntlDate" : "20160501"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

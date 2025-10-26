@@ -1,0 +1,38 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Remittance",
+    "OperationName" : "TWDOutWrdRmtAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "TWDOutWrdRmtAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "RE01",
+        "TxnNo" : "RE0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ChanId" : "APP",
+        "TxnRefNo" : "100137892621001000",
+        "RmtDate" : "2019-12-21",
+        "RmtType" : "1111",
+        "RmteeBank" : "090",
+        "RmteeAcctNo" : "90093223",
+        "RmteeName" : "王小明",
+        "Amt" : 100000.0,
+        "RmterBank" : "822",
+        "RmterAcctNo" : "20129812",
+        "RmterName" : "王小明",
+        "RmtMemo" : "匯款",
+        "BrchId" : "1234",
+        "TlrId" : "USER001",
+        "SprvsrId" : "ADM001"
+      }
+    }
+  }
+}

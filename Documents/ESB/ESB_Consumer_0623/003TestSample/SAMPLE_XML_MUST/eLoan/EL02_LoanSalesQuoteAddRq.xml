@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/eLoan/LoanSalesQuoteAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>eLoan</ServiceDomain>  
+      <OperationName>LoanSalesQuoteAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:LoanSalesQuoteAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>EL02</v11:TxnId>  
+        <v11:TxnNo>af3a317b-1720-4faa-983f-62855b9be0f9DAdUCFBdVg9d</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:IBMBAppNo>STR</v11:IBMBAppNo>  
+        <!--Optional:-->  
+        <v11:AppRefNo>YYYYMMDD999SS9999</v11:AppRefNo>  
+        <v11:AppDate>yyyy-MM-ddTHH:mm:ssZ</v11:AppDate>  
+        <v11:AppChan>01</v11:AppChan>  
+        <!--1 or more repetitions:-->  
+        <v11:QuoteInfo> 
+          <!--Optional:-->  
+          <v11:AppNo>YYYYMMDD999SS9999S</v11:AppNo>  
+          <v11:LoanType>81003101</v11:LoanType>  
+          <v11:AppAmt>1</v11:AppAmt>  
+          <v11:LoanPurp>000</v11:LoanPurp>  
+          <v11:LoanTerm>1</v11:LoanTerm>  
+          <v11:PnltyType>0</v11:PnltyType> 
+        </v11:QuoteInfo>  
+        <v11:CustPermId>S999999999</v11:CustPermId>  
+        <v11:CustName>STR</v11:CustName>  
+        <v11:BirthDate>yyyy-MM-dd</v11:BirthDate>  
+        <v11:EduLvl>4</v11:EduLvl>  
+        <v11:MrtlStat>M</v11:MrtlStat>  
+        <v11:NoOfChild>1</v11:NoOfChild>  
+        <v11:AMLLevel>STR</v11:AMLLevel>  
+        <v11:AMLChkDate>yyyy-MM-dd</v11:AMLChkDate>  
+        <v11:MailAddrType>1</v11:MailAddrType>  
+        <v11:AddrZip>100</v11:AddrZip>  
+        <!--Optional:-->  
+        <v11:City>A</v11:City>  
+        <!--Optional:-->  
+        <v11:TownCnty>03</v11:TownCnty>  
+        <v11:St>STR</v11:St>  
+        <v11:ResYear>99</v11:ResYear>  
+        <v11:ResMnth>00</v11:ResMnth>  
+        <v11:MobNo>STR</v11:MobNo>  
+        <v11:eMailAddr>STR</v11:eMailAddr>  
+        <v11:CoName>STR</v11:CoName>  
+        <v11:IndstryType>000000</v11:IndstryType>  
+        <v11:IndstryCode>1</v11:IndstryCode>  
+        <!--Optional:-->  
+        <v11:JobTitl>06</v11:JobTitl>  
+        <v11:NoOfEmplYears>99</v11:NoOfEmplYears>  
+        <v11:NoOfEmplMnths>99</v11:NoOfEmplMnths>  
+        <v11:MnthSlry>1</v11:MnthSlry>  
+        <v11:CoDept>STR</v11:CoDept>  
+        <v11:OffPhnNo>STR</v11:OffPhnNo>  
+        <!--1 or more repetitions:-->  
+        <v11:AttDocInfo> 
+          <!--Optional:-->  
+          <v11:AttDocType>R01</v11:AttDocType>  
+          <!--Optional:-->  
+          <v11:AttDocName>R01</v11:AttDocName>  
+          <v11:AttDocId>STR</v11:AttDocId> 
+        </v11:AttDocInfo> 
+      </v11:ServiceBody> 
+    </v11:LoanSalesQuoteAddRq> 
+  </soap:Body> 
+</soap:Envelope>

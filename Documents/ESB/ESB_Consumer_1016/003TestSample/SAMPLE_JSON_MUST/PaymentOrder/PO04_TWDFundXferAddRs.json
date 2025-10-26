@@ -1,0 +1,35 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "TWDFundXferAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "TWDFundXferAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO04",
+        "TxnNo" : "PO0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "4001",
+        "RtrnDesc" : "200{4001}",
+        "FundXferInfo" : {
+          "TxnDate" : "2016-05-01",
+          "HdlgChrg" : 10,
+          "AvailBal" : 1000,
+          "AcctBal" : 1000,
+          "AmtCcy" : "TWD",
+          "FISCTxnNo" : "2999999",
+          "FISCRtrnCode" : "0000"
+        }
+      }
+    }
+  }
+}

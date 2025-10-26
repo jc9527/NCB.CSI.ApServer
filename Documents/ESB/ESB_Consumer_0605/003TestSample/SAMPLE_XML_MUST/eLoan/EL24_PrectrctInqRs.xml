@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/eLoan/PrectrctInqRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>eLoan</ServiceDomain>  
+      <OperationName>PrectrctInq</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:PrectrctInqRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>EL24</v11:TxnId>  
+        <v11:TxnNo>af3a317b-1720-4faa-983f-62855b9be0f9DAdUCFBdVg9d</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>USER009</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:RtrnCode>01</v11:RtrnCode>  
+        <!--Optional:-->  
+        <v11:RtrnDesc>200{01}</v11:RtrnDesc>  
+        <!--Optional:-->  
+        <v11:PrectrctInqRec> 
+          <v11:CustPermId>S999999999</v11:CustPermId>  
+          <v11:AppRefNo>YYYYMMDD999SS9999</v11:AppRefNo>  
+          <v11:AppNo>YYYYMMDD999SS9999S</v11:AppNo>  
+          <!--1 or more repetitions:-->  
+          <v11:AttDocInfo> 
+            <!--Optional:-->  
+            <v11:AttDocType>R01</v11:AttDocType>  
+            <v11:AttDocId>STR</v11:AttDocId> 
+          </v11:AttDocInfo> 
+        </v11:PrectrctInqRec> 
+      </v11:ServiceBody> 
+    </v11:PrectrctInqRs> 
+  </soap:Body> 
+</soap:Envelope>

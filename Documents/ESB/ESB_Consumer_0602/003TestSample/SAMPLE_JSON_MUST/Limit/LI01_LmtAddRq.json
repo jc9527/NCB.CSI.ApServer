@@ -1,0 +1,45 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Limit",
+    "OperationName" : "LmtAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "LmtAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LI01",
+        "TxnNo" : "LI0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "ArrngId" : "NEW",
+        "CustRec" : [ {
+          "CIFNo" : "1000000013"
+        } ],
+        "ProdName" : "AC.DCS",
+        "Ccy" : "TWD",
+        "RsnCode" : "Open DCS AC",
+        "MainAcctNo" : "88691223344556",
+        "LmtInfo" : {
+          "LmtSeqNo" : "1000000429"
+        },
+        "IPAddr" : "IP.172.20.15.192",
+        "DevNo" : "1",
+        "EntryDeptCode" : "N01",
+        "PrftCntr" : "N01",
+        "CostCntr" : "N01",
+        "AuthEmpId" : "HELEN",
+        "VerName" : "AA.ARRANGEMENT.ACTIVITY",
+        "EcoUnit" : "N01",
+        "APIKey" : "NCB-IF01003",
+        "MobLang" : "ENGLISH"
+      }
+    }
+  }
+}

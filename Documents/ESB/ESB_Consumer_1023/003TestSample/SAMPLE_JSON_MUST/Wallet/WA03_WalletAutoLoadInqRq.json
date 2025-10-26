@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Wallet",
+    "OperationName" : "WalletAutoLoadInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "WalletAutoLoadInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "WA03",
+        "TxnNo" : "WA0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "InqPageNo" : 1,
+        "NoOfPage" : 200,
+        "CustPermId" : "A123456789",
+        "StartTxnDate" : "20160101",
+        "EndTxnDate" : "20160101",
+        "WalletCardType" : "1"
+      }
+    }
+  }
+}

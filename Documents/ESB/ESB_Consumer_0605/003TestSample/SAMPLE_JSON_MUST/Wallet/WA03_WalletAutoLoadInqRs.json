@@ -1,0 +1,44 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Wallet",
+    "OperationName" : "WalletAutoLoadInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "WalletAutoLoadInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "WA03",
+        "TxnNo" : "WA0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "WalletAutoLoadRec" : [ {
+          "WalletNo" : "04810000090",
+          "WalletChnName" : "新竹市中華路二段188號",
+          "AmtCcy" : "TWD",
+          "WalletTxnDate" : "20190331",
+          "WalletTxnTime" : "123456",
+          "WalletEquipId" : "8765",
+          "WalletPrtnr" : "交易業者_A",
+          "WalletPrtnrLoc" : "新竹市中華路二段188號",
+          "WalletTxnAmt" : 1000.0,
+          "WalletValue" : 1000.0
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 200,
+          "TtlPageNo" : 3,
+          "NoOfRec" : 550
+        }
+      }
+    }
+  }
+}

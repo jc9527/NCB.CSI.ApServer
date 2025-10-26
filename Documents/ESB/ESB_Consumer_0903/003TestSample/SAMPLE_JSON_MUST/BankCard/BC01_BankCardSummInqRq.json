@@ -1,0 +1,27 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "BankCard",
+    "OperationName" : "BankCardSummInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "BankCardSummInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "BC01",
+        "TxnNo" : "BC0100001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER",
+        "CustPswd" : "123456"
+      },
+      "ServiceBody" : {
+        "PageNo" : 1,
+        "NoOfPage" : 1,
+        "CardNo" : "4312340000036975"
+      }
+    }
+  }
+}

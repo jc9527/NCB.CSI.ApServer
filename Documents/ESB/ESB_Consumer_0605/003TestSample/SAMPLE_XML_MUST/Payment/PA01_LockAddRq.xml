@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Payment/LockAddRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>Payment</ServiceDomain>  
+      <OperationName>LockAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:LockAddRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>PA01</v11:TxnId>  
+        <v11:TxnNo>PA0100001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <!--Optional:-->  
+        <v11:ValidateOnly>false</v11:ValidateOnly>  
+        <v11:TxnType>1</v11:TxnType>  
+        <!--Optional:-->  
+        <v11:LockSeqNo>ACLK2002557245</v11:LockSeqNo>  
+        <!--Optional:-->  
+        <v11:LockInfo> 
+          <v11:AcctNo>88680000000026</v11:AcctNo>  
+          <v11:LockAmt>5000</v11:LockAmt>  
+          <v11:LockType>EVT-E-01</v11:LockType>  
+          <!--Optional:-->  
+          <v11:APIKey>NCB-IF17002</v11:APIKey> 
+        </v11:LockInfo> 
+      </v11:ServiceBody> 
+    </v11:LockAddRq> 
+  </soap:Body> 
+</soap:Envelope>

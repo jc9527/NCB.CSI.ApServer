@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "RewardPoints",
+    "OperationName" : "PointVndrAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "PointVndrAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "RP13",
+        "TxnNo" : "RP1300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "FnctType" : "ADD",
+        "CoNo" : 12345678,
+        "CoCode" : "13579",
+        "CoName" : "供應商第一號",
+        "UnincOrgId" : "24681357",
+        "ChartAcct" : "應收帳款"
+      }
+    }
+  }
+}

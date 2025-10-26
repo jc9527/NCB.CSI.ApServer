@@ -1,0 +1,30 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "eJCICAGTAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "eJCICAGTAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO33",
+        "TxnNo" : "LO3300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "D0000",
+        "RtrnDesc" : "200 {D0000}",
+        "JCICRsInfo" : {
+          "JCICTxnId" : "RAGT",
+          "MsgId" : "Z1234AABB"
+        }
+      }
+    }
+  }
+}

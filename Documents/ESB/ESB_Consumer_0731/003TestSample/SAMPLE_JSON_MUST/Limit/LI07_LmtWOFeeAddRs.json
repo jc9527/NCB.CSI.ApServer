@@ -1,0 +1,54 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Limit",
+    "OperationName" : "LmtWOFeeAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "LmtWOFeeAddRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "LI07",
+        "TxnNo" : "LI0700001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnStatCode" : [ {
+          "RtrnCode" : "200",
+          "RtrnDesc" : "200{success}"
+        } ],
+        "HeaderInfo" : {
+          "Id" : "AAACT19337LLMBKL0P"
+        },
+        "CustInfo" : {
+          "LmtId" : "NEW",
+          "CIFNo" : "1000000679",
+          "LmtProdId" : "8100",
+          "AppNo" : "ELOAN1234",
+          "Ccy" : "TWD",
+          "AvailFlg" : "Y",
+          "ApprvDate" : "20191203",
+          "DfltApprvDate" : "20191203",
+          "RvwFreq" : "20201203M0101",
+          "LmtExpDate" : "20201203",
+          "AppDate" : "20191203",
+          "LmtEffData" : "20191203",
+          "ExtblLmtExpDate" : "20201204",
+          "LmtAmt" : 40000,
+          "MaxLmtAmt" : 40000,
+          "LmtType" : "FIXED",
+          "AllwLmtCancFlg" : "1",
+          "LmtCtrctExpDate" : "20271203",
+          "LmtRefNo" : "1000000679.0008100.01",
+          "APIKey" : "IF05005",
+          "Chan" : "CCS"
+        }
+      }
+    }
+  }
+}

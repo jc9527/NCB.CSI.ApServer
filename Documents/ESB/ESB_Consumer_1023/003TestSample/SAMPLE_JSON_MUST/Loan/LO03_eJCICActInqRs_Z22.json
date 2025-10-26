@@ -1,0 +1,137 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "eJCICActInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "eJCICActInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO03",
+        "TxnNo" : "LO0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "D0000",
+        "RtrnDesc" : "200 {D0000}",
+        "JCICRsInfo" : {
+		  "JCICTxnId" : "QZ22",
+          "MsgId" : "Z1234AABB",
+          "InqKeyId1" : "X101010107",
+          "InqKeyId2" : "",
+          "SendJCICFlg" : "Y",
+          "RawData" : {
+		    "PIDInfo" : {
+              "AtomId" : "AAS005",
+              "CustPermId" : "A123456789",
+              "CustChnName" : "平安　　　　",
+              "Filler" : ""
+            },
+			"CustChnNameInfo" : {
+              "AtomId" : "AAS006",
+              "CustChnFullName" : "平安全名"
+            },
+            "JCICActInfo" : {
+              "AtomId" : "VAM201",
+              "JCICActRec" : [ {
+                "ActType" : "F",
+                "CriPlc" : "0010023",
+                "CriDate" : "1050909",
+                "ActDate" : "1050926",
+                "CustChnName" : "李○章",
+                "InvcNo" : "0011223345566",
+                "Rmk1" : "進口商億○貿易公司負責人張○○疑與香港興",
+                "Rmk2" : "○○公司共串以假提單至銀行押匯取得貨款　　　　　　　　　　　　　　",
+                "Rmk3" : "",
+                "Rmk4" : "",
+                "ActOrgName" : "中央信託局基隆分行",
+                "RlsCode" : "",
+                "RlsRsn" : "",
+                "RlsDate" : "",
+                "Filler" : ""
+              }, {
+                "ActType" : "L",
+                "CriPlc" : "057AU01",
+                "CriDate" : "1060330",
+                "ActDate" : "1060401",
+                "CustChnName" : "范○鳳(X101010107)",
+                "InvcNo" : "1801-000109XXX",
+                "Rmk1" : "本行93/4/1接獲台北縣警察局永和分局93.3.31永警刑字09300098XX號函之傳真.",
+                "Rmk2" : "爰因本行大發分行存戶帳號1801-000109XXX戶名范○鳳(身分證字號X101010107)",
+                "Rmk3" : "疑似詐騙犯罪用帳戶.為防範其繼續行騙.特此通報同業注意防範.",
+                "Rmk4" : "",
+                "ActOrgName" : "台東中小企業銀行稽核室",
+                "RlsCode" : "",
+                "RlsRsn" : "",
+                "RlsDate" : "",
+                "Filler" : ""
+              } ]
+            },
+            "MsgInfo" : {
+              "AtomId" : "VAM108",
+              "MsgRec" : [ {
+                "CustPermId" : "X101010107",
+                "MsgDate" : "1000113",
+                "MsgMainCode" : "1",
+                "MsgMainNote" : "期限內不再申請貸款或現金卡或信用卡等",
+                "MsgSubCode" : "",
+                "MsgSubNote" : "因身分證遺失",
+                "MsgtCntt" : "期限內不再申請貸款或現金卡或信用卡等",
+                "MsgNewSubCode" : "A0",
+                "Filler" : ""
+              }, {
+                "CustPermId" : "X101010107",
+                "MsgDate" : "1000112",
+                "MsgMainCode" : "2",
+                "MsgMainNote" : "加強確認個人身分",
+                "MsgSubCode" : "",
+                "MsgSubNote" : "其他",
+                "MsgtCntt" : "中國信託桃園分行函告;俟簡君和其接洽,暫無法變更.原ID為F1225401XX.",
+                "MsgNewSubCode" : "O0",
+                "Filler" : ""
+              } ]
+            },
+			"InqBankInfo" : {
+              "AtomId" : "STM011",
+              "InqBankInfo1" : [ {
+                "InqBankId" : "822LN01",
+                "InqBankName" : "中國信託商業銀行個金風險控管部",
+                "InqPurp1" : "1",
+                "InqPurp" : "新業務申請"
+              } ]
+            },
+            "Last3MnthInqBankInfo" : {
+              "AtomId" : "STM012",
+              "InqBankInfo2" : [ {
+                "InqDate" : "1000101",
+                "InqBankId" : "0060752",
+                "InqBankName" : "合作金庫銀行調查研究部",
+                "InqPurp1" : "A",
+                "InqPurp" : "新業務申請"
+              }, {
+                "InqDate" : "1000112",
+                "InqBankId" : "0061195",
+                "InqBankName" : "合作金庫銀行烏日分行",
+                "InqPurp1" : "B",
+                "InqPurp" : "原業務申請"
+              } ]
+            },
+            "InqBussCnt" : {
+              "AtomId" : "STS012",
+              "InqNewBussTime" : "00005",
+              "InqOldBussTime" : "00004",
+              "NewAcctOpnCnt" : "00000",
+              "OldAcctCnt" : "00002"
+            }
+          }
+        }
+      }
+    }
+  }
+}

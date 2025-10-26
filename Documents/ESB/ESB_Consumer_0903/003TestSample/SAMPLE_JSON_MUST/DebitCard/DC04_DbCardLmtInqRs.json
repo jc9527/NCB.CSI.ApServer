@@ -1,0 +1,55 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardLmtInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "DbCardLmtInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC04",
+        "TxnNo" : "DC0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00",
+        "RtrnDesc" : "200{00}",
+        "CardLmtRec" : [ {
+          "CardNo" : "5211958800000591",
+          "DbAcctNo" : "01000001982300",
+          "CustPermId" : "B169222431",
+          "CardAtt" : "0",
+          "AmtCcy" : "TWD",
+          "DayLmt" : 100000.0,
+          "MnthLmt" : 99999999.0,
+          "TempDDLmt" : 50000.0,
+          "StartTempDDLmtDate" : "20180201",
+          "EndTempDDLmtDate" : "20180220",
+          "TempMMLmt" : 1000000.0,
+          "StartTempMMLmtDate" : "201802",
+          "EndTempMMLmtDate" : "201803",
+          "UpdDate" : "20180125",
+          "UpdTime" : "093800",
+          "UpdtUserId" : "joe",
+          "SrcCode" : "TWCCS",
+          "AccumDayLmt" : 0.0,
+          "AccumMnthLmt" : 0.0,
+          "AvailDayLmt" : 100000.0,
+          "AvailMnthLmt" : 99999999.0
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

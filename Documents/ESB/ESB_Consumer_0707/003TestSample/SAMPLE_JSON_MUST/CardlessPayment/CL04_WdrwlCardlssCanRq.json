@@ -1,0 +1,29 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "CardlessPayment",
+    "OperationName" : "WdrwlCardlssCan",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "WdrwlCardlssCanRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "CL04",
+        "TxnNo" : "CL0400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CustPermId" : "A123456789",
+        "AcctNo" : "29887923",
+        "ChanId" : "APP",
+        "AppntNo" : "1234567",
+        "BrchId" : "02398233",
+        "UserId" : "1234"
+      }
+    }
+  }
+}

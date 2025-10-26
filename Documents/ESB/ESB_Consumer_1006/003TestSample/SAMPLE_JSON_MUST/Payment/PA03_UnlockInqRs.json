@@ -1,0 +1,43 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Payment",
+    "OperationName" : "UnlockInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "UnlockInqRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "DCS14",
+        "TxnNo" : "DCS1400001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnCode" : "00"
+        "RtrnDesc" : "200{00}",
+        "CardNoRec" : [ {
+          "CardNo" : "4563020616112800",
+          "TxnDate" : "20160501",
+          "TxnTime" : "123456",
+          "AuthKey" : "016290",
+          "AmtCcy" : "TWD",
+          "TxnAmt" : 1000.0,
+          "BlkAmt" : 1000.0,
+          "LockSeqNo" : "ACLK1615297806",
+          "MrchCode" : "7311"
+        } ],
+        "ControlRec" : {
+          "CurPage" : 1,
+          "NoOfCurPage" : 1,
+          "TtlPageNo" : 1,
+          "NoOfRec" : 1
+        }
+      }
+    }
+  }
+}

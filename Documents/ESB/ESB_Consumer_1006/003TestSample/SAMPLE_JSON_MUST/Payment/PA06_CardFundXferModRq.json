@@ -1,0 +1,27 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Payment",
+    "OperationName" : "CardFundXferMod",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "CardFundXferModRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "PA06",
+        "TxnNo" : "PA0600001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "BillNo" : "1000000001",
+        "CardNo" : "4563020616112800",
+        "UpdtUserId" : "joe",
+        "SprvsrlId" : "joe"
+      }
+    }
+  }
+}

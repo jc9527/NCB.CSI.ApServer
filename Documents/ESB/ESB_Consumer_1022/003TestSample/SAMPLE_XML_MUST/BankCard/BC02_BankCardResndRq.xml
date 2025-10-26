@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/BankCard/BankCardResndRq/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>BankCard</ServiceDomain>  
+      <OperationName>BankCardResnd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:BankCardResndRq> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>BC02</v11:TxnId>  
+        <v11:TxnNo>BC0200001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <v11:AppType>A</v11:AppType>  
+        <v11:CIFNo>12301</v11:CIFNo>  
+        <v11:CustPermId>A418173957</v11:CustPermId>  
+        <v11:CustChnName>王大明</v11:CustChnName>  
+        <v11:CustEngName>david wang</v11:CustEngName>  
+        <v11:BirthDay>1977/2/2</v11:BirthDay>  
+        <v11:MobNo>0911888888</v11:MobNo>  
+        <v11:AddrZip>1234</v11:AddrZip>  
+        <v11:MailAddr1>台北市大安區</v11:MailAddr1>  
+        <v11:MailAddr2>大安路3號</v11:MailAddr2>  
+        <v11:CardType>1</v11:CardType>  
+        <v11:DayLmt>1</v11:DayLmt>  
+        <v11:MnthLmt>1</v11:MnthLmt>  
+        <v11:NonRsrvdFundXfer>0</v11:NonRsrvdFundXfer>  
+        <v11:XbrdrWdl>0</v11:XbrdrWdl>  
+        <v11:SmartPay>0</v11:SmartPay>  
+        <v11:DlvrMthd>0</v11:DlvrMthd>  
+        <v11:DbAcctNo>123443234</v11:DbAcctNo>  
+        <v11:HCE>0</v11:HCE>  
+        <v11:SMSFlg>0</v11:SMSFlg>  
+        <v11:PushAppFlg>0</v11:PushAppFlg>  
+        <v11:eMailFlg>0</v11:eMailFlg>  
+        <v11:SMSAmt>1</v11:SMSAmt>  
+        <v11:eMailAddr>aaa@gmail.com</v11:eMailAddr>  
+        <v11:EmrgIssCardFlg>0</v11:EmrgIssCardFlg>  
+        <v11:DsgntCardNo>0</v11:DsgntCardNo>  
+        <v11:ImgId>123</v11:ImgId>  
+        <!--Zero or more repetitions:-->  
+        <v11:DbAcctInfo> 
+          <v11:DbAcctNo>1111222233334444</v11:DbAcctNo> 
+        </v11:DbAcctInfo>  
+        <!--Zero or more repetitions:-->  
+        <v11:CrBankInfo> 
+          <v11:CrBankId>013</v11:CrBankId>  
+          <v11:CrAcctNo>6666555544443333</v11:CrAcctNo> 
+        </v11:CrBankInfo>  
+        <!--Optional:-->  
+        <v11:ChargeFlg>Y</v11:ChargeFlg>  
+        <v11:CardGrade>W</v11:CardGrade>  
+        <v11:GrpCode>0000</v11:GrpCode>  
+        <v11:ElekCardType>0</v11:ElekCardType>  
+        <v11:Natl>TW</v11:Natl> 
+      </v11:ServiceBody> 
+    </v11:BankCardResndRq> 
+  </soap:Body> 
+</soap:Envelope>

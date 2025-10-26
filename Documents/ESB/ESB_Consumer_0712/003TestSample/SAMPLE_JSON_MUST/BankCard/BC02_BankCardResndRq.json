@@ -1,0 +1,62 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "BankCard",
+    "OperationName" : "BankCardResnd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "BankCardResndRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "BC02",
+        "TxnNo" : "BC0200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "AppType" : "A",
+        "CIFNo" : "12301",
+        "CustPermId" : "A418173957",
+        "CustChnName" : "王大明",
+        "CustEngName" : "david wang",
+        "BirthDay" : "1977/2/2",
+        "MobNo" : "0911888888",
+        "AddrZip" : "1234",
+        "MailAddr1" : "台北市大安區",
+        "MailAddr2" : "大安路3號",
+        "CardType" : "1",
+        "DayLmt" : 1.0,
+        "MnthLmt" : 1.0,
+        "NonRsrvdFundXfer" : "0",
+        "XbrdrWdl" : "0",
+        "SmartPay" : "0",
+        "DlvrMthd" : "0",
+        "DbAcctNo" : "123443234",
+        "HCE" : "0",
+        "SMSFlg" : "0",
+        "PushAppFlg" : "0",
+        "eMailFlg" : "0",
+        "SMSAmt" : 1.0,
+        "eMailAddr" : "aaa@gmail.com",
+        "EmrgIssCardFlg" : "0",
+        "DsgntCardNo" : "0",
+        "ImgId" : "123",
+        "DbAcctInfo" : [ {
+          "DbAcctNo" : "1111222233334444"
+        } ],
+        "CrBankInfo" : [ {
+          "CrBankId" : "013",
+          "CrAcctNo" : "6666555544443333"
+        } ],
+        "ChargeFlg" : "Y",
+        "CardGrade" : "W",
+        "GrpCode" : "0000",
+        "ElekCardType" : "0",
+        "Natl" : "TW"
+      }
+    }
+  }
+}

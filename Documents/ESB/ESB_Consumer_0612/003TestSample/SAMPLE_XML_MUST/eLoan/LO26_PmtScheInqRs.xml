@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Loan/PmtScheInqRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>Loan</ServiceDomain>  
+      <OperationName>PmtScheInq</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:PmtScheInqRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>CU18</v11:TxnId>  
+        <v11:TxnNo>CU1800001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <!--1 or more repetitions:-->  
+        <v11:RtrnStatCode> 
+          <v11:RtrnCode>200</v11:RtrnCode>  
+          <!--Optional:-->  
+          <v11:RtrnDesc>200{200}</v11:RtrnDesc> 
+        </v11:RtrnStatCode>  
+        <!--Optional:-->  
+        <v11:PageInfo> 
+          <!--Optional:-->  
+          <v11:PageSize>10</v11:PageSize>  
+          <!--Optional:-->  
+          <v11:PageStart>0</v11:PageStart>  
+          <!--Optional:-->  
+          <v11:NoOfRec>99</v11:NoOfRec>  
+          <!--Optional:-->  
+          <v11:PageToken>201904170622107608.01</v11:PageToken> 
+        </v11:PageInfo>  
+        <!--Optional:-->  
+        <v11:Audit></v11:Audit>  
+        <!--Zero or more repetitions:-->  
+        <v11:PmtRec> 
+          <!--Optional:-->  
+          <v11:SchdDate>20191203</v11:SchdDate>  
+          <!--Optional:-->  
+          <v11:TtlAmt>795</v11:TtlAmt>  
+          <!--Optional:-->  
+          <v11:PrncplAmt>1000000</v11:PrncplAmt>  
+          <!--Optional:-->  
+          <v11:IntrstAmt>3343</v11:IntrstAmt>  
+          <!--Optional:-->  
+          <v11:HdlgChrg>795</v11:HdlgChrg>  
+          <!--Optional:-->  
+          <v11:PaidAmt>1000000</v11:PaidAmt>  
+          <!--Optional:-->  
+          <v11:TtlOutstndAmt>-984100</v11:TtlOutstndAmt> 
+        </v11:PmtRec> 
+      </v11:ServiceBody> 
+    </v11:PmtScheInqRs> 
+  </soap:Body> 
+</soap:Envelope>

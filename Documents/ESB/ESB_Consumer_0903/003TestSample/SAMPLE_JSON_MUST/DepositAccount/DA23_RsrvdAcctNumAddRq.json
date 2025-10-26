@@ -1,0 +1,28 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DepositAccount",
+    "OperationName" : "RsrvdAcctNumAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "RsrvdAcctNumAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DA23",
+        "TxnNo" : "DA2300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "RsrvdAcctId" : "20200328-01",
+        "RsrvdAcctNoRec" : [ {
+          "RsrvdAcctNo" : 1
+        } ]
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.iisigroup.com/magiclamp/common/soapenv.xsd/v1" xmlns:v11="http://www.nextbank.com.tw/xsd/TW/Loan/ODLoanAddRs/v1">  
+  <soap:Header> 
+    <v1:Header v1:mustUnderstand="true"> 
+      <ChannelID>ESB</ChannelID>  
+      <ServiceDomain>Loan</ServiceDomain>  
+      <OperationName>ODLoanAdd</OperationName>  
+      <ConsumerID>TWESB</ConsumerID>  
+      <TransactionID>T1222222</TransactionID>  
+      <RqTimestamp>2015-12-06T12:01:01.00+08:00</RqTimestamp>  
+      <!--Optional:-->  
+      <RsTimestamp>2015-12-06T12:01:10.00+08:00</RsTimestamp> 
+    </v1:Header> 
+  </soap:Header>  
+  <soap:Body> 
+    <v11:ODLoanAddRs> 
+      <v11:ServiceHeader> 
+        <v11:TxnId>LO31</v11:TxnId>  
+        <v11:TxnNo>LO3100001</v11:TxnNo> 
+      </v11:ServiceHeader>  
+      <v11:Signon> 
+        <v11:CustId>ESBUSER</v11:CustId> 
+      </v11:Signon>  
+      <v11:ServiceBody> 
+        <!--1 or more repetitions:-->  
+        <v11:RtrnStatCode> 
+          <v11:RtrnCode>200</v11:RtrnCode>  
+          <!--Optional:-->  
+          <v11:RtrnDesc>200{success}</v11:RtrnDesc> 
+        </v11:RtrnStatCode>  
+        <!--Optional:-->  
+        <v11:HeaderInfo> 
+          <v11:Id>STR</v11:Id> 
+        </v11:HeaderInfo>  
+        <!--Optional:-->  
+        <v11:Payload> 
+          <!--Optional:-->  
+          <v11:Chan>CCS</v11:Chan> 
+        </v11:Payload> 
+      </v11:ServiceBody> 
+    </v11:ODLoanAddRs> 
+  </soap:Body> 
+</soap:Envelope>

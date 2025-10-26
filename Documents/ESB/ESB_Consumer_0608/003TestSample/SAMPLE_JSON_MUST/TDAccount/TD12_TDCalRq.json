@@ -1,0 +1,42 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "TDAccount",
+    "OperationName" : "TDCal",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "TDCalRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "TD12",
+        "TxnNo" : "TD1200001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "ValidateOnly" : false,
+        "Payload" : {
+          "ArrngId" : "NEW",
+          "ProdId" : "STR",
+          "Ccy" : "STR",
+          "EffDate" : "STR",
+          "CmmtmntInfo" : {
+            "Amt" : 3500
+          },
+          "RenewInfo" : {
+            "RenewPrd" : "STR",
+            "RenewDateType" : "STR",
+            "RenewType" : "STR"
+          },
+          "StlInfo" : [ {
+            "DbAcctFlg" : "STR",
+            "CrAcctFlg" : "STR"
+          } ]
+        }
+      }
+    }
+  }
+}

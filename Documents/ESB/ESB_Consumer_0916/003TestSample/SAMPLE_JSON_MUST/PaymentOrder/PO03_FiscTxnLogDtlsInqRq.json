@@ -1,0 +1,26 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "PaymentOrder",
+    "OperationName" : "FiscTxnLogDtlsInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "FiscTxnLogDtlsInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "PO03",
+        "TxnNo" : "PO0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "TxnDate" : "2016-01-01",
+        "AcqBankId" : "007",
+        "TxnSeqNo" : "1234567"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DemoService",
+    "OperationName" : "OneToOne",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "OneToOneRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DO01",
+        "TxnNo" : "DO010001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER",
+        "CustPswd" : "123456"
+      },
+      "ServiceBody" : {
+        "RqTransform" : {
+          "Pass" : "Y",
+          "ErrorCode" : "0903"
+        },
+        "InterfaceProxy" : {
+          "Pass" : "Y",
+          "ErrorCode" : "0903",
+          "TimeOut" : "5000"
+        },
+        "RsTransform" : {
+          "Pass" : "Y",
+          "ErrorCode" : "0903"
+        }
+      }
+    }
+  }
+}

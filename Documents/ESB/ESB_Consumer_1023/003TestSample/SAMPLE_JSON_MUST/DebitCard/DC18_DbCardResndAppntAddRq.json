@@ -1,0 +1,30 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "DebitCard",
+    "OperationName" : "DbCardResndAppntAdd",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "DbCardResndAppntAddRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "DC18",
+        "TxnNo" : "DC1800001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "CardNo" : "4563020616112800",
+        "ResndAppntType" : "1",
+        "ResndAppntCode" : "11",
+        "ExpAppntRsnCode" : "01",
+        "ExpUpdtDate" : "20010101",
+        "ResndRsn" : "1",
+        "ResndDate" : "20010101"
+      }
+    }
+  }
+}

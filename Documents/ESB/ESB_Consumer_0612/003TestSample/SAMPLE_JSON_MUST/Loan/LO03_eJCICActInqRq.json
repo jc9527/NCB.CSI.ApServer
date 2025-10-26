@@ -1,0 +1,40 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Loan",
+    "OperationName" : "eJCICActInq",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00"
+  },
+  "ambody" : {
+    "eJCICActInqRq" : {
+      "ServiceHeader" : {
+        "TxnId" : "LO03",
+        "TxnNo" : "LO0300001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "BankId" : "888",
+        "BrchId" : "1000",
+        "JCICTxnId" : "QZ21",
+        "InqSysType" : "CCS",
+        "MsgId" : "Z1234AABB",
+        "ChrgCode" : "1000",
+        "InqEmplId" : "testUser",
+        "InqEmplName" : "測試使用者",
+        "InqRsnCode" : "A1A",
+        "InqDeptCode" : "10.100.110.12",
+        "CustPermId" : "A123456789",
+        "IssDate" : "2006-04-09",
+        "IssType" : "3",
+        "BirthDay" : "1934-11-04",
+        "PicFreeFlg" : "0",
+        "IssLoc" : "10003000",
+        "SendJCICFlg" : "Y"
+      }
+    }
+  }
+}

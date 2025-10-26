@@ -1,0 +1,76 @@
+{
+  "amheader" : {
+    "ChannelID" : "ESB",
+    "ServiceDomain" : "Customer",
+    "OperationName" : "CustProfSync",
+    "ConsumerID" : "TWESB",
+    "TransactionID" : "T1222222",
+    "RqTimestamp" : "2015-12-06T12:01:01.00+08:00",
+    "RsTimestamp" : "2015-12-06T12:01:10.00+08:00"
+  },
+  "ambody" : {
+    "CustProfSyncRs" : {
+      "ServiceHeader" : {
+        "TxnId" : "CU20",
+        "TxnNo" : "CU2000001"
+      },
+      "Signon" : {
+        "CustId" : "ESBUSER"
+      },
+      "ServiceBody" : {
+        "RtrnStatCode" : [ {
+          "RtrnCode" : "200",
+          "RtrnDesc" : "200{success}"
+        } ],
+        "CMSRsRec" : {
+          "RtrnCode" : "00",
+          "RtrnDesc" : "200{00}"
+        },
+        "DCSRsRec" : {
+          "RtrnCode" : "00",
+          "RtrnDesc" : "200{00}"
+        },
+        "HeaderInfo" : {
+        },
+        "CustInfo" : {
+          "CustEngName" : "Henry Lu",
+          "CustChnName" : "盧小乖",
+          "Mnem" : "Y123789456",
+          "Sctr" : "1000",
+          "Tgt" : "999",
+          "CustStat" : "2",
+          "Natl" : "TW",
+          "Res" : "TW",
+          "CustPermId" : "Y123789456",
+          "BirthDay" : "19900322",
+          "Gndr" : "MALE",
+          "MrtlStat" : "SINGLE",
+          "EduLvl" : "DEGREE",
+          "IndstryType" : "060000",
+          "IndstryObj" : "060000",
+          "GrpCo" : "CORBAN",
+          "EmplNo" : "223432",
+          "DgtlAcctVrfy" : "2566-20200910",
+          "CIFCloseDt" : "20191225",
+          "TaxFreeFlg" : "Y",
+          "PIPAFlg" : "Y",
+          "RelnRMCode" : "1",
+          "FXId" : "3",
+          "IndstryCode" : "25",
+          "PIDIssLoc" : "63000000",
+          "PIDIssDate" : "20150921",
+          "NHIFlg" : "Y",
+          "Rsdnt183Flg" : "Y",
+          "L3PtyXSellFlg" : "Y",
+          "StkhldrToken" : "STAKE HOLDER",
+          "PinYinName" : "PinYin",
+          "LoanLmtTtl" : 11819.21,
+          "Cntry" : "台灣",
+          "CIFAddDate" : "20191218",
+          "DsbltyCardExpDate" : "20201203",
+          "Chan" : "CCS"
+        }
+      }
+    }
+  }
+}
