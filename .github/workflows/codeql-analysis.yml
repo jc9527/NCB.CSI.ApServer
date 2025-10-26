@@ -1,58 +1,53 @@
-name: CodeQL - C# (.NET Framework 4.7.2)
+name: "CodeQL - C# (.NET Framework 4.7.2)"
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ "main", "master" ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ "main", "master" ]
   schedule:
-    - cron: '0 5 * * 0'
+    - cron: '0 0 * * 0'
 
 jobs:
   analyze:
     name: CodeQL analysis for .NET Framework (C#)
     runs-on: windows-latest
 
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'csharp' ]
+
     steps:
-      # -----------------------------
-      # 1️⃣ Checkout repository
-      # -----------------------------
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # -----------------------------
-      # 2️⃣ Setup MSBuild & NuGet
-      # -----------------------------
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v2
-
+      # Step 2: Setup NuGet
       - name: Setup NuGet
-        uses: NuGet/setup-nuget@v2
+        uses: nuget/setup-nuget@v2
 
-      # -----------------------------
-      # 3️⃣ Restore NuGet packages
-      # -----------------------------
+      # Step 3: Restore NuGet packages (solution-wide)
       - name: Restore NuGet packages
-        run: nuget restore NCB.CSI.ApServer.sln
-
-      # -----------------------------
-      # 4️⃣ Build entire solution (Release)
-      # -----------------------------
-      - name: Build Solution
         run: |
-          msbuild NCB.CSI.ApServer.sln /p:Configuration=Release /p:Platform="Any CPU" /m
+          nuget restore NCB.CSI.ApServer.sln
 
-      # -----------------------------
-      # 5️⃣ Initialize CodeQL
-      # -----------------------------
+      # Step 4: Initialize CodeQL
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: csharp
-          build-mode: manual
+          languages: ${{ matrix.language }}
 
-      # -----------------------------
-      # 6️⃣ Perform CodeQL Analysis
-      # -----------------------------
-      - name: Perform CodeQL Analysis
+      # Step 5: Build entire solution using MSBuild
+      - name: Build solution
+        run: |
+          msbuild NCB.CSI.ApServer.sln /p:Configuration=Release /p:Platform="Any CPU" /m
+
+      # Step 6: Perform CodeQL analysis
+      - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
