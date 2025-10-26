@@ -1,4 +1,4 @@
-name: "CodeQL - C# (.NET Framework 4.7.2) - build selected projects"
+name: "CodeQL - C# (.NET Framework 4.7.2) - build selected projects (CodeQL v3)"
 
 on:
   push:
@@ -11,7 +11,6 @@ on:
 
 permissions:
   contents: read
-  actions: read
   security-events: write
 
 jobs:
@@ -26,8 +25,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+      - name: Initialize CodeQL (v3)
+        uses: github/codeql-action/init@v3
         with:
           languages: csharp
 
@@ -65,12 +64,11 @@ jobs:
           }
 
           if (-not $msbuildPath) {
-            # fallback to msbuild on PATH
             $msbuildPath = "msbuild"
           }
 
-          Write-Host "MSBUILD_PATH=$msbuildPath"
-          Write-Output "::set-output name=msbuild::$msbuildPath"
+          Write-Host "Using MSBuild: $msbuildPath"
+          Add-Content -Path $env:GITHUB_OUTPUT -Value "msbuild=$msbuildPath"
 
       - name: Restore & Build selected projects (Models -> ApClient -> Batch)
         shell: powershell
@@ -78,9 +76,9 @@ jobs:
           MSBUILD_PATH: ${{ steps.find-msbuild.outputs.msbuild }}
         run: |
           $projects = @(
-            "NCB.CSI.Models/NCB.CSI.Models.csproj",
-            "NCB.CSI.ApClient/NCB.CSI.ApClient.csproj",
-            "NCB.CSI.Batch/NCB.CSI.Batch.csproj"
+            'NCB.CSI.Models/NCB.CSI.Models.csproj',
+            'NCB.CSI.ApClient/NCB.CSI.ApClient.csproj',
+            'NCB.CSI.Batch/NCB.CSI.Batch.csproj'
           )
 
           $msbuild = $env:MSBUILD_PATH
@@ -90,50 +88,50 @@ jobs:
             Write-Host "---- Processing project: $proj ----"
 
             if (-not (Test-Path $proj)) {
-              Write-Error "Project not found: $proj. Update the path in the workflow if necessary."
+              Write-Error ("Project not found: " + $proj + ". Update the path in the workflow if necessary.")
               exit 1
             }
 
             # Restore with nuget.exe (works for packages.config & older projects)
-            Write-Host "Restoring packages for $proj"
+            Write-Host ("Restoring packages for " + $proj)
             & .\nuget.exe restore $proj -PackagesDirectory packages
             if ($LASTEXITCODE -ne 0) {
-              Write-Warning "nuget restore returned exit code $LASTEXITCODE for $proj — continuing to build (msbuild may still resolve references)."
+              Write-Warning ("nuget restore returned exit code " + $LASTEXITCODE + " for " + $proj + " — continuing to build (msbuild may still resolve references).")
             }
 
             # Compute OutDir (ensure trailing backslash)
             $projDir = Split-Path -Parent $proj
             $outDirCandidate = Join-Path $projDir "bin\Release\"
-            $resolved = $null
             try {
               $resolved = (Resolve-Path -Path $outDirCandidate -ErrorAction Stop).Path
             } catch {
-              # path may not exist yet; use the candidate
               $resolved = $outDirCandidate
             }
             if ($resolved -notlike '*\') { $resolved += '\' }
 
-            Write-Host "Building $proj -> OutDir: $resolved"
+            Write-Host ("Building " + $proj + " -> OutDir: " + $resolved)
 
-            # Build args: pass each /p: as separate argv; quote Platform "Any CPU"
+            # Build args: construct OutDir argument by concatenation to avoid nested quotes issues
+            $outArg = '/p:OutDir=' + $resolved
+            $platformArg = '/p:Platform="Any CPU"'
             $msbuildArgs = @(
               $proj,
               '/p:Configuration=Release',
-              '/p:Platform="Any CPU"',
-              "/p:OutDir=`"$resolved`"",
+              $platformArg,
+              $outArg,
               '/p:BuildProjectReferences=true',
               '/m'
             )
 
-            Write-Host "Calling MSBuild: $msbuild $($msbuildArgs -join ' ')"
+            Write-Host ("Calling MSBuild: " + $msbuild + " " + ($msbuildArgs -join ' '))
             & $msbuild @msbuildArgs
             if ($LASTEXITCODE -ne 0) {
-              Write-Error "MSBuild failed for $proj with exit code $LASTEXITCODE"
+              Write-Error ("MSBuild failed for " + $proj + " with exit code " + $LASTEXITCODE)
               exit $LASTEXITCODE
             }
           }
 
-      - name: Perform CodeQL analysis
-        uses: github/codeql-action/analyze@v2
+      - name: Perform CodeQL analysis (v3)
+        uses: github/codeql-action/analyze@v3
         with:
           category: "security"
