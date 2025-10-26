@@ -63,9 +63,7 @@ jobs:
             }
           }
 
-          if (-not $msbuildPath) {
-            $msbuildPath = "msbuild"
-          }
+          if (-not $msbuildPath) { $msbuildPath = "msbuild" }
 
           Write-Host "Using MSBuild: $msbuildPath"
           Add-Content -Path $env:GITHUB_OUTPUT -Value "msbuild=$msbuildPath"
@@ -99,21 +97,19 @@ jobs:
               Write-Warning ('nuget restore returned exit code ' + $LASTEXITCODE + ' for ' + $proj + ' - continuing to build (msbuild may still resolve references).')
             }
 
-            # Compute OutDir (ensure trailing backslash)
+            # Compute absolute OutDir (ensure trailing backslash). Use repo root as base to ensure MSBuild sees a valid path.
             $projDir = Split-Path -Parent $proj
             $outDirCandidate = Join-Path $projDir "bin\Release\"
-            try {
-              $resolved = (Resolve-Path -Path $outDirCandidate -ErrorAction Stop).Path
-            } catch {
-              $resolved = $outDirCandidate
-            }
+            $repoRoot = (Get-Location).ProviderPath
+            $resolved = Join-Path $repoRoot $outDirCandidate
             if ($resolved -notlike '*\') { $resolved += '\' }
 
             Write-Host ('Building ' + $proj + ' -> OutDir: ' + $resolved)
 
-            # Build args: construct OutDir argument safely and pass each /p: as a separate arg.
-            $outArg = '/p:OutDir=' + $resolved
-            $platformArg = '/p:Platform="Any CPU"'
+            # IMPORTANT: pass Platform as AnyCPU (no space) so project Condition like Release|AnyCPU matches and OutputPath is set
+            $platformArg = '/p:Platform=AnyCPU'
+            $outArg = '/p:OutDir=' + '"' + $resolved + '"'
+
             $msbuildArgs = @(
               $proj,
               '/p:Configuration=Release',
