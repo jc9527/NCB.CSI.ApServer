@@ -88,15 +88,15 @@ jobs:
             Write-Host "---- Processing project: $proj ----"
 
             if (-not (Test-Path $proj)) {
-              Write-Error ("Project not found: " + $proj + ". Update the path in the workflow if necessary.")
+              Write-Error ('Project not found: ' + $proj + '. Update the path in the workflow if necessary.')
               exit 1
             }
 
             # Restore with nuget.exe (works for packages.config & older projects)
-            Write-Host ("Restoring packages for " + $proj)
+            Write-Host ('Restoring packages for ' + $proj)
             & .\nuget.exe restore $proj -PackagesDirectory packages
             if ($LASTEXITCODE -ne 0) {
-              Write-Warning ("nuget restore returned exit code " + $LASTEXITCODE + " for " + $proj + " — continuing to build (msbuild may still resolve references).")
+              Write-Warning ('nuget restore returned exit code ' + $LASTEXITCODE + ' for ' + $proj + ' - continuing to build (msbuild may still resolve references).')
             }
 
             # Compute OutDir (ensure trailing backslash)
@@ -109,9 +109,9 @@ jobs:
             }
             if ($resolved -notlike '*\') { $resolved += '\' }
 
-            Write-Host ("Building " + $proj + " -> OutDir: " + $resolved)
+            Write-Host ('Building ' + $proj + ' -> OutDir: ' + $resolved)
 
-            # Build args: construct OutDir argument by concatenation to avoid nested quotes issues
+            # Build args: construct OutDir argument safely and pass each /p: as a separate arg.
             $outArg = '/p:OutDir=' + $resolved
             $platformArg = '/p:Platform="Any CPU"'
             $msbuildArgs = @(
@@ -123,10 +123,10 @@ jobs:
               '/m'
             )
 
-            Write-Host ("Calling MSBuild: " + $msbuild + " " + ($msbuildArgs -join ' '))
+            Write-Host ('Calling MSBuild: ' + $msbuild + ' ' + ($msbuildArgs -join ' '))
             & $msbuild @msbuildArgs
             if ($LASTEXITCODE -ne 0) {
-              Write-Error ("MSBuild failed for " + $proj + " with exit code " + $LASTEXITCODE)
+              Write-Error ('MSBuild failed for ' + $proj + ' with exit code ' + $LASTEXITCODE)
               exit $LASTEXITCODE
             }
           }
