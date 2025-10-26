@@ -10,9 +10,9 @@ on:
   workflow_dispatch:
 
 permissions:
+  contents: read
   actions: read
   security-events: write
-  code-scanning: write
 
 jobs:
   codeql:
@@ -57,7 +57,6 @@ jobs:
             exit 1
           }
 
-          # Try to locate MSBuild via vswhere (robust across VS versions). Fallback to 'msbuild' in PATH.
           $msbuildPath = $null
           $vswhere = Join-Path $env:ProgramFiles(x86) "Microsoft Visual Studio\Installer\vswhere.exe"
           if (Test-Path $vswhere) {
