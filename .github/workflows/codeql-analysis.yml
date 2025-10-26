@@ -43,11 +43,29 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      # Step 5: Build entire solution using MSBuild
+      # Step 5: Build entire solution using MSBuild (auto-detect via vswhere)
       - name: Build solution
+        shell: pwsh
         run: |
-          msbuild NCB.CSI.ApServer.sln /p:Configuration=Release /p:Platform="Any CPU" /m
+          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          if (Test-Path $vswhere) {
+            $installPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath
+            $msbuild = Join-Path $installPath "MSBuild\Current\Bin\MSBuild.exe"
+          } else {
+            Write-Error "vswhere.exe not found."
+            exit 1
+          }
+
+          if (-not (Test-Path $msbuild)) {
+            Write-Error "MSBuild not found in Visual Studio installation."
+            exit 1
+          }
+
+          Write-Host "Using MSBuild at $msbuild"
+          & $msbuild "NCB.CSI.ApServer.sln" /p:Configuration=Release /p:Platform="Any CPU" /m /verbosity:minimal
 
       # Step 6: Perform CodeQL analysis
       - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
+
+        
