@@ -1,0 +1,6 @@
+# Exclude NCB.CSI.ApServer from CodeQL analysis.
+# This file is referenced by the codeql-action init step using `config-file`.
+# The top-level key `paths-ignore` is used by the CodeQL GitHub Action to ignore
+# matching file globs from analysis.
+paths-ignore:
+  - "NCB.CSI.ApServer/**"
