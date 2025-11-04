@@ -111,7 +111,7 @@ jobs:
 
             # Pass Platform as AnyCPU (no space) to match common project Conditions (Release|AnyCPU).
             # Build the OutDir argument and quote it safely (we trimmed trailing backslash above).
-            $platformArg = '/p:Platform=AnyCPU'
+            $platformArg = '/p:Platform="Any CPU"'
             $outArg = '/p:OutDir="' + $resolved + '"' 
 
             $msbuildArgs = @(
