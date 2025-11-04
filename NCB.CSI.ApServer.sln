@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCB.CSI.ApServer", "NCB.CSI.ApServer\NCB.CSI.ApServer.csproj", "{80BE8305-2F30-4B40-A269-41D651921963}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCB.CSI.Models", "NCB.CSI.Models\NCB.CSI.Models.csproj", "{7ED8F189-49B9-4495-BB42-E1829DB763BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCB.CSI.Batch", "NCB.CSI.Batch\NCB.CSI.Batch.csproj", "{49BD6524-D85E-4B33-AF77-703CB30BD980}"
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{80BE8305-2F30-4B40-A269-41D651921963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80BE8305-2F30-4B40-A269-41D651921963}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80BE8305-2F30-4B40-A269-41D651921963}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80BE8305-2F30-4B40-A269-41D651921963}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7ED8F189-49B9-4495-BB42-E1829DB763BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7ED8F189-49B9-4495-BB42-E1829DB763BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ED8F189-49B9-4495-BB42-E1829DB763BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
