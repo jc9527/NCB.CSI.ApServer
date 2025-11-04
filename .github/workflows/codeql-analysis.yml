@@ -1,4 +1,3 @@
-# Modified: ensure Platform uses "Any CPU", remove invalid nuget /version call, keep diagnostics minimal
 name: "CodeQL - C# (.NET Framework 4.7.2) - build selected projects (CodeQL v3)"
 
 on:
@@ -38,7 +37,7 @@ jobs:
           $out = "nuget.exe"
           Invoke-WebRequest -Uri "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" -OutFile $out
           Write-Host "nuget.exe downloaded to $PWD\$out"
-          # don't call '/version' (not a valid nuget subcommand); keep download only
+          # do not call invalid nuget subcommands here
 
       - name: Locate MSBuild (vswhere fallback to PATH) - diagnostic
         id: find-msbuild
@@ -67,79 +66,44 @@ jobs:
           Write-Host "Using MSBuild: $msbuildPath"
           Add-Content -Path $env:GITHUB_OUTPUT -Value "msbuild=$msbuildPath"
 
-      - name: Restore & Build selected projects (Models -> ApClient -> Batch) - diagnostic + Platform fix
+      - name: Restore & Build solution (preferred) - diagnostic
         shell: powershell
         env:
           MSBUILD_PATH: ${{ steps.find-msbuild.outputs.msbuild }}
         run: |
-          # Replace the current Restore & Build step run: | ... block with this
-          # This script: if any .sln exists, build the first .sln found.
-          # Otherwise build each .csproj with explicit OutDir to avoid missing OutputPath.
-          $projects = @(
-            'NCB.CSI.Models/NCB.CSI.Models.csproj',
-            'NCB.CSI.ApClient/NCB.CSI.ApClient.csproj',
-            'NCB.CSI.Batch/NCB.CSI.Batch.csproj'
-          )
+          Write-Host "Searching for solution files..."
+          $solutions = Get-ChildItem -Path (Get-Location) -Filter *.sln -Recurse -File -Depth 3 | Select-Object -First 10
+          if ($solutions.Count -eq 0) {
+            Write-Host "No .sln files found in repo root (within depth). Falling back to per-project build (not recommended)."
+            exit 1
+          }
 
-          Write-Host "Looking for solution files in repo root..."
-          $solutions = Get-ChildItem -Path (Get-Location) -Filter *.sln -Recurse -File -Depth 2 | Select-Object -First 10
-          if ($solutions.Count -gt 0) {
-            Write-Host "Found solution(s):"
-            $solutions | ForEach-Object { Write-Host " - " $_.FullName }
-            $sln = $solutions[0].FullName
-            Write-Host "Building solution: $sln"
-            $msbuild = $env:MSBUILD_PATH
-            if (-not $msbuild) { $msbuild = "msbuild" }
-            & $msbuild $sln /p:Configuration=Release /p:Platform="Any CPU" /m
-            if ($LASTEXITCODE -ne 0) {
-              Write-Error ("MSBuild failed for solution " + $sln + " with exit code " + $LASTEXITCODE)
-              exit $LASTEXITCODE
-            }
-          } else {
-            Write-Host "No .sln found. Will build projects individually with explicit OutDir."
-            $msbuild = $env:MSBUILD_PATH
-            if (-not $msbuild) { $msbuild = "msbuild" }
+          $slnPath = $solutions[0].FullName
+          Write-Host "Using solution: $slnPath"
 
-            foreach ($proj in $projects) {
-              Write-Host "---- Processing project: $proj ----"
-              if (-not (Test-Path $proj)) {
-                Write-Error ('Project not found: ' + $proj + '. Update the path in the workflow if necessary.')
-                exit 1
-              }
+          if (-not (Test-Path ".\nuget.exe")) {
+            Write-Error "nuget.exe not found in workspace. Make sure Download nuget.exe step ran successfully."
+            exit 1
+          }
 
-              Write-Host ('Restoring packages for ' + $proj)
-              & .\nuget.exe restore $proj -PackagesDirectory packages -Verbosity detailed
-              if ($LASTEXITCODE -ne 0) {
-                Write-Warning ('nuget restore returned exit code ' + $LASTEXITCODE + ' for ' + $proj + ' - continuing to build (msbuild may still resolve references).')
-              }
+          Write-Host "Restoring NuGet packages for solution (detailed output)..."
+          & .\nuget.exe restore $slnPath -Verbosity detailed
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "nuget restore failed for solution with exit code $LASTEXITCODE"
+            exit $LASTEXITCODE
+          }
 
-              $projDir = Split-Path -Parent $proj
-              $repoRoot = (Get-Location).ProviderPath
-              $outDirCandidate = Join-Path $projDir "bin\Release"
-              $resolved = Join-Path $repoRoot $outDirCandidate
-              $resolved = $resolved.TrimEnd('\')
+          $msbuild = $env:MSBUILD_PATH
+          if (-not $msbuild) { $msbuild = "msbuild" }
 
-              Write-Host ('Building ' + $proj + ' -> OutDir: ' + $resolved)
-              $platformArg = '/p:Platform="Any CPU"'
-              # Explicitly set OutputPath to ensure MSBuild has an output path even if .csproj Conditions don't set it
-              $outArg = '/p:OutputPath="' + $resolved + '\\"'
-              $msbuildArgs = @(
-                $proj,
-                '/p:Configuration=Release',
-                $platformArg,
-                $outArg,
-                '/p:BuildProjectReferences=true',
-                '/m'
-              )
+          Write-Host "Building solution with MSBuild: $msbuild"
+          & $msbuild $slnPath /p:Configuration=Release /p:Platform="Any CPU" /m
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "MSBuild failed for solution with exit code $LASTEXITCODE"
+            exit $LASTEXITCODE
+          }
 
-              Write-Host ('Calling MSBuild: ' + $msbuild + ' ' + ($msbuildArgs -join ' '))
-              & $msbuild @msbuildArgs
-              if ($LASTEXITCODE -ne 0) {
-                Write-Error ('MSBuild failed for ' + $proj + ' with exit code ' + $LASTEXITCODE)
-                exit $LASTEXITCODE
-              }
-            }
-          }         
+          Write-Host "Solution build succeeded."
 
       - name: Perform CodeQL analysis (v3)
         uses: github/codeql-action/analyze@v3
