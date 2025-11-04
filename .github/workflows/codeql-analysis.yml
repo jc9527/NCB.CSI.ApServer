@@ -105,11 +105,10 @@ jobs:
 
             Write-Host ('Building ' + $proj + ' -> OutDir: ' + $resolved)
 
-            # FIX: pass Platform exactly as defined in many .csproj Conditions: "Any CPU"
+            # Pass Platform as AnyCPU (no space) to match common project Conditions (Release|AnyCPU).
+            # Build the OutDir argument and quote it safely (we trimmed trailing backslash above).
             $platformArg = '/p:Platform="Any CPU"'
-
-            # OPTIONAL SAFEGUARD: explicitly set OutputPath to ensure it's present even if Conditions mismatch
-            $outArg = '/p:OutputPath="' + $resolved + '\\"'
+            $outArg = '/p:OutDir="' + $resolved + '"' 
 
             $msbuildArgs = @(
               $proj,
