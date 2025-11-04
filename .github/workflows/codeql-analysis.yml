@@ -72,61 +72,74 @@ jobs:
         env:
           MSBUILD_PATH: ${{ steps.find-msbuild.outputs.msbuild }}
         run: |
+          # Replace the current Restore & Build step run: | ... block with this
+          # This script: if any .sln exists, build the first .sln found.
+          # Otherwise build each .csproj with explicit OutDir to avoid missing OutputPath.
           $projects = @(
             'NCB.CSI.Models/NCB.CSI.Models.csproj',
             'NCB.CSI.ApClient/NCB.CSI.ApClient.csproj',
             'NCB.CSI.Batch/NCB.CSI.Batch.csproj'
           )
 
-          Write-Host "Check that project files exist:"
-          foreach ($p in $projects) { Write-Host " - $p : " + (Test-Path $p) }
-
-          $msbuild = $env:MSBUILD_PATH
-          if (-not $msbuild) { $msbuild = "msbuild" }
-
-          foreach ($proj in $projects) {
-            Write-Host "---- Processing project: $proj ----"
-            if (-not (Test-Path $proj)) {
-              Write-Error ('Project not found: ' + $proj + '. Update the path in the workflow if necessary.')
-              exit 1
-            }
-
-            Write-Host ('Restoring packages for ' + $proj)
-            & .\nuget.exe restore $proj -PackagesDirectory packages -Verbosity detailed
+          Write-Host "Looking for solution files in repo root..."
+          $solutions = Get-ChildItem -Path (Get-Location) -Filter *.sln -Recurse -File -Depth 2 | Select-Object -First 10
+          if ($solutions.Count -gt 0) {
+            Write-Host "Found solution(s):"
+            $solutions | ForEach-Object { Write-Host " - " $_.FullName }
+            $sln = $solutions[0].FullName
+            Write-Host "Building solution: $sln"
+            $msbuild = $env:MSBUILD_PATH
+            if (-not $msbuild) { $msbuild = "msbuild" }
+            & $msbuild $sln /p:Configuration=Release /p:Platform="Any CPU" /m
             if ($LASTEXITCODE -ne 0) {
-              Write-Warning ('nuget restore returned exit code ' + $LASTEXITCODE + ' for ' + $proj + ' - continuing to build (msbuild may still resolve references).')
-            }
-
-            $projDir = Split-Path -Parent $proj
-            $repoRoot = (Get-Location).ProviderPath
-            $outDirCandidate = Join-Path $projDir "bin\Release"
-            $resolved = Join-Path $repoRoot $outDirCandidate
-            $resolved = $resolved.TrimEnd('\')
-
-            Write-Host ('Building ' + $proj + ' -> OutDir: ' + $resolved)
-
-            # PASS Platform exactly as defined in many .csproj Conditions: "Any CPU"
-            $platformArg = '/p:Platform="Any CPU"'
-
-            # Build the OutDir argument and quote it safely (we trimmed trailing backslash above).
-            $outArg = '/p:OutDir="' + $resolved + '"' 
-
-            $msbuildArgs = @(
-              $proj,
-              '/p:Configuration=Release',
-              $platformArg,
-              $outArg,
-              '/p:BuildProjectReferences=true',
-              '/m'
-            )
-
-            Write-Host ('Calling MSBuild: ' + $msbuild + ' ' + ($msbuildArgs -join ' '))
-            & $msbuild @msbuildArgs
-            if ($LASTEXITCODE -ne 0) {
-              Write-Error ('MSBuild failed for ' + $proj + ' with exit code ' + $LASTEXITCODE)
+              Write-Error ("MSBuild failed for solution " + $sln + " with exit code " + $LASTEXITCODE)
               exit $LASTEXITCODE
             }
-          }
+          } else {
+            Write-Host "No .sln found. Will build projects individually with explicit OutDir."
+            $msbuild = $env:MSBUILD_PATH
+            if (-not $msbuild) { $msbuild = "msbuild" }
+
+            foreach ($proj in $projects) {
+              Write-Host "---- Processing project: $proj ----"
+              if (-not (Test-Path $proj)) {
+                Write-Error ('Project not found: ' + $proj + '. Update the path in the workflow if necessary.')
+                exit 1
+              }
+
+              Write-Host ('Restoring packages for ' + $proj)
+              & .\nuget.exe restore $proj -PackagesDirectory packages -Verbosity detailed
+              if ($LASTEXITCODE -ne 0) {
+                Write-Warning ('nuget restore returned exit code ' + $LASTEXITCODE + ' for ' + $proj + ' - continuing to build (msbuild may still resolve references).')
+              }
+
+              $projDir = Split-Path -Parent $proj
+              $repoRoot = (Get-Location).ProviderPath
+              $outDirCandidate = Join-Path $projDir "bin\Release"
+              $resolved = Join-Path $repoRoot $outDirCandidate
+              $resolved = $resolved.TrimEnd('\')
+
+              Write-Host ('Building ' + $proj + ' -> OutDir: ' + $resolved)
+              $platformArg = '/p:Platform="Any CPU"'
+              # Explicitly set OutputPath to ensure MSBuild has an output path even if .csproj Conditions don't set it
+              $outArg = '/p:OutputPath="' + $resolved + '\\"'
+              $msbuildArgs = @(
+                $proj,
+                '/p:Configuration=Release',
+                $platformArg,
+                $outArg,
+                '/p:BuildProjectReferences=true',
+                '/m'
+              )
+
+              Write-Host ('Calling MSBuild: ' + $msbuild + ' ' + ($msbuildArgs -join ' '))
+              & $msbuild @msbuildArgs
+              if ($LASTEXITCODE -ne 0) {
+                Write-Error ('MSBuild failed for ' + $proj + ' with exit code ' + $LASTEXITCODE)
+                exit $LASTEXITCODE
+              }
+            }
+          }         
 
       - name: Perform CodeQL analysis (v3)
         uses: github/codeql-action/analyze@v3
