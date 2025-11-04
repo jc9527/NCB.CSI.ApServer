@@ -97,7 +97,7 @@ jobs:
           if (-not $msbuild) { $msbuild = "msbuild" }
 
           Write-Host "Building solution with MSBuild: $msbuild"
-          & $msbuild $slnPath /p:Configuration=Release /p:Platform="Any CPU" /m
+          & $msbuild $slnPath /p:Configuration=Debug /p:Platform="Any CPU" /m
           if ($LASTEXITCODE -ne 0) {
             Write-Error "MSBuild failed for solution with exit code $LASTEXITCODE"
             exit $LASTEXITCODE
