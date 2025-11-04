@@ -1,3 +1,4 @@
+# Modified: ensure Platform uses "Any CPU" and add optional explicit OutputPath fallback + diagnostics
 name: "CodeQL - C# (.NET Framework 4.7.2) - build selected projects (CodeQL v3)"
 
 on:
@@ -37,23 +38,21 @@ jobs:
           $out = "nuget.exe"
           Invoke-WebRequest -Uri "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" -OutFile $out
           Write-Host "nuget.exe downloaded to $PWD\$out"
+          & .\nuget.exe /version
 
-      - name: Locate MSBuild (vswhere fallback to PATH)
+      - name: Locate MSBuild (vswhere fallback to PATH) - diagnostic
         id: find-msbuild
         shell: powershell
         run: |
+          Write-Host "PWD: $PWD"
+          Get-ChildItem -Force | Select-Object -First 200 | Format-Table -AutoSize
           $msbuildPath = $null
           $pf86 = ${env:ProgramFiles(x86)}
           if (-not $pf86 -or -not (Test-Path $pf86)) {
             if ($env:ProgramFiles -and (Test-Path $env:ProgramFiles)) { $pf86 = $env:ProgramFiles }
             elseif ($env:ProgramW6432 -and (Test-Path $env:ProgramW6432)) { $pf86 = $env:ProgramW6432 }
           }
-          if ($pf86) {
-            $vswhere = Join-Path $pf86 "Microsoft Visual Studio\Installer\vswhere.exe"
-          } else {
-            $vswhere = $null
-          }
-
+          if ($pf86) { $vswhere = Join-Path $pf86 "Microsoft Visual Studio\Installer\vswhere.exe" } else { $vswhere = $null }
           if ($vswhere -and (Test-Path $vswhere)) {
             $installPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath -nologo 2>$null
             if ($installPath) {
@@ -63,13 +62,12 @@ jobs:
               elseif (Test-Path $candidate2) { $msbuildPath = $candidate2 }
             }
           }
-
           if (-not $msbuildPath) { $msbuildPath = "msbuild" }
-
+          try { & $msbuildPath /version } catch { Write-Warning "Could not execute $msbuildPath /version" }
           Write-Host "Using MSBuild: $msbuildPath"
           Add-Content -Path $env:GITHUB_OUTPUT -Value "msbuild=$msbuildPath"
 
-      - name: Restore & Build selected projects (Models -> ApClient -> Batch)
+      - name: Restore & Build selected projects (Models -> ApClient -> Batch) - diagnostic + Platform fix
         shell: powershell
         env:
           MSBUILD_PATH: ${{ steps.find-msbuild.outputs.msbuild }}
@@ -80,39 +78,38 @@ jobs:
             'NCB.CSI.Batch/NCB.CSI.Batch.csproj'
           )
 
+          Write-Host "Check that project files exist:"
+          foreach ($p in $projects) { Write-Host " - $p : " + (Test-Path $p) }
+
           $msbuild = $env:MSBUILD_PATH
           if (-not $msbuild) { $msbuild = "msbuild" }
 
           foreach ($proj in $projects) {
             Write-Host "---- Processing project: $proj ----"
-
             if (-not (Test-Path $proj)) {
               Write-Error ('Project not found: ' + $proj + '. Update the path in the workflow if necessary.')
               exit 1
             }
 
-            # Restore with nuget.exe (works for packages.config & older projects)
             Write-Host ('Restoring packages for ' + $proj)
-            & .\nuget.exe restore $proj -PackagesDirectory packages
+            & .\nuget.exe restore $proj -PackagesDirectory packages -Verbosity detailed
             if ($LASTEXITCODE -ne 0) {
               Write-Warning ('nuget restore returned exit code ' + $LASTEXITCODE + ' for ' + $proj + ' - continuing to build (msbuild may still resolve references).')
             }
 
-            # Compute absolute OutDir using repo root as base (avoid trailing-backslash-quote escaping issues)
             $projDir = Split-Path -Parent $proj
             $repoRoot = (Get-Location).ProviderPath
             $outDirCandidate = Join-Path $projDir "bin\Release"
             $resolved = Join-Path $repoRoot $outDirCandidate
-
-            # Ensure there is NO trailing backslash to avoid escaping the closing quote when we quote the argument
             $resolved = $resolved.TrimEnd('\')
 
             Write-Host ('Building ' + $proj + ' -> OutDir: ' + $resolved)
 
-            # Pass Platform as AnyCPU (no space) to match common project Conditions (Release|AnyCPU).
-            # Build the OutDir argument and quote it safely (we trimmed trailing backslash above).
-            $platformArg = '/p:Platform=AnyCPU'
-            $outArg = '/p:OutDir="' + $resolved + '"' 
+            # FIX: pass Platform exactly as defined in many .csproj Conditions: "Any CPU"
+            $platformArg = '/p:Platform="Any CPU"'
+
+            # OPTIONAL SAFEGUARD: explicitly set OutputPath to ensure it's present even if Conditions mismatch
+            $outArg = '/p:OutputPath="' + $resolved + '\\"'
 
             $msbuildArgs = @(
               $proj,
